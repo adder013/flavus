@@ -1,0 +1,1398 @@
+.shop-wrap {
+    width: 100%;
+    .category-description {
+        box-sizing: border-box;
+        width: calc(100% - 40px);
+        margin: 20px;
+        @media(max-width: $large-mobile-max) {
+            margin-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+            margin-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+        }
+        h2, h3 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            a {
+                color: black;
+                @extend %hover-transition;
+                &:hover {
+                    text-decoration: none;
+                    color: $generalHover;
+                }
+            }
+        }
+        ul {
+            margin: 0 0 20px 40px;
+            li {
+                a {
+                    color: black;
+                    text-decoration: none;
+                    @extend %hover-transition;
+                    &:hover {
+                        color: $generalHover;
+                    }
+                }
+            }
+        }
+    }
+    .cat-price-usd-wrap {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 4px;
+        div {
+            display: flex;
+            flex: 0 0 auto;
+        }
+        span {
+            display: flex;
+            flex: 1 1 auto;
+            margin-left: 5px;
+        }
+    }
+    .empty-block {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid $border;
+        @media(max-width: $large-mobile-max) {
+            margin-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+            margin-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+        }
+        &.no-margin {
+            margin: 0;
+        }
+    }
+    .category-menu {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+        @media(max-width: $large-mobile-max) {
+            padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+            padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+        }
+        @media(max-width: $tablet-max) {
+            background-color: $categoryMenuBg;
+            padding: 0 20px 20px;
+        }
+        @media(min-width: $tablet) {
+            padding: 0 26px 0 20px;
+        }
+        @media(min-width: 1500px) {
+            width: 75%;
+        }
+        .links {
+            display: none;
+            @media(min-width: $tablet) {
+                display: flex;
+                width: 100%;
+            }
+            >* {
+                margin: 15px 0;
+            }
+            ul {
+                columns: 1;
+                column-fill: auto;
+                width: 100%;
+                list-style: none;
+                @media(min-width: $tablet) {
+                    columns: 2;
+                }
+                @media(min-width: $pc) {
+                    columns: 3;
+                }
+                li {
+                    display: flex;
+                    padding: 0;
+                    break-inside: avoid;
+                    a {
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        padding: 7px;
+                        padding-right: 30%;
+                        color: black;
+                        text-decoration: none;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: black;
+                            background-color: $generalColor;
+                        }
+                    }
+                }
+            }
+            >div {
+                display: flex;
+                flex-wrap: wrap;
+                a {
+                    width: 150px;
+                    height: 63px;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        filter: grayscale(100%);
+                        @extend %hover-transition;
+                        &:hover {
+                            filter: grayscale(0);
+                            box-shadow: 0 5px 15px 5px $shadowColor;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-weight: 700;
+        font-size: 1.6em;
+        text-transform: uppercase;
+        @media(max-width: $large-mobile-max) {
+            padding-left: unquote('max(#{20px}, var(--safe-area-inset-left))');
+            padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .brand-info {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        padding: 20px;
+        background-color: $generalBg;
+        border: 1px solid $border;
+        @media(min-width: $tablet) {
+            flex-direction: row;
+        }
+        .brand-img {
+            width: 100%;
+            @media(min-width: $tablet) {
+                width: 300px;
+            }
+            img {
+                width: 100%;
+                @media(max-width: $tablet-max) {
+                    width: 300px;
+                }
+            }
+        }
+        .info {
+            width: 100%;
+            @media(min-width: $tablet) {
+                width: calc(100% - 300px);
+                padding-left: 30px;
+            }
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+            ul {
+                margin: 20px 0;
+                margin-left: 40px;
+                li {
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: $generalHover;
+                        }
+                    }
+                }
+            }
+            p {
+				margin-bottom: 20px;
+                a {
+                    color: black;
+                    @extend %hover-transition;
+                    &:hover {
+                        color: $generalHover;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .geo-disc{
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 20px;
+        .category-name {
+            text-transform: lowercase;
+        }
+    }
+    .mobile-filter {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: $categoryMenuBg;
+        @media(min-width: $tablet) {
+            display: none;
+        }
+        @media(max-width: $large-mobile-max) {
+            padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+            padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+        }
+        .enable-mobile-filters {
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: .9em;
+            font-weight: 700;
+            border: 0;
+            color: black;
+            background-color: white;
+            outline: none;
+            cursor: pointer;
+            @extend %hover-transition;
+            &:hover {
+                background-color: $generalColor;
+            }
+            span {
+                padding-right: 24px;
+            }
+            svg {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: calc(50% - 10px);
+                right: 10px;
+            }
+        }
+        select {
+            box-sizing: border-box;
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: white;
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            border-radius: 0;
+        }
+    }
+    .product-filter {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .top-filter {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            @media(max-width: $tablet-max) {
+                background-color: $categoryMenuBg;
+                padding: 0 20px 20px;
+            }
+            @media(max-width: $large-mobile-max) {
+                padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+                padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+            }
+            @media(min-width: $tablet) {
+                padding: 0 26px 0 20px;
+                height: 60px;
+            }
+            @media(min-width: 1500px) {
+                width: 75%;
+            }
+            &.no-filter {
+                width: 100%;
+                padding: 0 26px 0 20px;
+                @media(max-width: $tablet-max) {
+                    padding: 0 20px 20px;
+                }
+                @media(max-width: $large-mobile-max) {
+                    padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+                    padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+                }
+
+            }
+            &.transparent-bg-filter {
+                background-color: transparent;
+                .main-filter {
+                    form {
+                        label {
+                            color: black;
+                            border-color: black;
+                        }
+                    }
+                }
+            }
+            &.disabled {
+                padding-right: 0;
+                width: 100%;
+            }
+            .main-filter {
+                display: flex;
+                flex: 1 1 auto;
+                align-content: flex-end;
+                font-size: .9em;
+                .sort-name {
+                    display: none;
+                    @media(min-width: $tablet) {
+                        display: flex;
+                    }
+                }
+                form {
+                    display: flex;
+                    flex-flow: row wrap;
+                    label {
+                        margin: 0 6px;
+                        color: $notActive;
+                        @extend %hover-transition;
+                        @media(max-width: $tablet-max) {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid white;
+                            margin: 4px;
+                            padding: 6px;
+                            color: white;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            color: $generalHover;
+                        }
+                    }
+                    input[type=radio] {
+                        display: none;
+                    }
+                }
+                select {
+                    font-size: 1em;
+                    padding: 8px 12px;
+                    color: $selectColor;
+                    border: 1px solid $border;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+            .switch {
+                display: none;
+                @media(min-width: $tablet) {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    flex: 0 0 auto;
+                    color: $notActive;
+                }
+                img {
+                    width: 28px;
+                    height: 32px;
+                    margin-left: 10px;
+                    opacity: .5;
+                    cursor: pointer;
+                    @extend %transition;
+                    &:first-child {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .filter-wrap {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            @media(min-width: $tablet) {
+                flex-direction: row;
+                padding: 0 20px;
+            }
+            .products-wrap {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @media(min-width: 1500px) {
+                    width: 75%;
+                    margin-right: 10px;
+                    &.no-filter {
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                }
+                .products {
+                    &.list {
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        @media(min-width: $tablet) {
+                            margin-top: 1px;
+                        }
+                        .product-block {
+                            box-sizing: border-box;
+                            position: relative;
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: 100%;
+                            padding: 16px;
+                            background-color: $generalBg;
+                            border: 1px solid $border;
+                            margin-top: -1px;
+                            @extend %hover-transition;
+                            @media(min-width: 800px) {
+                                flex-wrap: nowrap;
+                            }
+                            &:hover {
+                                z-index: 1;
+                                box-shadow: 0 5px 15px 5px $shadowColor;
+                            }
+                            .grid-cv {
+                                display: none;
+                            }
+                            .product-image {
+                                position: relative;
+                                width: 100%;
+                                @media(min-width: $large-mobile) {
+                                    width: 200px;
+                                    height: 150px;
+                                }
+                                img {
+                                    width: 200px;
+                                    @media(min-width: $large-mobile) {
+                                        min-width: 10%;
+                                        max-width: 100%;
+                                        min-height: 10%;
+                                        max-height: 100%;
+                                    }
+                                }
+                            }
+                            .product-info {
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                @media(min-width: $large-mobile) {
+                                    width: calc(100% - 200px);
+                                    padding: 0 10px 0 20px;
+                                }
+                                @media(min-width: 800px) {
+                                    width: calc(100% - 400px);
+                                }
+                                .top {
+                                    flex: 0 0 auto;
+                                    .name {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        @media (max-width: $pc-max) {
+                                            flex-direction: column;
+                                        }
+                                        .title {
+                                            display: flex;
+                                            flex-grow: 1;
+                                            max-width: 600px;
+                                            color: black;
+                                            text-decoration: none;
+                                            font-size: 1.1em;
+                                            font-weight: 700;
+                                            @extend %hover-transition;
+                                            &:hover {
+                                                color: $generalHover;
+                                            }
+                                            .highlight {
+                                                background-color: rgba(96%, 92%, 2%, .7);
+                                            }
+                                        }
+                                        .sticker {
+                                            display: flex;
+                                            flex-flow: column;
+                                            justify-self: flex-end;
+                                            align-self: baseline;
+                                            justify-content: center;
+                                            align-items: center;
+                                            width: 160px;
+                                            min-width: 160px;
+                                            padding: 3px 10px;
+                                            text-transform: uppercase;
+                                            text-align: center;
+                                            color: white;
+                                            font-size: .8em;
+                                            font-weight: 700;
+                                            @media (max-width: $pc-max) {
+                                                margin-top: 5px;
+                                            }
+                                        }
+                                    }
+                                    ul {
+                                        margin-top: 14px;
+                                        list-style: none;
+                                    }
+                                }
+                                .bottom {
+                                    display: flex;
+                                    align-items: flex-end;
+                                    @media(min-width: 800px) {
+                                        flex: 1 1 auto;
+                                    }
+                                    .wrap {
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        align-items: center;
+                                        width: 100%;
+                                        height: 60px;
+                                        .compare {
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            align-items: center;
+                                            color: $notActive;
+                                            margin-right: 14px;
+                                            @extend %hover-transition;
+                                            span {
+                                                margin-left: 6px;
+                                            }
+                                            &::before {
+                                                content: url('/svg/compare.svg');
+                                                display: block;
+                                                width: 24px;
+                                                height: 24px;
+                                                margin-right: 4px;
+                                            }
+                                            &:hover {
+                                                cursor: pointer;
+                                                color: $active;
+                                                &::before {
+                                                    content: url('/svg/compare_hover.svg');
+                                                }
+                                            }
+                                            &.selected {
+                                                color: black;
+                                                &::before {
+                                                    content: url('/svg/compare_hover.svg');
+                                                }
+                                            }
+                                        }
+                                        .bookmark {
+                                            display: flex;
+                                            align-items: center;
+                                            color: $notActive;
+                                            margin-right: 14px;
+                                            @extend %hover-transition;
+                                            span {
+                                                margin-left: 6px;
+                                            }
+                                            &::before {
+                                                content: url('/svg/bookmark.svg');
+                                                display: block;
+                                                width: 24px;
+                                                height: 24px;
+                                                margin-right: 4px;
+                                            }
+                                            &:hover {
+                                                cursor: pointer;
+                                                color: $active;
+                                                &::before {
+                                                    content: url('/svg/bookmark_hover.svg');
+                                                }
+                                            }
+                                            &.selected {
+                                                color: black;
+                                                &::before {
+                                                    content: url('/svg/bookmark_hover.svg');
+                                                }
+                                            }
+                                        }
+                                        .brand {
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: center;
+                                            flex: 1 1 auto;
+                                            @media(max-width: $pc-max) {
+                                                display: none;
+                                            }
+                                            img {
+                                                height: 40px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .product-shop {
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: column-reverse;
+                                width: 100%;
+                                @media(min-width: $large-mobile) {
+                                    padding-left: 220px;
+                                }
+                                @media(min-width: 800px) {
+                                    flex-direction: column;
+                                    width: 300px;
+                                    padding-left: 14px;
+                                    border-left: 1px solid $border;
+                                }
+                                .cart {
+                                    flex: 0 0 auto;
+                                    width: 100%;
+                                    .price-wrap {
+                                        display: flex;
+                                        align-items: center;
+                                        flex-flow: row wrap;
+                                        width: 100%;
+                                        margin: 10px 0;
+                                        @media(min-width: 800px) {
+                                            margin: 0;
+                                        }
+                                        .old-price {
+                                            text-decoration: line-through;
+                                            color: red;
+                                        }
+                                        .old-tax {
+                                            text-decoration: line-through;
+                                            margin-left: 6px;
+                                            color: red;
+                                            font-size: .8em;
+                                        }
+                                        .cat-price {
+                                            font-size: 1.5em;
+                                            font-weight: 700;
+                                            @media(max-width: 1220px) {
+                                                font-size: 1.2em;
+                                            }
+                                        }
+                                        .cat-price-empty {
+                                            font-size: 1.2em;
+                                            font-weight: 700;
+                                            @media(max-width: 1220px) {
+                                                font-size: 1.2em;
+                                            }
+                                        }
+                                        .tax {
+                                            margin-left: 6px;
+                                            color: $priceGrey;
+                                            font-size: 1em;
+                                        }
+                                    }
+                                    .btn-wrap {
+                                        margin: 10px 0;
+                                        button {
+                                            position: relative;
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            align-items: center;
+                                            width: 140px;
+                                            height: 36px;
+                                            margin: 0;
+                                            padding: 0;
+                                            padding-left: 24px;
+                                            font-size: .9em;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            background-color: white;
+                                            border: 1px solid $border;
+                                            outline: none;
+                                            @extend %transition;
+                                            @media(max-width: 1220px) {
+                                                width: 110px;
+                                                padding-left: 8px;
+                                            }
+                                            &:hover {
+                                                cursor: pointer;
+                                                background-color: $generalColor;
+                                            }
+                                            .cart-icon {
+                                                position: absolute;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                top: 0;
+                                                right: 0;
+                                                width: 34px;
+                                                height: 34px;
+                                                border-left: 1px solid $border;
+                                                background-color: $generalColor;
+                                                &::before {
+                                                    content: url('/svg/cart.svg');
+                                                    display: block;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                }
+                                            }
+                                        }
+                                        .request-price {
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            width: 140px;
+                                            height: 36px;
+                                            margin: 0;
+                                            padding: 0;
+                                            font-size: .9em;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            background-color: white;
+                                            border: 1px solid $border;
+                                            text-decoration: none;
+                                            color: black;
+                                            @extend %transition;
+                                            @media(max-width: 1220px) {
+                                                width: 110px;
+                                                padding-left: 8px;
+                                            }
+                                            &:hover {
+                                                cursor: pointer;
+                                                background-color: $generalColor;
+                                            }
+                                        }
+                                    }
+                                }
+                                .additional-info {
+                                    display: flex;
+                                    flex: 1 1 auto;
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    .in-stock,
+                                    .preorder,
+                                    .production,
+                                    .delivery-city {
+                                        display: flex;
+                                        margin: 3px 0;
+                                        color: $notActive;
+                                        font-size: .9em;
+                                        word-wrap: break-word;
+                                        span {
+                                            &::before {
+                                                display: block;
+                                                width: 16px;
+                                                height: 16px;
+                                                margin-top: 2px;
+                                                margin-right: 8px;
+                                                opacity: .6;
+                                            }
+                                        }
+                                        .in-stock-icon {
+                                            &::before {
+                                                content: url('/svg/instock.svg');
+                                            }
+                                        }
+                                        .preorder-icon {
+                                            &::before {
+                                                content: url('/svg/preorder.svg');
+                                                display: block;
+                                            }
+                                        }
+                                        .production-icon {
+                                            &::before {
+                                                content: url('/svg/production.svg');
+                                                display: block;
+                                            }
+                                        }
+                                        .delivery-city-icon {
+                                            &::before {
+                                                content: url('/svg/delivery.svg');
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.grid {
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-flow: row wrap;
+                        width: 100%;
+                        margin-left: 1px;
+                        .product-block {
+                            position: relative;
+                            box-sizing: border-box;
+                            display: flex;
+                            flex-direction: column;
+                            width: 50%;
+                            margin-left: -1px;
+                            padding: 16px;
+                            background-color: $generalBg;
+                            @extend %hover-transition;
+                            border: 1px solid $border;
+                            @media(min-width: $pc) {
+                                width: 33.333%;
+                            }
+                            @media(min-width: $pc-wide) {
+                                width: 25%;
+                            }
+                            @media(min-width: $pc-4k) {
+                                width: 20%;
+                            }
+                            &:hover {
+                                z-index: 1;
+                                box-shadow: 0 5px 15px 5px $shadowColor;
+                            }
+                            .grid-cv {
+                                display: flex;
+                                justify-content: flex-end;
+                                width: 100%;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                                .compare {
+                                    display: flex;
+                                    align-items: center;
+                                    color: $notActive;
+                                    margin-right: 14px;
+                                    @extend %hover-transition;
+                                    span {
+                                        margin-left: 6px;
+                                    }
+                                    &::before {
+                                        content: url('/svg/compare.svg');
+                                        display: block;
+                                        width: 24px;
+                                        height: 24px;
+                                        margin-right: 4px;
+                                    }
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: $active;
+                                    }
+                                    &.selected {
+                                        color: black;
+                                    }
+                                }
+                                .bookmark {
+                                    display: flex;
+                                    align-items: center;
+                                    color: $notActive;
+                                    margin-right: 14px;
+                                    @extend %hover-transition;
+                                    span {
+                                        margin-left: 6px;
+                                    }
+                                    &::before {
+                                        content: url('/svg/bookmark.svg');
+                                        display: block;
+                                        width: 24px;
+                                        height: 24px;
+                                        margin-right: 4px;
+                                    }
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: $active;
+                                        &::before {
+                                            content: url('/svg/bookmark_hover.svg');
+                                        }
+                                    }
+                                    &.selected {
+                                        color: black;
+                                        &::before {
+                                            content: url('/svg/bookmark_hover.svg');
+                                        }
+                                    }
+                                }
+                            }
+                            .product-image {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                height: 200px;
+                                a {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    img {
+                                        min-width: 70%;
+                                        max-width: 100%;
+                                        min-height: 10%;
+                                        max-height: 100%;
+                                    }
+                                }
+                            }
+                            .product-info {
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                margin-top: 10px;
+                                padding: 10px 0;
+                                .top {
+                                    flex: 0 0 auto;
+                                    .name {
+                                        .title {
+                                            color: black;
+                                            text-decoration: none;
+                                            font-size: 1.1em;
+                                            font-weight: 700;
+                                            @extend %hover-transition;
+                                            &:hover {
+                                                color: $generalHover;
+                                            }
+                                        }
+                                        .sticker {
+                                            padding: 3px 10px;
+                                            text-transform: uppercase;
+                                            text-align: center;
+                                            color: white;
+                                            font-size: .8em;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                    ul {
+                                        margin-top: 14px;
+                                        list-style: none;
+                                    }
+                                }
+                                .bottom {
+                                    display: none;
+                                }
+                            }
+                            .product-shop {
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                flex: 1 1 auto;
+                                width: 100%;
+                                .cart {
+                                    flex: 0 0 auto;
+                                    width: 100%;
+                                    .price-wrap {
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        align-items: flex-end;
+                                        flex-flow: row wrap;
+                                        width: 100%;
+                                        padding-top: 6px;
+                                        &:nth-child(2) {
+                                            padding-top: 20px;
+                                            border-top: 1px solid $border;
+                                        }
+                                        .old-price {
+                                            text-decoration: line-through;
+                                            color: red;
+                                        }
+                                        .old-tax {
+                                            text-decoration: line-through;
+                                            margin-left: 6px;
+                                            color: red;
+                                            font-size: .8em;
+                                        }
+                                        .cat-price {
+                                            font-size: 1.5em;
+                                            font-weight: 700;
+                                            @media(max-width: 1220px) {
+                                                font-size: 1.2em;
+                                            }
+                                        }
+                                        .cat-price-empty {
+                                            font-size: 1.2em;
+                                            font-weight: 700;
+                                            @media(max-width: 1220px) {
+                                                font-size: 1.2em;
+                                            }
+                                        }
+                                        .tax {
+                                            margin-left: 6px;
+                                            color: $priceGrey;
+                                            font-size: 1em;
+                                        }
+                                    }
+                                    .btn-wrap {
+                                        margin: 10px 0;
+                                        button {
+                                            position: relative;
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            align-items: center;
+                                            width: 140px;
+                                            height: 36px;
+                                            margin: 0;
+                                            padding: 0;
+                                            padding-left: 24px;
+                                            font-size: .9em;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            background-color: white;
+                                            border: 1px solid $border;
+                                            outline: none;
+                                            @extend %transition;
+                                            @media(max-width: 1220px) {
+                                                width: 110px;
+                                                padding-left: 8px;
+                                            }
+                                            &:hover {
+                                                cursor: pointer;
+                                                background-color: $generalColor;
+                                            }
+                                            .cart-icon {
+                                                position: absolute;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                top: 0;
+                                                right: 0;
+                                                width: 34px;
+                                                height: 34px;
+                                                border-left: 1px solid $border;
+                                                background-color: $generalColor;
+                                                &::before {
+                                                    content: url('/svg/cart.svg');
+                                                    display: block;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .additional-info {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pagination-wrap {
+                box-sizing: border-box;
+                display: flex;
+                width: 100%;
+                margin: 20px 0 20px 1px;
+                @media(max-width: $tablet-max) {
+                    flex-flow: row wrap;
+                    padding: 0 10px;
+                }
+                ul {
+                    display: flex;
+                    flex-flow: row wrap;
+                    @media(max-width: $tablet-max) {
+                        margin-top: 20px;
+                    }
+                    li {
+                        margin-top: 4px;
+                        margin-bottom: 4px;
+                    }
+                }
+                .select-wrap {
+                    flex: 0 0 auto;
+                    @media(max-width: $tablet-max) {
+                        margin-top: 20px;
+                        margin-left: -1px;
+                    }
+                    select {
+                        width: 250px;
+                        height: 40px;
+                        padding: 8px 20px;
+                        background-color: transparent;
+                        border: 1px solid $border;
+                        font-size: 1em;
+                        outline: none;
+                    }
+                }
+            }
+            .filter {
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid $border;
+                @media(min-width: 1500px) {
+                    width: 25%;
+                    height: 100%;
+                    margin-left: 10px;
+                }
+                @media(max-width: 1499px) {
+                    display: none;
+                    margin-bottom: 10px;
+                }
+                .refresh {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 16px;
+                    background-color: $filterBg-2;
+                    border-bottom: 1px solid $border;
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 38px;
+                        color: white;
+                        border: 0;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: .9em;
+                        background-color: $categoryMenuBg;
+                        @extend %hover-transition;
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0 5px 15px 5px $shadowColor;
+                        }
+                    }
+                }
+                .filter-option {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    font-size: .9em;
+                    background-color: $filterBg-2;
+                    @media(max-width: $tablet-max) {
+                        border-bottom: 1px solid $border;
+                        &:nth-child(2n) {
+                            background-color: $filterBg-1;
+                        }
+                    }
+                    &.category-links {
+                        @media(max-width: $tablet-max) {
+                            display: none;
+                        }
+                        > a {
+                            color: black;
+                            text-decoration: none;
+                            padding: 4px 16px;
+                            @extend %hover-transition;
+                            &:hover {
+                                color: $generalHover;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        @media(min-width: $tablet-max) {
+                            border-bottom: 1px solid $border;
+                        }
+                        .name {
+                            font-weight: 400;
+                            padding: 16px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        @media(min-width: $tablet-max) {
+                            border-bottom: 1px solid $border;
+                        }
+                        padding: 10px 0;
+                    }
+                    .name {
+                        box-sizing: border-box;
+                        font-weight: 700;
+                        padding: 8px 16px 4px;
+                        span {
+                            display: none;
+                        }
+                        @media(max-width: $tablet-max) {
+                            display: flex;
+                            align-items: center;
+                            padding: 16px;
+                            font-weight: 400;
+                            cursor: pointer;
+                            span {
+                                display: flex;
+                                flex: 1 1 auto;
+                                justify-content: flex-end;
+                                align-items: center;
+                                img {
+                                    width: 16px;
+                                    height: 16px;
+                                    transition: all .5s ease-out;
+                                    transform: rotate(270deg);
+                                }
+                            }
+                        }
+                    }
+                    .selectable {
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: 6px 12px;
+                        @media(max-width: $tablet-max) {
+                            display: none;
+                            border-top: 1px solid $border;
+                        }
+                        @media(min-width: $tablet) {
+                            column-count: 1;
+                        }
+                        @media(min-width: $pc-wide) {
+                           column-count: 2;
+                           column-gap: 10px;
+                        }
+                        > li {
+                            box-sizing: border-box;
+                            display: flex;
+                            width: 100%;
+                            list-style: none;
+                            padding: 3px 6px;
+                            break-inside: avoid;
+                            a {
+                                box-sizing: border-box;
+                                position: relative;
+                                width: 100%;
+                                text-decoration: none;
+                                color: black;
+                                // word-break: break-all;
+                                word-wrap: break-word;
+                                padding-left: 26px;
+                                cursor: pointer;
+                                &.disabled {
+                                    pointer-events: none;
+                                    cursor: default;
+                                    &::before {
+                                        background-color: $disabledFilter;
+                                        border: 1px solid $border;
+                                    }
+                                }
+                                &.selected {
+                                    &::before {
+                                        background-image: url('/svg/check.svg');
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: 70%;
+                                        border-radius: 20%;
+                                        background-color: $generalColor;
+                                        border: 1px solid $border;
+                                    }
+                                }
+                                &::before {
+                                    position: absolute;
+                                    content: ' ';
+                                    display: inline-flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    top: 2px;
+                                    left: 0;
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 20%;
+                                    background-color: white;
+                                    transition: all .4s ease-out;
+                                    border: 1px solid $border;
+                                    cursor: pointer;
+                                }
+                                &:hover::before {
+                                    border: 1px solid $generalColor;
+                                }
+                            }
+                        }
+                        label {
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            margin: 2px 0;
+                            padding: 0 4px;
+                            width: 100%;
+                            @media(min-width: $pc-wide) {
+                                width: 50%;
+                            }
+                            @extend %hover-transition;
+                            &.disabled {
+                                &:hover {
+                                    cursor: default;
+                                    color: black;
+                                }
+                            }
+                            &:hover {
+                                cursor: pointer;
+                                color: $generalHover;
+                                input[type=checkbox]::before {
+                                    border: 1px solid $generalColor;
+                                }
+                            }
+                            input[type=checkbox] {
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 10px;
+                                &:hover::before {
+                                    cursor: pointer;
+                                    border: 1px solid $generalColor;
+                                }
+                                &:hover:disabled::before {
+                                    border: 1px solid $disabledFilter !important;
+                                }
+                                &:disabled::before {
+                                    cursor: default !important;
+                                    background-color: $disabledFilter !important;
+                                }
+                                &:before {
+                                    box-sizing: border-box;
+                                    content: ' ';
+                                    display: block;
+                                    width: 18px;
+                                    height: 18px;
+                                    padding: 2px;
+                                    border-radius: 20%;
+                                    margin-top: -1px;
+                                    background-color: white;
+                                    border: 1px solid $border;
+                                    outline: none;
+                                    transition: all .4s ease-out;
+                                }
+                                &:checked::before {
+                                    content: url('/svg/check.svg');
+                                    cursor: pointer;
+                                    color: white;
+                                    background-color: $generalColor;
+                                }
+                            }
+                        }
+                    }
+                    .selectable-price {
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        padding: 0 14px;
+                        .select-price {
+                            width: 100%;
+                            input[type=number] {
+                                box-sizing: border-box;
+                                width: calc(50% - 10px);
+                                margin: 4px;
+                                padding: 10px;
+                                border-radius: 4px;
+                                border: 1px solid $border;
+                                outline: none;
+                                &::placeholder {
+                                    color: #828282;
+                                }
+                            }
+                        }
+                        .select-range {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 20px;
+                            width: 100%;
+                            #slider-range {
+                                width: calc(100% - 30px);
+                                margin: 4px;
+                            }
+                        }
+                    }
+                    .apply-price {
+                        box-sizing: border-box;
+                        padding: 16px;
+                        button {
+                            @extend %yellow-form-button;
+                            @media(max-width: 1220px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

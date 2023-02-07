@@ -1,0 +1,987 @@
+.edit-product {
+    @extend %content-flex-column;
+    #app {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+        width: 100%;
+        .product-props {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            width: 100%;
+			margin: 10px 0;
+            h2 {
+                width: 100%;
+				margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+			@extend %onoff;
+            .more-properties:checked + .properties-disabled {
+                display: flex;
+            }
+            .properties-enabled {
+                display: flex;
+            }
+            .properties-disabled  {
+                display: none;
+            }
+            > label {
+                box-sizing: border-box;
+                width: 100%;
+                margin: 10px 6px;
+                padding: 10px;
+                border-radius: 6px;
+                color: $DashboardBlocksHeadText;
+                background-color: $DashboardBlocks;
+                cursor: pointer;
+                &:hover {
+                    background-color: $DashboardBlocksHover;
+                }
+            }
+            > label + input[type=checkbox] {
+                display: none;
+            }
+            .properties-enabled, .properties-disabled {
+                flex-flow: row wrap;
+                width: 100%;
+                .block-wrap {
+                    position: relative;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: calc(100% - 12px);
+                    min-height: 150px;
+                    max-height: 160px;
+                    margin: 6px;
+                    @media(min-width: 600px) {
+                        width: calc(50% - 12px);
+                    }
+                    @media(min-width: $tablet) {
+                        width: calc(33% - 12px);
+                    }
+                    @media(min-width: $pc) {
+                        width: calc(25% - 12px);
+                    }
+                    @media(min-width: $pc-wide) {
+                        min-height: 136px;
+                        width: calc(20% - 12px);
+                    }
+                    .prop-text {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                .props-block {
+                    position: relative;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    min-height: 150px;
+                    max-height: 800px;
+                    padding: 12px;
+                    border-radius: 6px;
+                    background-color: $DashboardBlocks;
+                    overflow: hidden;
+                    @media(min-width: $pc-wide) {
+                        min-height: 136px;
+                    }
+        			.tgl {
+        				+ .tgl-btn {
+        					width: 40px;
+        					height: 20px;
+                            margin: 0;
+        				}
+        			}
+                    &:hover {
+                        position: absolute;
+                        max-height: 800px;
+                        background-color: #3B414C;
+                        z-index: 10;
+                        form {
+                            position: relative;
+                            width: 100%;
+                            top: 0;
+                            left: 0;
+                        }
+                        label {
+                            display: flex;
+                            &:nth-child(2) {
+                                display: block;
+                            }
+                        }
+                    }
+                    .prop-name {
+                        box-sizing: border-box;
+                        width: 100%;
+                        color: $DashboardBlocksHeadText;
+                        margin-bottom: 4px;
+                        padding-right: 56px;
+                        word-wrap: break-word;
+                        font-size: .8em;
+                    }
+                    form {
+                        box-sizing: border-box;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(100% - 24px);
+                        top: 12px;
+                        left: 12px;
+                    }
+                    label {
+                        display: none;
+                        width: 100%;
+                        margin: 3px 0;
+                        color: $DashboardBlocksText;
+                        input[type=checkbox] {
+                            margin-top: 6px;
+                        }
+                        &:nth-child(2) {
+                            display: block;
+                        }
+                        &:nth-child(4) {
+                            display: flex;
+                        }
+                        &:nth-child(5) {
+                            display: flex;
+                        }
+                        input[type=checkbox] {
+                            margin: 4px 0;
+                            margin-right: 10px;
+                            &:hover::before {
+                                cursor: pointer;
+                                background: $buttonBgHover;
+                            }
+                            &:before {
+                                content: ' ';
+                                display: block;
+                                width: 12px;
+                                height: 12px;
+                                padding: 2px;
+                                margin-left: -2px;
+                                background: #737E94;
+                                border-radius: 2px;
+                                color: $buttonColor;
+                                outline: none;
+                                transition: all .4s ease-out;
+                            }
+                            &:checked::before {
+                                content: url('/svg/check.svg');
+                                font-family: FontAwesome;
+                                cursor: pointer;
+                                color: white;
+                                background: $buttonBgHover;
+                            }
+                        }
+                    }
+                    select {
+                        width: 100%;
+                        margin: 10px 0;
+                        padding: 4px 10px;
+                        border: 1px solid $selectBorder;
+                        border-radius: 6px;
+                        outline: none;
+                        color: $selectText;
+                        background: $selectBg;
+                        transition: all .4s ease-out;
+                        -webkit-appearance: none;
+                        option {
+                            background: $selectBg;
+                            border: 1px solid red;
+                            outline-color: $selectOptionBorder;
+                            color: $selectText;
+                        }
+                    }
+                    input[type=text] {
+                        width: calc(100% - 53px);
+                        height: 17px;
+                        margin: 10px 0;
+                        padding: 4px 10px;
+                        background-color: $inputBg;
+                        border: 1px solid $inputBorder;
+                        border-radius: 6px;
+                        color: $inputColor;
+                        outline: none;
+                        transition: background-color .4s ease-out;
+                        &::placeholder {
+                            color: $inputPlaceholder;
+                        }
+                        &:focus {
+                            padding: 3px 9px;
+                            border: 2px solid $inputBorderFocus;
+                            border-radius: 8px;
+                            background-color: $inputBgFocus;
+                            &::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+                    button {
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        margin: 10px 0;
+                        margin-left: 8px;
+                        border: 1px solid $buttonBorder;
+                        border-radius: 6px;
+                        color: $buttonColor;
+                        background: $buttonBg;
+                        outline: none;
+                        cursor: pointer;
+                        transition: all .4s ease-out;
+                        &:hover {
+                            color: white;
+                            background: $buttonBgHover;
+                        }
+                    }
+                }
+                .props-block-disabled {
+                    position: relative;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    min-height: 150px;
+                    max-height: 800px;
+                    padding: 12px;
+                    border-radius: 6px;
+                    background-color: rgba(20%, 22%, 26%, .3);
+                    overflow: hidden;
+                    @media(min-width: $pc-wide) {
+                        min-height: 136px;
+                    }
+        			.tgl {
+        				+ .tgl-btn {
+        					width: 40px;
+        					height: 20px;
+        				}
+        			}
+                    .prop-name {
+                        box-sizing: border-box;
+                        width: 100%;
+                        color: $DashboardBlocksHeadText;
+                        margin-bottom: 4px;
+                        padding-right: 56px;
+                        word-wrap: break-word;
+                        font-size: .8em;
+                    }
+                    form {
+                        box-sizing: border-box;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(100% - 24px);
+                        top: 12px;
+                        left: 12px;
+                    }
+                    label {
+                        display: none;
+                        width: 100%;
+                        margin: 3px 0;
+                        color: $DashboardBlocksText;
+                        &:nth-child(2) {
+                            display: block;
+                        }
+                        &:nth-child(4) {
+                            display: flex;
+                        }
+                        &:nth-child(5) {
+                            display: flex;
+                        }
+                        input[type=checkbox] {
+                            width: 0;
+                            margin: 4px 0;
+                            margin-right: 24px;
+                            &:before {
+                                content: ' ';
+                                display: block;
+                                width: 12px;
+                                height: 12px;
+                                padding: 2px;
+                                margin-left: -2px;
+                                background: rgba(23%, 25%, 29%, .6);
+                                border-radius: 2px;
+                                color: $buttonColor;
+                                outline: none;
+                                transition: all .4s ease-out;
+                            }
+                        }
+                    }
+                    select {
+                        width: 100%;
+                        margin: 10px 0;
+                        padding: 4px 10px;
+                        border: 1px solid rgba(9%, 10%, 12%, .4);
+                        border-radius: 6px;
+                        outline: none;
+                        background: rgba(23%, 25%, 29%, .1);
+                        transition: all .4s ease-out;
+                    }
+                    input[type=text] {
+                        width: calc(100% - 20px);
+                        height: 17px;
+                        margin: 10px 0;
+                        padding: 4px 10px;
+                        background-color: $inputBg;
+                        border: 1px solid $inputBorder;
+                        border-radius: 6px;
+                        color: $inputColor;
+                        outline: none;
+                        transition: background-color .4s ease-out;
+                        &::placeholder {
+                            color: $inputPlaceholder;
+                        }
+                        &:focus {
+                            padding: 3px 9px;
+                            border: 2px solid $inputBorderFocus;
+                            border-radius: 8px;
+                            background-color: $inputBgFocus;
+                            &::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .files-wrap {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .uploaded-images {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                .upd-img {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 120px;
+                    height: 152px;
+                    margin: 6px;
+                    padding: 6px;
+                    border-radius: 6px;
+                    background: $DashboardBlocks;
+                    .img-wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 120px;
+                        height: 120px;
+                        overflow: hidden;
+                        img {
+                            width: 120px;
+                        }
+                    }
+                    .wrap-img-btn {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        bottom: 0;
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            width: 36px;
+                            margin: 4px 6px;
+                            padding: 7px 22px;
+                            background: none;
+                            border: 0;
+                            border-radius: 6px;
+                            color: $buttonColor;
+                            outline: none;
+                            transition: all .4s ease-out;
+                            &:hover {
+                                cursor: pointer;
+                                color: white;
+                                background: $buttonBgHover;
+                            }
+                        }
+                    }
+                }
+            }
+            .uploaded-files {
+				display: flex;
+				flex-direction: column;
+                width: 100%;
+                .upd-files {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    margin: 6px;
+                    padding: 6px;
+                    border-radius: 6px;
+                    color: $DashboardBlocksText;
+                    background: $DashboardBlocks;
+                    .file-name {
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        padding-right: 60px;
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 8px;
+                            fill: $buttonColor;
+                        }
+                        span {
+                            width: calc(100% - 32px);
+                        }
+                    }
+                    .wrap-file-btn {
+						position: absolute;
+						display: flex;
+						justify-content: center;
+						width: 60px;
+                        right: 0;
+						button {
+							display: flex;
+							justify-content: center;
+							width: 36px;
+							margin: 4px 6px;
+							padding: 7px 22px;
+							background: none;
+							border: 0;
+							border-radius: 6px;
+							color: $buttonColor;
+							outline: none;
+							transition: all .4s ease-out;
+							&:hover {
+								cursor: pointer;
+								color: white;
+								background: $buttonBgHover;
+							}
+						}
+					}
+                }
+            }
+            #lfm-img, #lfm-files {
+                @extend %button;
+                width: 210px;
+                margin: 6px;
+            }
+        }
+		.product-main-info {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+			.product-name {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				text-align: center;
+				color: white;
+				margin: 10px 0;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+			}
+            .vue-tags-input {
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 100% !important;
+                padding: 0 6px;
+                border-radius: 6px;
+                background-color: transparent !important;
+            }
+            .vue-tags-input .input {
+                width: 100%;
+                border: 1px solid #1C1E24 !important;
+                border-radius: 6px;
+                color: #D7DAE0;
+                background-color: #1E2127;
+            }
+            .vue-tags-input input {
+                color: #9098A7;
+                background-color: #1E2127;
+            }
+            .vue-tags-input .tag {
+                border-radius: 6px !important;
+            }
+			.product-head {
+                box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+                padding: 0 6px;
+                margin-bottom: 10px;
+				@media(min-width: $productSmall) {
+					flex-direction: row;
+				}
+				.left-info {
+					display: flex;
+					flex-direction: column;
+					flex: 0 0 auto;
+					@media(min-width: $productSmall) {
+						margin-right: 10px;
+					}
+					.block-img {
+                        box-sizing: border-box;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin: 10px 0;
+						padding: 10px;
+						width: 100%;
+						background: $DashboardBlocks;
+						border-radius: 6px;
+						overflow: hidden;
+						img {
+							width: 180px;
+						}
+					}
+					.product-id-block {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 10px 0;
+						color: $DashboardBlocksHeadText;
+						background: $DashboardBlocks;
+						border-radius: 6px;
+						font-size: 1.4rem;
+						font-weight: 800;
+						span {
+							margin-left: 10px;
+						}
+					}
+                    .stickers {
+                        select {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 7px 10px;
+                            border: 1px solid $selectBorder;
+                            border-radius: 6px;
+                            outline: none;
+                            color: $selectText;
+                            background: $selectBg;
+                            margin-top: 10px;
+                            -webkit-appearance: none;
+                        }
+                    }
+				}
+				.major-info {
+					background: $DashboardBlocks;
+					border-radius: 6px;
+					margin-top: 10px;
+					@media(min-width: $productSmall) {
+						flex: 1 1 auto;
+					}
+					.flex-width {
+						position: relative;
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: center;
+						width: 100%;
+						height: calc(100% - 40px);
+						padding-bottom: 40px;
+						@media(min-width: $productSmall) {
+							justify-content: flex-start;
+						}
+						.add-sku {
+							position: absolute;
+							right: 10px;
+							bottom: 10px;
+							padding: 7px 10px;
+							background: $buttonBg;
+							border: 1px solid $buttonBorder;
+							border-radius: 6px;
+							color: $buttonColor;
+							outline: none;
+							transition: all .4s ease-out;
+							&:hover {
+								cursor: pointer;
+								color: white;
+								background: $buttonBgHover;
+							}
+						}
+						.sku {
+							display: flex;
+							flex-direction: column;
+							width: 246px;
+							margin: 10px;
+							padding: 14px 4px;
+							border-radius: 6px;
+							background: $skuBg;
+							color: $DashboardBlocksHeadText;
+							.price-sku {
+								display: flex;
+								width: 100%;
+								.half {
+									display: flex;
+									flex-direction: column;
+									width: 50%;
+									input {
+										width: calc(100% - 42px);
+									}
+								}
+							}
+							span {
+								margin-left: 12px;
+							}
+							input[type=text], input[type=number] {
+								margin: 10px;
+								padding: 7px 10px;
+								background: $inputBg;
+								border: 1px solid $inputBorder;
+								border-radius: 6px;
+								color: $inputColor;
+								outline: none;
+								transition: background .4s ease-out;
+								&::placeholder {
+									color: $inputPlaceholder;
+								}
+								&:focus {
+									padding: 6px 9px;
+									background: $inputBgFocus;
+									border: 2px solid $inputBorderFocus;
+									border-radius: 8px;
+									&::placeholder {
+										color: transparent;
+									}
+								}
+							}
+							button {
+								margin: 4px 10px;
+								padding: 7px 10px;
+								background: $buttonBg;
+								border: 1px solid $buttonBorder;
+								border-radius: 6px;
+								color: $buttonColor;
+								outline: none;
+								transition: all .4s ease-out;
+								&:hover {
+									cursor: pointer;
+									color: white;
+									background: $buttonBgHover;
+								}
+							}
+						}
+					}
+				}
+			}
+			.product-main-options {
+                box-sizing: border-box;
+				width: 100%;
+				margin-top: 10px;
+                padding: 0 6px;
+				form {
+					display: flex;
+					flex-flow: row wrap;
+					.btn-sub-wrap {
+						button {
+							margin: 10px 0;
+							padding: 7px 20px;
+							background: $buttonBg;
+							border: 1px solid $buttonBorder;
+							border-radius: 6px;
+							color: $buttonColor;
+							outline: none;
+							transition: all .4s ease-out;
+							&:hover {
+								cursor: pointer;
+								color: white;
+								background: $buttonBgHover;
+							}
+						}
+					}
+					.textarea-wrap {
+						@extend %textarea-wrap;
+					}
+					.blocks-num {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						@media(min-width: 1600px) {
+							flex-direction: row;
+						}
+						.block-input-number,
+						.block-select {
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							width: calc(100% - 24px);
+							margin: 4px 0;
+							padding: 12px;
+							border-radius: 6px;
+							color: $DashboardBlocksHeadText;
+							background: $DashboardBlocks;
+							@media(min-width: $tablet) {
+								flex-direction: row;
+								justify-content: flex-start;
+								align-items: center;
+							}
+							.name {
+								width: 270px;
+							}
+							select {
+								width: 100%;
+								padding: 7px 10px;
+	                            border: 1px solid $selectBorder;
+	                            border-radius: 6px;
+	                            outline: none;
+	                            color: $selectText;
+	                            background: $selectBg;
+								margin-top: 10px;
+                                -webkit-appearance: none;
+								@media(min-width: $tablet) {
+									margin-top: 0;
+									margin-left: 10px;
+								}
+	                        }
+							input[type=number], input[type=text] {
+								width: calc(100% - 20px);
+								padding: 7px 10px;
+								background: $inputBg;
+								border: 1px solid $inputBorder;
+								border-radius: 6px;
+								color: $inputColor;
+								outline: none;
+								transition: background .4s ease-out;
+								margin-top: 10px;
+								@media(min-width: $tablet) {
+									margin-top: 0;
+									margin-left: 10px;
+									width: 100%;
+								}
+								&::placeholder {
+									color: $inputPlaceholder;
+								}
+								&:focus {
+									padding: 6px 9px;
+									background: $inputBgFocus;
+									border: 2px solid $inputBorderFocus;
+									border-radius: 8px;
+									&::placeholder {
+										color: transparent;
+									}
+								}
+							}
+						}
+						.block-input-number {
+							&:nth-child(2) {
+								@media(min-width: 1600px) {
+									margin: 4px 6px;
+								}
+							}
+						}
+						.block-select {
+							&:nth-child(1) {
+								@media(min-width: 1600px) {
+									margin-right: 12px;
+								}
+							}
+						}
+					}
+					.input-wrap {
+						@extend %input-wrap;
+					}
+				}
+			}
+		}
+        .product-groups-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 8px;
+            .on-off {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: calc(100% - 24px);
+                margin: 10px 10px 0;
+                padding: 12px;
+                border-radius: 6px;
+                color: $DashboardBlocksHeadText;
+                background-color: $DashboardBlocks;
+                @extend %onoff;
+                .tgl {
+                    + .tgl-btn {
+                        width: 60px;
+                        height: 30px;
+                    }
+                }
+                .tgl-flat {
+                    + .tgl-btn {
+                        top: 8px;
+                        left: 240px;
+                    }
+                    &:checked + .tgl-btn {
+                        background: #4CC76F;
+                    }
+                }
+            }
+            .product-accessories, .product-cross-selling, .product-up-selling {
+                @extend %content-flex-column;
+                min-height: 0;
+                max-height: 0;
+                width: 100%;
+                overflow: hidden;
+                transition: all .5s ease-out;
+                h2 {
+                    width: 100%;
+    				margin: 10px 0;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+        .calculated-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            h2 {
+                width: 100%;
+                margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+            .add-calc-group {
+                @extend %add-form;
+                width: calc(100% - 20px);
+            }
+            .dragArea {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    list-style: none;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
+                        width: calc(100% - 20px);
+                        padding: 10px;
+                        border-radius: 6px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $navBg;
+                        button {
+                            display: flex;
+                            align-items: center;
+                            background-color: transparent;
+                            border: 0;
+                            outline: none;
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                &:hover {
+                                    cursor: pointer;
+                                    fill: white;
+                                }
+                            }
+                        }
+                    }
+                    .dragArea {
+                        width: 100%;
+                        ul {
+                            width: 100%;
+                            margin: 6px 0;
+                            li {
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+                                background-color: $DashboardBlocks;
+                                @media(min-width: $tablet) {
+                                    flex-direction: row;
+                                }
+                                div {
+                                    width: calc(100% - 28px);
+                                    margin: 4px;
+                                    padding: 10px;
+                                    border-radius: 6px;
+                                    background-color: $skuBg;
+                                }
+                            }
+                        }
+                    }
+                    .add-calc-option {
+                        @extend %add-form;
+                        width: calc(100% - 20px);
+                        margin: 6px 0;
+                    }
+                }
+            }
+        }
+        .product-tabs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            h2 {
+                width: 100%;
+                margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+            .add-tab {
+                @extend %add-form;
+                flex-direction: column;
+                width: calc(100% - 20px);
+                input {
+                    margin: 0 !important;
+                }
+                textarea {
+                    height: 300px;
+                    margin: 10px 0;
+                }
+            }
+            .dragArea {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    margin: 6px 0;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        list-style: none;
+                        width: calc(100% - 20px);
+                        padding: 10px;
+                        border-radius: 6px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                        @media(min-width: $tablet) {
+                            flex-direction: row;
+                        }
+                        button {
+                            display: flex;
+                            align-items: center;
+                            background-color: transparent;
+                            border: 0;
+                            outline: none;
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                &:hover {
+                                    cursor: pointer;
+                                    fill: white;
+                                }
+                            }
+                        }
+                        div {
+                            width: calc(100% - 28px);
+                            margin: 4px;
+                            padding: 10px;
+                            border-radius: 6px;
+                            background-color: $skuBg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

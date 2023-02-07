@@ -1,0 +1,21 @@
+.module-contacts-wrap {
+    @extend %content-flex-column;
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        width: calc(100% - 20px);
+        margin: 6px 10px;
+        .input-wrap {
+            @extend %input-wrap;
+        }
+        .textarea-wrap {
+            @extend %textarea-wrap;
+        }
+        .btn-sub-wrap {
+            margin: 10px 0 30px;
+            button {
+                @extend %button;
+            }
+        }
+    }
+}

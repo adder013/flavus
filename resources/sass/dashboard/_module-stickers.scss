@@ -1,0 +1,63 @@
+.module-stickers-wrap {
+    @extend %content-flex-column;
+    .add-sticker {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 20px);
+        margin: 10px;
+        padding: 20px 10px;
+        background-color: $DashboardBlocks;
+        border-radius: 6px;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .input-wrap {
+                box-sizing: border-box;
+                @extend %input-wrap;
+                padding: 4px 12px;
+            }
+            .btn-sub-wrap {
+                display: flex;
+                width: calc(100% - 20px);
+                button {
+                    @extend %button;
+                }
+            }
+        }
+    }
+    .stickers {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 100%;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            margin: 10px;
+            padding: 20px 10px;
+            border-radius: 6px;
+            background-color: $DashboardBlocks;
+            .input-wrap {
+                box-sizing: border-box;
+                @extend %input-wrap;
+                padding: 4px 12px;
+            }
+            .btn-wrap {
+                display: flex;
+                .btn-sub-wrap {
+                    margin: 10px 20px 10px 0;
+                    button {
+                        @extend %button;
+                    }
+                }
+            }
+        }
+    }
+}

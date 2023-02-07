@@ -1,0 +1,34 @@
+.module-redirect-wrap {
+    @extend %content-flex-column;
+    h1 {
+        @extend %h1;
+    }
+    .add-redirect {
+        @extend %add;
+    }
+    @extend %table;
+    .table-wrap {
+        table {
+            thead {
+                tr {
+                    th {
+                        &:nth-child(5),
+                        &:nth-child(6) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        &:nth-child(5),
+                        &:nth-child(6) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

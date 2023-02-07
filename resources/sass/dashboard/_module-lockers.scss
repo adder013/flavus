@@ -1,0 +1,712 @@
+.module-lockers-wrap {
+    @extend %content-flex-column;
+    h1 {
+        @extend %h1;
+    }
+    .add-locker {
+        @extend %add;
+    }
+    .breadcrumb {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+        color: $DashboardBlocksHeadText;
+        .breadcrumb-btn {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            height: 32px;
+            padding: 0 10px;
+            margin-left: 8px;
+            transition: all .5s ease-out;
+            &:hover {
+                &::before {
+                    background-color: $generalColor;
+                }
+                &::after {
+                    background-color: $generalColor;
+                }
+                a {
+                    color: black;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: ' ';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 16px;
+                transform: skew(45deg);
+                background-color: $navBg;
+                transition: all .5s ease-out;
+            }
+            &::after {
+                position: absolute;
+                content: ' ';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 16px;
+                transform: skew(-45deg);
+                background-color: $navBg;
+                transition: all .5s ease-out;
+            }
+            a {
+                position: relative;
+                box-sizing: border-box;
+                padding: 4px 10px;
+                text-decoration: none;
+                color: $DashboardBlocksHeadText;
+                z-index: 1;
+                transition: all .5s ease-out;
+            }
+        }
+    }
+    .lockers-wrap {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .locker {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: $DashboardBlocks;
+            @media(max-width: 499px) {
+                width: 100%;
+                margin: 10px 0 0;
+            }
+            @media(min-width: 500px) and (max-width: 799px) {
+                width: calc(50% - 5px);
+                margin: 10px 10px 0 0;
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: 800px) and (max-width: $tablet-max) {
+                width: calc(33.33% - 6.66px);
+                margin: 10px 10px 0 0;
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: $tablet) and (max-width: $pc-max) {
+                width: calc(50% - 5px);
+                margin: 10px 10px 0 0;
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: $pc) and (max-width: $pc-4k-max) {
+                width: calc(25% - 7.5px);
+                margin: 10px 10px 0 0;
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: $pc-4k) {
+                width: calc(20% - 8px);
+                margin: 10px 10px 0 0;
+                &:nth-child(5n) {
+                    margin-right: 0;
+                }
+            }
+            .img-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 160px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .name {
+                width: 100%;
+                margin-top: 10px;
+                font-weight: 700;
+                color: $DashboardBlocksHeadText;
+            }
+            .btn-wrap {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                margin-top: 10px;
+                button {
+                    width: 100%;
+                    @extend %button;
+                }
+                a {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    @extend %a-button;
+                }
+            }
+        }
+    }
+    .locker {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .data-left {
+            width: 100%;
+            @media(min-width: $tablet) {
+                width: calc(34% - 10px);
+                margin-right: 10px;
+            }
+            @media(min-width: $pc) {
+                width: calc(20% - 10px);
+            }
+            .locker-list {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 8px;
+                background-color: $DashboardBlocks;
+                .block-img {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    background-color: white;
+                    border: 2px dashed black;
+                    img {
+                        width: 280px;
+                        @media(min-width: $pc) {
+                            width: 100%;
+                        }
+                    }
+                }
+                > button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    @extend %button;
+                }
+                .on-off {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 6px;
+                    height: 36px;
+                    margin-bottom: 10px;
+                    font-size: .8em;
+                    color: $DashboardBlocksHeadText;
+                    background-color: rgba(0, 0, 0, .4);
+                    @extend %onoff;
+                    .tgl {
+                        + .tgl-btn {
+                            width: 44px;
+                            height: 24px;
+                        }
+                    }
+                    .tgl-flat {
+                        + .tgl-btn {
+                            top: 6px;
+                            right: 6px;
+                        }
+                    }
+                }
+                @extend %sortable-list;
+            }
+        }
+        .data-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+            @media(min-width: $tablet) {
+                width: 66%;
+                margin-top: 0;
+            }
+            @media(min-width: $pc) {
+                width: 80%;
+            }
+            .add-locker {
+                @extend %add;
+            }
+            .edit-locker {
+                .block-input {
+                    &:first-child {
+                        margin: 0;
+                    }
+                }
+                @extend %edit;
+            }
+            .locker-list {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                .locker-block {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    background-color: $DashboardBlocks;
+                    @media(max-width: 499px) {
+                        width: 100%;
+                        margin: 10px 0 0;
+                    }
+                    @media(min-width: 500px) and (max-width: 799px) {
+                        width: calc(50% - 5px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: 800px) and (max-width: $tablet-max) {
+                        width: calc(33.33% - 6.66px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: $tablet) and (max-width: $pc-max) {
+                        width: calc(50% - 5px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: $pc) and (max-width: $pc-4k-max) {
+                        width: calc(25% - 7.5px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(4n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: $pc-4k) {
+                        width: calc(20% - 8px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(5n) {
+                            margin-right: 0;
+                        }
+                    }
+                    .img-wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        height: 120px;
+                        background-color: white;
+                        border: 2px dashed black;
+                        img {
+                            height: 80%;
+                        }
+                    }
+                    .name {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        width: 100%;
+                        margin-top: 10px;
+                        font-size: 1.1em;
+                        font-weight: 700;
+                        color: $DashboardBlocksHeadText;
+                    }
+                    .btn-wrap {
+                        display: flex;
+                        flex-flow: row wrap;
+                        width: 100%;
+                        margin-top: 10px;
+                        button {
+                            width: 100%;
+                            @extend %button;
+                        }
+                        a {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            @extend %a-button;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .locker-tables {
+        .block-textarea {
+            textarea {
+                height: 120px !important;
+            }
+        }
+    }
+    .locker-slider,
+    .locker-tables {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        h2 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            margin: 10px 0;
+            font-size: 1.6em;
+        }
+        .add-slider,
+        .add-table {
+            @extend %add;
+        }
+        .draggable {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            .slider {
+                @extend %edit;
+                align-items: center;
+                background-color: $DashboardBlocks;
+                .block-input {
+                    padding: 0 12px !important;
+                    input {
+                        margin-left: 0 !important;
+                    }
+                }
+                .block-textarea {
+                    margin: 0;
+                    textarea {
+                        height: 220px;
+                    }
+                }
+                > button {
+                    width: calc(100% - 20px);
+                    margin-bottom: 10px;
+                    @extend %button;
+                    &.img-change {
+                        margin-top: 10px;
+                    }
+                }
+                .image-wrap {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: calc(100% - 20px);
+                    height: 100px;
+                    margin: 10px 10px 0;
+                    background-color: white;
+                    border: 2px dashed black;
+                    overflow: hidden;
+                    img {
+                        box-sizing: border-box;
+                        width: 150px;
+                        padding: 10px;
+                    }
+                }
+                @media(max-width: 499px) {
+                    width: 100%;
+                    margin: 10px 0 0;
+                }
+                @media(min-width: 500px) and (max-width: 799px) {
+                    width: calc(50% - 5px);
+                    margin: 10px 10px 0 0;
+                    &:nth-child(2n) {
+                        margin-right: 0;
+                    }
+                }
+                @media(min-width: 800px) and (max-width: $tablet-max) {
+                    width: calc(33.33% - 6.66px);
+                    margin: 10px 10px 0 0;
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
+                @media(min-width: $tablet) and (max-width: $pc-max) {
+                    width: calc(50% - 5px);
+                    margin: 10px 10px 0 0;
+                    &:nth-child(2n) {
+                        margin-right: 0;
+                    }
+                }
+                @media(min-width: $pc) {
+                    width: calc(25% - 7.5px);
+                    margin: 10px 10px 0 0;
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .locker-orders {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        h2 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            margin: 10px 0;
+            font-size: 1.6em;
+        }
+        .add-order {
+            @extend %add;
+            input {
+                width: 500px;
+            }
+        }
+        > button {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            padding: 4px 10px;
+            font-family: OpenSans;
+            font-size: .85rem;
+            border: 1px solid $buttonBorder;
+            color: $buttonColor;
+            background-color: $buttonBg;
+            outline: none;
+            cursor: pointer;
+            transition: all .4s ease-out;
+            span {
+                margin-left: 8px;
+            }
+            @media(max-width: $tablet-max) {
+                width: 100%;
+                margin-top: 10px;
+            }
+            &:hover {
+                color: white;
+                background: $buttonBgHover;
+            }
+        }
+        .draggable {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            .orders-list {
+                box-sizing: border-box;
+                display: flex;
+                width: 100%;
+                padding: 6px 10px;
+                background-color: $DashboardBlocks;
+                input {
+                    box-sizing: border-box;
+                    width: calc(100% - 50px);
+                    padding: 6px 10px;
+                    border: 1px solid $inputBorder;
+                    outline: none;
+                    transition: background-color .4s ease-out;
+                    color: $inputColor;
+                    background-color: $inputBg;
+                    &::placeholder {
+                        color: $inputPlaceholder;
+                    }
+                    &:focus {
+                        padding: 5px 9px;
+                        border: 2px solid $inputBorderFocus;
+                        background-color: $inputBgFocus;
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                button {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    margin-left: 10px;
+                    padding: 4px 10px;
+                    font-family: OpenSans;
+                    font-size: .85rem;
+                    border: 1px solid $buttonBorder;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .4s ease-out;
+                    &:hover {
+                        color: white;
+                        background: $buttonBgHover;
+                    }
+                }
+            }
+        }
+    }
+    .locker-images {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        h2 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            margin: 10px 0;
+            font-size: 1.6em;
+        }
+        > button {
+            margin-top: 10px;
+            @extend %button;
+        }
+        .images {
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            padding: 6px 10px;
+            background-color: $DashboardBlocks;
+            .image-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                margin: 10px;
+                .img-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100px;
+                    background-color: white;
+                    border: 1px dashed black;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+                input {
+                    box-sizing: border-box;
+                    padding: 6px 10px;
+                    border: 1px solid $inputBorder;
+                    outline: none;
+                    transition: background-color .4s ease-out;
+                    color: $inputColor;
+                    -webkit-user-select: none;
+                    background-color: $inputBg;
+                    &::-webkit-file-upload-button {
+                        visibility: hidden;
+                    }
+                    @media(max-width: $tablet-max) {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                    @media(min-width: $tablet) {
+                        margin-right: 10px;
+                    }
+                    &::placeholder {
+                        color: $inputPlaceholder;
+                    }
+                    &:focus {
+                        padding: 5px 9px;
+                        border: 2px solid $inputBorderFocus;
+                        background-color: $inputBgFocus;
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                button {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 4px 10px;
+                    font-family: OpenSans;
+                    font-size: .85rem;
+                    border: 1px solid $buttonBorder;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .4s ease-out;
+                    span {
+                        margin-left: 8px;
+                    }
+                    &:hover {
+                        color: white;
+                        background: $buttonBgHover;
+                    }
+                }
+            }
+            .image-block-brands {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 180px;
+                margin: 10px;
+                .img-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100px;
+                    background-color: white;
+                    border: 1px dashed black;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+                input {
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 6px 10px;
+                    margin-top: 10px;
+                    border: 1px solid $inputBorder;
+                    outline: none;
+                    transition: background-color .4s ease-out;
+                    color: $inputColor;
+                    -webkit-user-select: none;
+                    background-color: $inputBg;
+                    &::-webkit-file-upload-button {
+                        visibility: hidden;
+                    }
+                    &::placeholder {
+                        color: $inputPlaceholder;
+                    }
+                    &:focus {
+                        padding: 5px 9px;
+                        border: 2px solid $inputBorderFocus;
+                        background-color: $inputBgFocus;
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                button {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 4px 10px;
+                    font-family: OpenSans;
+                    font-size: .85rem;
+                    border: 1px solid $buttonBorder;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .4s ease-out;
+                    span {
+                        margin-left: 8px;
+                    }
+                    &:hover {
+                        color: white;
+                        background: $buttonBgHover;
+                    }
+                }
+            }
+        }
+    }
+}

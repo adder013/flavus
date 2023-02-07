@@ -1,0 +1,129 @@
+.catalog-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px 10px;
+    @media(max-width: $large-mobile-max) {
+        padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+        padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+    }
+    h1 {
+        @extend %pages-h1;
+    }
+    .category-blocks {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .block {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 6px;
+            border: 1px solid $border;
+            background-color: $generalBg;
+            @media(min-width: $large-mobile) {
+                width: 50%;
+            }
+            @media(min-width: $tablet) {
+                display: flex;
+                flex-direction: column;
+                width: calc(33% - 12px);
+            }
+            @media(min-width: $pc) {
+                width: calc(25% - 12px);
+            }
+            .img-link {
+                width:100%; 
+                img {
+                    display: block;
+                    margin: 16px auto;
+                    height: 140px;
+                }
+            }
+            h2 {
+                display: flex;
+                flex-flow: row nowrap;
+                font-size: 1em;
+                padding: 12px 16px 12px;
+                height: 40px;
+                border-top: 1px solid $border;
+                a {
+                    width:88%;
+                    color: black;
+                    word-wrap: break-word;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @extend %hover-transition;
+                    &:hover {
+                        color: $generalHover;
+                    }
+                }
+                .dropdown-btn-cat{
+                    border: none;
+                    width:12%;
+                    margin-bottom: 16px;
+                    font-weight: bold;
+                    background: none;
+                    font-size: 1em;
+                    svg{
+                        max-width: 14px;
+                        max-height: 14px;
+                        transform:rotate(0deg);
+                    }
+                }
+            }
+            .sub-categories {
+                display: none;
+                border-top: 1px solid $border;
+                > ul {
+                    list-style: none;
+                    > li {
+                        border-bottom: 1px solid $border;
+                        display: flex;
+                        flex-flow: row wrap;
+                        padding: 10px 16px 10px;
+                        a {
+                            vertical-align: middle;
+                            color: black;
+                            word-wrap: break-word;
+                            text-decoration: none;
+                            width:88%;
+                            @extend %hover-transition;
+                            &:hover {
+                                color: $generalHover;
+                            }
+                        }
+                        .dropdown-btn{
+                            border: none;
+                            width:12%;
+                            background: none;
+                            font-size: 13px;
+                            svg{
+                                max-width: 14px;
+                                max-height: 14px;
+                                transform:rotate(0deg);
+                            }
+                        }
+                        .dropdown-container {
+                            list-style: none;
+                            display: none;
+                            li {
+                                margin: 4px 0;
+                                a {
+                                    word-wrap: break-word;
+                                    color: #9e9e9e;
+                                    text-decoration: none;
+                                    @extend %hover-transition;
+                                    &:hover {
+                                        color: $generalHover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    > li:last-child{
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

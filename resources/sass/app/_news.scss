@@ -1,0 +1,217 @@
+.news-wrap {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0 20px 10px;
+    @media(max-width: $large-mobile-max) {
+        padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+        padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+    }
+    h1 {
+        width: 100%;
+        @extend %pages-h1;
+        margin-bottom: 0;
+    }
+    .all-news {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .news-block {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid $border;
+            background-color: $generalBg;
+            text-decoration: none;
+            color: black;
+            @extend %hover-transition;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 5px 15px 5px $shadowColor;
+            }
+            @media(min-width: $large-mobile) {
+                width: calc(50% - 10px);
+                margin-right: 20px;
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: $tablet) {
+                width: calc(33% - 14px);
+                &:nth-child(2n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: $pc) {
+                width: calc(25% - 15px);
+                &:nth-child(2n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+            }
+            @media(min-width: $pc-4k) {
+                width: calc(20% - 20px);
+                &:nth-child(2n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(4n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(5n) {
+                    margin-right: 0;
+                }
+            }
+            .img-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                @media(min-width: $large-mobile) {
+                    height: 170px;
+                }
+                @media(min-width: $tablet) {
+                    height: 200px;
+                }
+                @media(min-width: $pc) {
+                    height: 280px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .time {
+                margin-top: 20px;
+            }
+            h2 {
+                margin-top: 20px;
+                font-weight: 400;
+            }
+            .description {
+                margin-top: 20px;
+                color: rgba(51%, 51%, 51%, 1);
+            }
+        }
+    }
+}
+.news-page-wrap {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 10px 20px;
+    @media(max-width: $large-mobile-max) {
+        padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+        padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+    }
+    .news {
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        background-color: $generalBg;
+        border: 1px solid $border;
+        .main-news {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @media(min-width: $tablet) {
+                width: calc(75% - 20px);
+                margin-right: 20px
+            }
+            .time {
+
+            }
+            h1 {
+                margin-top: 20px;
+                font-weight: 400;
+            }
+            .main-slider {
+                margin: 20px 0;
+                .flickity-prev-next-button {
+                    @media(max-width: $large-mobile-max) {
+                        padding-left: env(safe-area-inset-left);
+                        padding-right: env(safe-area-inset-right);
+                    }
+                }
+            }
+            .description {
+                font-size: 1.1em;
+                p {
+                    margin: 20px 0;
+                }
+                ul {
+                    margin: 20px 20px 20px 40px;
+                }
+            }
+        }
+        .latest-news {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            margin-top: 40px;
+            @media(max-width: $tablet-max) {
+                display: none;
+            }
+            h2 {
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+            .news-item {
+                display: flex;
+                flex-direction: column;
+                .time {
+                    margin-top: 10px;
+                    padding-top: 20px;
+                    border-top: 1px solid $border;
+                }
+                .name {
+                    margin: 10px 0;
+                    a {
+                        font-size: 1.2em;
+                        text-decoration: none;
+                        color: black;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: $generalHover;
+                        }
+                    }
+                }
+            }
+            .all-news-link {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                padding: 20px 0;
+                border-top: 1px solid $border;
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $generalHover;
+                    font-size: 1.2em;
+                    text-decoration: none;
+                    svg {
+                        margin-left: 8px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

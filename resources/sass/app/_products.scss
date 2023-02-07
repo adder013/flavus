@@ -1,0 +1,1646 @@
+.product-wrap {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0 20px 10px;
+    @media (max-width: $large-mobile-max) {
+        padding-left: unquote("max(#{20px}, env(safe-area-inset-left))");
+        padding-right: unquote("max(#{20px}, env(safe-area-inset-right))");
+    }
+    figure {
+        margin: 0;
+    }
+    > .product {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $generalBg;
+        border: 1px solid $border;
+        .top {
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            border-bottom: 1px solid $border;
+            @media (min-width: $tablet) {
+                padding: 20px;
+            }
+            h1 {
+                display: flex;
+                flex: 1 1 auto;
+                font-size: 1.3em;
+                @media (min-width: $tablet) {
+                    font-size: 1.6em;
+                }
+            }
+            .print-button {
+                box-sizing: border-box;
+                display: flex;
+                height: 100%;
+                padding-left: 20px;
+                button {
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+                    border: 0;
+                    font-size: 1em;
+                    outline: none;
+                    cursor: pointer;
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    span {
+                        margin-left: 10px;
+                        @media (max-width: $tablet-max) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .main-info {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 10px;
+            @media (min-width: $tablet) {
+                flex-direction: row;
+                padding: 20px;
+            }
+            .slider-wrap {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @media (min-width: $tablet) {
+                    width: 25%;
+                }
+            }
+            .preview {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @media (min-width: $tablet) {
+                    width: 50%;
+                    padding: 0 20px;
+                }
+                .text {
+                    padding-bottom: 8px;
+                }
+                .sticker {
+                    display: flex;
+                    align-self: flex-start;
+                    padding: 3px 10px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 0.8em;
+                    color: white;
+                }
+                .brand {
+                    height: 50px;
+                    margin: 10px 0;
+                    img {
+                        height: 100%;
+                    }
+                }
+                .additional-info {
+                    display: flex;
+                    flex-direction: column;
+                    .in-stock,
+                    .preorder,
+                    .production,
+                    .delivery-city {
+                        display: flex;
+                        margin: 3px 0;
+                        color: $notActive;
+                        font-size: 0.9em;
+                        word-wrap: break-word;
+                        span {
+                            &::before {
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                margin-top: 2px;
+                                margin-right: 8px;
+                                opacity: 0.6;
+                            }
+                        }
+                        .in-stock-icon {
+                            &::before {
+                                content: url("/svg/instock.svg");
+                            }
+                        }
+                        .preorder-icon {
+                            &::before {
+                                content: url("/svg/preorder.svg");
+                                display: block;
+                            }
+                        }
+                        .production-icon {
+                            &::before {
+                                content: url("/svg/production.svg");
+                                display: block;
+                            }
+                        }
+                        .delivery-city-icon {
+                            &::before {
+                                content: url("/svg/delivery.svg");
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .shop {
+                display: flex;
+                flex-direction: column;
+				align-items: flex-start;
+                width: 100%;
+                @media (max-width: $tablet-max) {
+                    margin-top: 20px;
+                }
+                @media (min-width: $tablet) {
+                    width: 25%;
+                }
+                .product-code {
+                    font-weight: 700;
+                    .code {
+                        display: flex;
+                        flex-flow: row wrap;
+                        span {
+                            margin-right: 3px;
+                        }
+                    }
+                }
+                .sku {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    .name {
+                        font-weight: 700;
+                    }
+                    input[type="radio"] {
+                        position: relative;
+                        margin-left: 4px;
+                        padding-right: 10px;
+                        cursor: pointer;
+                        &:hover::before {
+                            cursor: pointer;
+                            border: 1px solid $generalColor;
+                        }
+                        &:before {
+                            content: " ";
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            margin-left: -4px;
+                            background-color: white;
+                            border-radius: 50%;
+                            border: 1px solid $border;
+                            outline: none;
+                            transition: all 0.4s ease-out;
+                        }
+                        &:checked::before {
+                            content: " ";
+                            cursor: pointer;
+                            background-color: $generalColor;
+                        }
+                        &:checked::after {
+                            position: absolute;
+                            content: " ";
+                            cursor: pointer;
+                            display: block;
+                            top: 6px;
+                            left: 2px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: black;
+                        }
+                    }
+                    label {
+                        margin-top: 14px;
+                        display: inline-flex;
+                        cursor: pointer;
+                    }
+                    span {
+                        margin-left: 10px;
+                    }
+                    > div {
+                        display: block;
+                    }
+                }
+                #old-price {
+                    margin-top: 20px;
+                    font-size: 1.4em;
+                    color: red;
+                    text-decoration: line-through;
+                }
+                .price-block {
+                    display: flex;
+                    width: 250px;
+                    flex-direction: column;
+                }
+                .price-wrap {
+                    display: flex;
+                    margin-top: 16px;
+                    font-size: 1.8em;
+                    font-weight: 700;
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+                .price-usd-wrap {
+                    display: flex;
+                    margin-top: 10px;
+                    span {
+                        font-size: 1.2em;
+                        margin-left: 5px;
+                        color: rgb(128, 128, 128);
+                    }
+                }
+                #price-USD {
+                    font-size: 1.2em;
+                    color: rgb(128, 128, 128);
+                }
+                #price-empty {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-size: 1.6em;
+                    font-weight: 700;
+                }
+                .options {
+                    display: flex;
+                    flex-direction: column;
+                    select {
+                        box-sizing: border-box;
+                        width: 200px;
+                        margin: 10px 0;
+                        padding: 5px 10px;
+                    }
+                }
+                .cart-wrap {
+                    display: flex;
+                    flex-flow: row wrap;
+                    > button {
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 26px;
+                        height: 36px;
+                        margin-top: 20px;
+                        padding: 0;
+                        border: 1px solid $border;
+                        background-color: white;
+                        outline: none;
+                        cursor: pointer;
+                        z-index: 1;
+                        @extend %transition;
+                        &:first-child {
+                            margin-right: -1px;
+                        }
+                        &.last {
+                            margin-right: 20px;
+                        }
+                        &:hover {
+                            border: 1px solid #000;
+                            svg {
+                                fill: #000;
+                            }
+                        }
+                        svg {
+                            @extend %transition;
+                            fill: #7f7f7f;
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                    .request-price {
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 140px;
+                        height: 36px;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 0.9em;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        background-color: white;
+                        border: 1px solid $border;
+                        text-decoration: none;
+                        color: black;
+                        @extend %transition;
+                        @media (max-width: 1220px) {
+                            width: 110px;
+                            padding-left: 8px;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $generalColor;
+                        }
+                    }
+                    .disabled {
+                        &:hover {
+                            cursor: not-allowed !important;
+                            background-color: transparent !important;
+                        }
+                    }
+                    input[type="number"] {
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 36px;
+                        margin-top: 20px;
+                        margin-right: -1px;
+                        border: 1px solid $border;
+                        border-radius: 0;
+                        text-align: center;
+                        outline: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: textfield;
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+                    .btn-wrap {
+                        margin-top: 20px;
+                        @media (max-width: $tablet-max) {
+                            display: flex;
+                            flex: 1 1 auto;
+                            justify-content: flex-end;
+                        }
+                        button {
+                            position: relative;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            width: 140px;
+                            height: 36px;
+                            margin: 0;
+                            padding: 0;
+                            padding-left: 24px;
+                            font-size: 0.9em;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            background-color: white;
+                            border: 1px solid $border;
+                            outline: none;
+                            @extend %transition;
+                            @media (max-width: 1220px) {
+                                width: 110px;
+                                padding-left: 8px;
+                            }
+                            &:hover {
+                                cursor: pointer;
+                                background-color: $generalColor;
+                            }
+                            span {
+                                position: absolute;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                top: 0;
+                                right: 0;
+                                width: 34px;
+                                height: 34px;
+                                border-left: 1px solid $border;
+                                background-color: $generalColor;
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                        }
+                        .disabled-btn {
+                            svg {
+                                fill: $notActive;
+                            }
+                            span {
+                                background-color: white;
+                            }
+                            &:hover {
+                                cursor: not-allowed;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+                .action-required {
+                    display: none;
+                    margin-top: 10px;
+                    color: orange;
+                }
+                .tax {
+                    margin-top: 20px;
+                    font-weight: 700;
+                }
+                .cvl-wrap {
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 20px;
+                    .compare {
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        color: $notActive;
+                        margin-right: 14px;
+                        @extend %hover-transition;
+                        span {
+                            margin-left: 6px;
+                        }
+                        &::before {
+                            content: url("/svg/compare.svg");
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 4px;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            color: $active;
+                            &::before {
+                                content: url("/svg/compare_hover.svg");
+                            }
+                        }
+                        &.selected {
+                            color: black;
+                            &::before {
+                                content: url("/svg/compare_hover.svg");
+                            }
+                        }
+                    }
+                    .bookmark {
+                        display: flex;
+                        align-items: center;
+                        color: $notActive;
+                        margin-right: 14px;
+                        @extend %hover-transition;
+                        span {
+                            margin-left: 6px;
+                        }
+                        &::before {
+                            content: url("/svg/bookmark.svg");
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 4px;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            color: $active;
+                            &::before {
+                                content: url("/svg/bookmark_hover.svg");
+                            }
+                        }
+                        &.selected {
+                            color: black;
+                            &::before {
+                                content: url("/svg/bookmark_hover.svg");
+                            }
+                        }
+                    }
+                }
+                .email-contact {
+                    margin: 20px 0;
+                    padding: 10px;
+                    border: 1px solid $border;
+                }
+            }
+        }
+    }
+    .configurator {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: rgba(90%, 88%, 85%, 1);
+        .options-head {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @media (min-width: $tablet) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .head-wrap {
+                h2 {
+                    padding: 7px 16px;
+                    font-size: 1.6em;
+                    font-weight: 400;
+                    border-left: 10px solid $generalColor;
+                }
+            }
+            .progress {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                @media (min-width: $tablet) and (max-width: $pc-wide-max) {
+                    width: calc(33% - 6px);
+                    margin-top: 0;
+                    margin-right: 8px;
+                }
+                @media (min-width: $pc-wide) {
+                    width: calc(25% - 8px);
+                    margin-right: 2px;
+                }
+                .title {
+                    width: 100%;
+                    margin-bottom: 6px;
+                    text-align: center;
+                }
+                .percent {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-bottom: 4px;
+                    font-size: 0.9em;
+                }
+                .progress-bar {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 100%;
+                    height: 8px;
+                    padding: 1px;
+                    border-radius: 10px;
+                    background-color: rgba(50%, 49%, 47%, 1);
+                    #bar {
+                        display: block;
+                        width: 0%;
+                        border-radius: 10px;
+                        height: 6px;
+                        background-color: rgba(96%, 92%, 2%, 1);
+                        @extend %transition;
+                    }
+                }
+            }
+        }
+        .options-code {
+            .opt-code {
+                display: flex;
+                flex-flow: row wrap;
+                @media (max-width: $tablet-max) {
+                    margin-top: 20px;
+                }
+                span {
+                    margin-right: 3px;
+                }
+            }
+            .opt-code-price {
+                margin-top: 10px;
+            }
+        }
+        .options {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            margin-top: 20px;
+            .option-wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 100%;
+                @media (min-width: $large-mobile) and (max-width: $tablet-max) {
+                    width: calc(50% - 5px);
+                    margin: 10px 10px 10px 0;
+                    &:nth-child(2n) {
+                        margin: 10px 0;
+                    }
+                }
+                @media (min-width: $tablet) and (max-width: $pc-wide-max) {
+                    width: calc(33% - 6px);
+                    margin: 10px 10px 10px 0;
+                    &:nth-child(3n) {
+                        margin: 10px 0;
+                    }
+                }
+                @media (min-width: $pc-wide) {
+                    width: calc(25% - 8px);
+                    margin: 10px 10px 10px 0;
+                    &:nth-child(4n) {
+                        margin: 10px 0;
+                    }
+                }
+                .name {
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                }
+                select {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 36px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .more {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        @media (max-width: $pc-max) {
+            flex-direction: column;
+        }
+        .product-info-wrap {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20px;
+            @extend %table-layout;
+            .product-info {
+                position: relative;
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                background-color: $generalBg;
+                border: 1px solid $border;
+                @media (max-width: $tablet-max) {
+                    display: none;
+                }
+                .tabs {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 100%;
+                    padding-right: 170px;
+                    padding-bottom: 20px;
+                    li {
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 20px 0 0 20px;
+                        border: 1px solid $border;
+                        cursor: pointer;
+                        @extend %hover-transition;
+                        &:hover {
+                            background-color: $generalColor;
+                        }
+                        &.ui-state-active {
+                            background-color: $generalColor;
+                        }
+                        a {
+                            box-sizing: border-box;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            color: black;
+                            padding: 10px;
+                            text-decoration: none;
+                            outline: none;
+                        }
+                    }
+                }
+                .ask-question {
+                    position: absolute;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 20px;
+                    right: 20px;
+                    padding: 10px;
+                    border: 1px solid $border;
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                    @extend %hover-transition;
+                    &:hover {
+                        background-color: $generalColor;
+                    }
+                }
+                .tags {
+                    display: flex;
+                    margin: 20px;
+                    a {
+                        color: black;
+                        margin-right: 6px;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: $generalHover;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                hr {
+                    width: 100%;
+                    height: 1px;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    background-color: $border;
+                }
+                .section {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding-top: 38px;
+                    padding: 20px;
+                    overflow: hidden;
+                    .info-table {
+                        width: 100%;
+                    }
+                    &:nth-child(7),
+                    &:nth-child(8),
+                    &:nth-child(9) {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        &:first-child {
+                                            text-align: left !important;
+                                        }
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        &:first-child {
+                                            text-align: left !important;
+                                        }
+                                        &.center {
+                                            text-align: center !important;
+                                        }
+                                        &.bold {
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        table {
+                            width: 50%;
+                        }
+                        .all-center {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                        .all-left {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                        .col-2 {
+                            thead {
+                                tr {
+                                    th {
+                                        width: 50%;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        width: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    h2 {
+                        margin-bottom: 20px;
+                        font-size: 1.8em;
+                        font-weight: 400;
+                    }
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        margin: 10px 0;
+                    }
+                    p {
+                        margin: 10px 0;
+                    }
+                    ul {
+                        margin-left: 40px;
+                        li {
+                            ul {
+                                margin-top: 4px;
+                                margin-bottom: 4px;
+                            }
+                        }
+                    }
+                    .scroll-fix {
+                        position: absolute;
+                        display: inline-block;
+                        width: 100%;
+                        height: 26px;
+                        left: 0;
+                        bottom: 20px;
+                        background-color: white;
+                    }
+                    .tab-scroll {
+                        width: 100%;
+                        padding-bottom: 20px;
+                        overflow-x: scroll;
+                        img {
+                            @media (max-width: $tablet-max) {
+                                width: 100%;
+                            }
+                        }
+                        &.custom {
+                            table {
+                                box-sizing: border-box;
+                                width: 50%;
+                                margin: 0;
+                                border-collapse: collapse;
+                                border-spacing: 0;
+                                @media (min-width: $pc) {
+                                    width: 70%;
+                                }
+                                thead {
+                                    width: 100%;
+                                    tr {
+                                        width: 100%;
+                                        margin: 0;
+                                        background-color: $tableOdd;
+                                        td,
+                                        th {
+                                            box-sizing: border-box;
+                                            // width: 50%;
+                                            padding: 10px;
+                                            font-weight: 700;
+                                            text-align: center;
+                                            border: 1px solid $border;
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    width: 100%;
+                                    tr {
+                                        width: 100%;
+                                        margin: 0;
+                                        &:nth-child(even) {
+                                            background-color: $tableOdd;
+                                        }
+                                        &:nth-child(odd) {
+                                            background-color: white;
+                                        }
+                                        td {
+                                            box-sizing: border-box;
+                                            padding: 10px;
+                                            border: 1px solid $border;
+                                            &.price {
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#description table,
+                    table {
+                        margin: 6px 0;
+                        box-sizing: border-box;
+                        width: 50%;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        border: 1px solid $border;
+                        @media (max-width: $pc-max) {
+                            width: 100% !important;
+                        }
+                        th,
+                        td {
+                            border: 1px solid $border;
+                        }
+                        thead {
+                            width: 100%;
+                            tr {
+                                width: 100%;
+                                margin: 0;
+                                background-color: #dedede;
+                                td,
+                                th {
+                                    box-sizing: border-box;
+                                    padding: 10px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        tbody {
+                            width: 100%;
+                            tr {
+                                width: 100%;
+                                margin: 0;
+                                &:nth-child(odd) {
+                                    background-color: $tableOdd;
+                                }
+                                td {
+                                    box-sizing: border-box;
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .files {
+                        display: flex;
+                        flex-direction: column;
+                        align-self: flex-start;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            margin: 10px 0;
+                            color: black;
+                            text-decoration: none;
+                            &:hover {
+                                color: $generalHover;
+                            }
+                            img {
+                                width: 26px;
+                                height: 26px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .product-info-mobile {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                @media (max-width: $tablet-max) {
+                    display: flex;
+                }
+                .section-title {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 100%;
+                    margin-top: -2px;
+                    padding: 20px;
+                    background-color: $mainBg;
+                    border: 1px solid $border;
+                    outline: none;
+                    .accordion-expand {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 8px;
+                        svg {
+                            @extend %transition;
+                            width: 14px;
+                        }
+                    }
+                    &.ui-state-active {
+                        background-color: white;
+                        .accordion-expand {
+                            svg {
+                                width: 14px;
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+                }
+                .tags {
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 100%;
+                    padding-bottom: 40px;
+                    a {
+                        color: black;
+                        margin-right: 6px;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: $generalHover;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                hr {
+                    width: 100%;
+                    height: 1px;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    background-color: $border;
+                }
+                .section {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: calc(100% + 38px);
+                    margin-top: -2px;
+                    padding-top: 38px;
+                    padding: 20px;
+                    overflow: hidden;
+                    border: 1px solid $border;
+                    &.ui-accordion-content-active {
+                        background-color: white;
+                    }
+                    h2 {
+                        margin-bottom: 20px;
+                        font-size: 1.8em;
+                        font-weight: 400;
+                    }
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        margin: 10px 0;
+                    }
+                    p {
+                        margin: 10px 0;
+                    }
+                    ul {
+                        margin-left: 40px;
+                        li {
+                            ul {
+                                margin-top: 4px;
+                                margin-bottom: 4px;
+                            }
+                        }
+                    }
+                    .scroll-fix {
+                        position: absolute;
+                        display: inline-block;
+                        width: 100%;
+                        height: 26px;
+                        left: 0;
+                        bottom: 20px;
+                        background-color: white;
+                    }
+                    .tab-scroll {
+                        width: 100%;
+                        padding-bottom: 20px;
+                        overflow-x: scroll;
+                        img {
+                            @media (max-width: $tablet-max) {
+                                width: 100%;
+                            }
+                        }
+                        &.custom {
+                            table {
+                                box-sizing: border-box;
+                                width: 100%;
+                                margin: 0;
+                                border-collapse: collapse;
+                                border-spacing: 0;
+                                @media (min-width: $pc) {
+                                    width: 70%;
+                                }
+                                thead {
+                                    width: 100%;
+                                    tr {
+                                        width: 100%;
+                                        margin: 0;
+                                        background-color: $tableOdd;
+                                        td,
+                                        th {
+                                            box-sizing: border-box;
+                                            padding: 10px;
+                                            font-weight: 700;
+                                            text-align: center;
+                                            border: 1px solid $border;
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    width: 100%;
+                                    tr {
+                                        width: 100%;
+                                        margin: 0;
+                                        &:nth-child(even) {
+                                            background-color: $tableOdd;
+                                        }
+                                        td {
+                                            box-sizing: border-box;
+                                            padding: 10px;
+                                            border: 1px solid $border;
+                                            &.price {
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.description table,
+                    .info-table {
+                        box-sizing: border-box;
+                        width: 100%;
+                        margin: 0;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        border: 1px solid $border;
+                        @media (max-width: $pc-max) {
+                            width: 100% !important;
+                        }
+                        thead {
+                            width: 100%;
+                            tr {
+                                width: 100%;
+                                margin: 0;
+                                background-color: #dedede;
+                                td,
+                                th {
+                                    box-sizing: border-box;
+                                    padding: 10px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        tbody {
+                            width: 100%;
+                            tr {
+                                width: 100%;
+                                margin: 0;
+                                &:nth-child(odd) {
+                                    background-color: $tableOdd;
+                                }
+                                td {
+                                    box-sizing: border-box;
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .files {
+                        display: flex;
+                        flex-direction: column;
+                        align-self: flex-start;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            margin: 10px 0;
+                            color: black;
+                            text-decoration: none;
+                            &:hover {
+                                color: $generalHover;
+                            }
+                            img {
+                                width: 26px;
+                                height: 26px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.with-accessories {
+            .product-info-wrap {
+                width: 100%;
+                @media (min-width: $pc) {
+                    width: 75%;
+                }
+            }
+        }
+        .ask-question-mobile {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid $border;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: $generalColor;
+            @media (min-width: $tablet) {
+                display: none;
+            }
+        }
+        .accessories-wrap {
+            width: 100%;
+            margin-top: 20px;
+            background-color: transparent;
+            @media (min-width: $pc) {
+                width: calc(25% - 20px);
+                margin-left: 20px;
+            }
+            .accessories {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                background-color: $generalBg;
+                border: 1px solid $border;
+                &.short {
+                    .product:nth-child(n + 5) {
+                        display: none;
+                    }
+                }
+                h2 {
+                    box-sizing: border-box;
+                    display: flex;
+                    width: 100%;
+                    padding: 25px 20px 26px;
+                    font-weight: 400;
+                    border-bottom: 1px solid $border;
+                }
+                .product {
+                    box-sizing: border-box;
+                    display: flex;
+                    width: 100%;
+                    padding: 20px;
+                    border-bottom: 1px solid $border;
+                }
+                .img-wrap {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 30%;
+                    @media (min-width: $tablet) {
+                        width: 10%;
+                    }
+                    @media (min-width: $pc) {
+                        width: 30%;
+                    }
+                    img {
+                        width: 90%;
+                    }
+                }
+                .product-overview {
+                    width: 70%;
+                    @media (min-width: $tablet) {
+                        width: 90%;
+                    }
+                    @media (min-width: $pc) {
+                        width: 70%;
+                    }
+                    .text {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 0.85em;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: $generalHover;
+                        }
+                    }
+                    .shop-wrap {
+                        display: flex;
+                        align-items: center;
+                        height: 50px;
+                        .s-price {
+                            display: flex;
+                            flex: 1 1 auto;
+                            font-weight: 700;
+                            font-size: 1.4em;
+                        }
+                        .s-price-usd-wrap {
+                            display: flex;
+                            flex: 1 1 auto;
+                            font-weight: 700;
+                            font-size: 1.4em;
+                            span {
+                                margin-left: 5px;
+                            }
+                        }
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 34px;
+                            height: 34px;
+                            margin: 0;
+                            padding: 0;
+                            outline: none;
+                            background-color: $generalColor;
+                            border: 1px solid $border;
+                            cursor: pointer;
+                            svg {
+                                outline: none;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+                .see-more-wrap {
+                    display: flex;
+                    width: 100%;
+                    .see-more {
+                        box-sizing: border-box;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        padding: 20px;
+                        cursor: pointer;
+                        @extend %hover-transition;
+                        &:hover {
+                            background-color: $generalColor;
+                        }
+                        svg {
+                            position: absolute;
+                            right: 20px;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cross-selling-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        h2 {
+            margin: 30px 0;
+            @extend %h2;
+        }
+        .slider-wrap {
+            display: flex;
+            justify-content: center;
+            .cs-product {
+                display: flex;
+                flex-direction: column;
+                width: 230px;
+                height: 330px;
+                padding: 15px;
+                background-color: $generalBg;
+                border: 1px solid $border;
+                color: black;
+                text-decoration: none;
+                &:hover {
+                    h3 {
+                        color: $generalHover;
+                        @extend %hover-transition;
+                    }
+                }
+                img {
+                    height: 200px;
+                    width: 100%;
+                    object-fit: contain;
+                    margin-bottom: 12px;
+                }
+                h3 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    font-size: 16px;
+                    font-weight: normal;
+                }
+                .code {
+                    margin-top: 4px;
+                    color: #b3b3b3;
+                }
+                .price {
+                    margin-top: auto;
+                    font-weight: bold;
+                }
+            }
+            @media (min-width: 768px) {
+                .carousel {
+                    width: calc(100% - 70px);
+                }
+                .flickity-button {
+                    background-color: #333;
+                    &:hover {
+                        background-color: $generalHover;
+                    }
+                }
+                .flickity-prev-next-button {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    &.previous {
+                        left: -35px;
+                    }
+                    &.next {
+                        right: -35px;
+                    }
+                }
+                .flickity-button-icon {
+                    fill: white;
+                }
+            }
+        }
+    }
+    .up-selling-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        h2 {
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            @extend %h2;
+            margin: 30px 20px;
+        }
+        .up-selling-blocks {
+            display: flex;
+            justify-content: center;
+            width: 280px;
+            margin-left: 1px;
+            @media (min-width: 700px) {
+                width: 559px;
+            }
+            @media (min-width: 1300px) {
+                width: 838px;
+            }
+            @media (min-width: 1550px) {
+                width: 1117px;
+            }
+            @media (min-width: 1800px) {
+                width: 1396px;
+            }
+            .us-product {
+                position: relative;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                width: 280px;
+                height: 100%;
+                padding: 20px;
+                margin-left: -1px;
+                background-color: $generalBg;
+                border: 1px solid $border;
+                .top {
+                    .cvl-wrap {
+                        display: flex;
+                        flex-flow: row-reverse wrap;
+                        align-items: center;
+                        width: 100%;
+                        .compare,
+                        .bookmark {
+                            display: flex;
+                            align-items: center;
+                            color: $notActive;
+                            margin-left: 14px;
+                            @extend %hover-transition;
+                            svg {
+                                width: 24px;
+                                height: 24px;
+                                @extend %hover-transition;
+                            }
+                            span {
+                                margin-left: 6px;
+                            }
+                            &:hover {
+                                cursor: pointer;
+                                color: $active;
+                                svg {
+                                    fill: $active;
+                                }
+                            }
+                        }
+                    }
+                }
+                .img-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    height: 200px;
+                    img {
+                        height: 90%;
+                    }
+                }
+                a {
+                    display: flex;
+                    align-items: flex-start;
+                    text-decoration: none;
+                    height: 110px;
+                    color: black;
+                    @extend %hover-transition;
+                    &:hover {
+                        color: $generalHover;
+                    }
+                }
+                .code {
+                    height: 70px;
+                }
+                hr {
+                    width: 100%;
+                    height: 1px;
+                    margin: 20px 0;
+                    padding: 0;
+                    border: 0;
+                    background-color: $border;
+                }
+                .shop-wrap {
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    .s-price {
+                        display: flex;
+                        flex: 1 1 auto;
+                        font-weight: 700;
+                        font-size: 1.4em;
+                    }
+                    .s-price-usd-wrap {
+                        display: flex;
+                        flex: 1 1 auto;
+                        font-weight: 700;
+                        font-size: 1.4em;
+                        span {
+                            margin-left: 5px;
+                        }
+                    }
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 34px;
+                        height: 34px;
+                        margin: 0;
+                        padding: 0;
+                        background-color: $generalColor;
+                        border: 1px solid $border;
+                        cursor: pointer;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mail-us-block {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid $border;
+    @media (max-width: $large-mobile-max) {
+        padding-left: unquote("max(#{20px}, env(safe-area-inset-left))");
+        padding-right: unquote("max(#{20px}, env(safe-area-inset-right))");
+    }
+    @media (max-width: $tablet-max) {
+        flex-direction: column;
+    }
+    img {
+        width: 127px;
+        height: 89px;
+        margin-right: 20px;
+    }
+    .text-phone {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $tablet-max) {
+            width: 100%;
+        }
+        @media (min-width: $tablet) {
+            min-width: 100px;
+            max-width: 580px;
+        }
+        .text {
+            @media (max-width: $tablet-max) {
+                margin-top: 20px;
+                text-align: justify;
+            }
+        }
+        .phone {
+            margin-top: 10px;
+            a {
+                text-decoration: none;
+                font-size: 1.5em;
+                color: $asideMenuColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<svg width="103" height="72" viewBox="0 0 103 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="41" width="103" height="31" fill="#F5EB05"/>
+<path d="M28 32H14V49H56V32L45 13H29V32H28Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.5 53.5C20.8137 53.5 23.5 50.8137 23.5 47.5C23.5 44.1863 20.8137 41.5 17.5 41.5C14.1863 41.5 11.5 44.1863 11.5 47.5C11.5 50.8137 14.1863 53.5 17.5 53.5Z" fill="white" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M52.5 53.5C55.8137 53.5 58.5 50.8137 58.5 47.5C58.5 44.1863 55.8137 41.5 52.5 41.5C49.1863 41.5 46.5 44.1863 46.5 47.5C46.5 50.8137 49.1863 53.5 52.5 53.5Z" fill="white" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M56 37.3H61.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M62.5 20.5V49.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63 26.3H68.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63 42.3H68.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M68.5 8.5V49.5H90.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90.5 27.5H68.5V49.5H90.5V27.5Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 33.5V27.6" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90.5 1.5H68.5V23.5H90.5V1.5Z" fill="#FFEA13" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M80 7.50001V1.60001" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.5 2.3H30" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>

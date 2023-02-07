@@ -1,0 +1,9 @@
+.module-robots-wrap {
+    @extend %content-flex-column;
+    h1 {
+        @extend %h1;
+    }
+    .update-robots {
+        @extend %update;
+    }
+}

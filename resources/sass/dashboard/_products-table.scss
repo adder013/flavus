@@ -1,0 +1,26 @@
+.products-table-wrap {
+    width: 100%;
+    @extend %table;
+    .table-wrap {
+        table {
+            thead {
+                tr {
+                    th {
+                        &:nth-child(4) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        &:nth-child(4) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

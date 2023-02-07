@@ -1,0 +1,312 @@
+.products-wrap {
+    @extend %content-flex-column;
+    .all-categories {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .breadcrumb {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+            color: $DashboardBlocksHeadText;
+            background-color: transparent !important;
+            .breadcrumb-btn {
+                position: relative;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 10px;
+                margin-left: 8px;
+                transition: all .5s ease-out;
+                &:hover {
+                    &::before {
+                        background-color: $generalColor;
+                    }
+                    &::after {
+                        background-color: $generalColor;
+                    }
+                    a {
+                        color: black;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    content: ' ';
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 16px;
+                    transform: skew(45deg);
+                    background-color: $navBg;
+                    transition: all .5s ease-out;
+                }
+                &::after {
+                    position: absolute;
+                    content: ' ';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 16px;
+                    transform: skew(-45deg);
+                    background-color: $navBg;
+                    transition: all .5s ease-out;
+                }
+                a {
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 4px 10px;
+                    text-decoration: none;
+                    color: $DashboardBlocksHeadText;
+                    z-index: 1;
+                    transition: all .5s ease-out;
+                }
+            }
+        }
+        .data-left {
+            width: 100%;
+            @media(min-width: $pc) {
+                width: calc(34% - 10px);
+                margin-right: 10px;
+            }
+            @media(min-width: $pc-wide) {
+                width: calc(20% - 10px);
+            }
+            .categories-list {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 8px;
+                background-color: $DashboardBlocks;
+                .block-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    img {
+                        width: 280px;
+                        @media(min-width: $pc) {
+                            width: 100%;
+                        }
+                    }
+                }
+                > button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    @extend %button;
+                }
+                .on-off {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 6px;
+                    height: 36px;
+                    margin-bottom: 4px;
+                    color: $DashboardBlocksHeadText;
+                    background-color: rgba(0, 0, 0, .4);
+                    @extend %onoff;
+                    .tgl {
+                        + .tgl-btn {
+                            width: 44px;
+                            height: 24px;
+                        }
+                    }
+                    .tgl-flat {
+                        + .tgl-btn {
+                            top: 6px;
+                            right: 6px;
+                        }
+                    }
+                }
+                @extend %sortable-list;
+            }
+        }
+        .data-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+            @media(min-width: $pc) {
+                width: 66%;
+                margin-top: 0;
+            }
+            @media(min-width: $pc-wide) {
+                width: 80%;
+            }
+            .add-category {
+                @extend %add;
+            }
+            .edit-category {
+                @extend %edit;
+            }
+            .categories-description {
+                @extend %update;
+            }
+        }
+        .filters {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+            @media(min-width: $tablet) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .enabled-options {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @media(min-width: $tablet) {
+                    width: 49%;
+                }
+                .active-filters {
+                    position: absolute;
+                    display: block;
+                    top: 16px;
+                    left: 16px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    outline: none;
+                    border: 0;
+                    background-color: red;
+                    cursor: pointer;
+                    &.on {
+                        background-color: #6ac259;
+                    }
+                }
+                h3 {
+                    box-sizing: border-box;
+                    color: $DashboardBlocksHeadText;
+                    background-color: $thead;
+                    width: 100%;
+                    padding: 10px 14px 10px 40px;
+                }
+                .option {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    padding: 6px 10px;
+                    cursor: move;
+                    cursor: grab;
+                    color: $DashboardBlocksText;
+                    background-color: $tbodyOdd;
+                    &:nth-child(even) {
+                        background-color: $tbodyEven;
+                    }
+                    .name {
+                        margin-left: 8px;
+                    }
+                    svg {
+                        position: absolute;
+                        top: 8px;
+                        right: 6px;
+                        width: 24px;
+                    }
+                    input[type=checkbox] {
+                        width: 16px;
+                        height: 16px;
+                        cursor: pointer;
+                        &::before {
+                            box-sizing: border-box;
+                            content: " ";
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            padding: 2px;
+                            background-color: $tSelectBox;
+                            outline: 0;
+                            transition: all .4s ease-out;
+                        }
+                        &:checked::before {
+                            content: url('/svg/check.svg');
+                            padding: 3px;
+                            background-color: $tSelectBoxActive;
+                        }
+                        &:hover::before {
+                            background-color: $tSelectBoxActive;
+                        }
+                    }
+                }
+            }
+            .disabled-options {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                @media(min-width: $tablet) {
+                    width: 49%;
+                    margin-top: 0;
+                }
+                h3 {
+                    box-sizing: border-box;
+                    color: $DashboardBlocksHeadText;
+                    background-color: $thead;
+                    width: 100%;
+                    padding: 10px 14px;
+                }
+                .hidden-options {
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 100%;
+                    .option {
+                        position: relative;
+                        box-sizing: border-box;
+                        display: flex;
+                        width: 100%;
+                        padding: 6px 10px;
+                        font-size: .9em;
+                        cursor: move;
+                        cursor: grab;
+                        color: $DashboardBlocksText;
+                        background-color: $tbodyOdd;
+                        &:nth-child(even) {
+                            background-color: $tbodyEven;
+                        }
+                        .name {
+                            margin-left: 8px;
+                        }
+                        input[type=checkbox] {
+                            width: 16px;
+                            height: 16px;
+                            cursor: pointer;
+                            &::before {
+                                box-sizing: border-box;
+                                content: " ";
+                                display: block;
+                                width: 18px;
+                                height: 18px;
+                                padding: 2px;
+                                background-color: $tSelectBox;
+                                outline: 0;
+                                transition: all .4s ease-out;
+                            }
+                            &:checked::before {
+                                content: url('/svg/check.svg');
+                                padding: 3px;
+                                background-color: $tSelectBoxActive;
+                            }
+                            &:hover::before {
+                                background-color: $tSelectBoxActive;
+                            }
+                        }
+                        @media(min-width: $tablet) {
+                            width: 50%;
+                        }
+                        @media(min-width: $pc-wide) {
+                            width: 33.333333%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

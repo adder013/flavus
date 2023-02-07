@@ -1,0 +1,184 @@
+.ib-page {
+	width: 100%;
+	font-size: 1rem;
+	@media (max-width: 600px) {
+		font-size: .8rem;
+	}
+	.banner-1 {
+		height: 700px;
+		color: white;
+		background: no-repeat center;
+		background-image: url("/img/static/individualB/main-photo-2.png");
+		background-size: 100% 100%;
+		h2 {
+			font-size: 3em;
+			text-align: center;
+			padding: 100px 45px 70px 45px;
+			font-weight: 600;
+			@media (min-width: $pc) {
+				font-size: 3em;
+			}
+		}
+		@media (max-width: $pc-max) {
+			background-size: 120% 100%;
+		}
+		@media (max-width: $tablet-max) {
+			background-size: 145% 100%;
+		}
+		@media (max-width: 750px) {
+			background-size: 200% 100%;
+		}
+		@media (max-width: $large-mobile-max) {
+			background-size: 300% 100%;
+		}
+	}
+	.main-work-pluses{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width:100%;
+		height:720px;
+		background-color: #ffffff;
+		&::after {
+			content: " ";
+			display: block;
+			width: 110px;
+			height: 10px;
+			margin-top: 70px;
+			margin-bottom: 20px;
+			background-color: $generalColor;
+		}
+		.work-pluses{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-content: center;
+			.pluses-block{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width:22.5%;
+				height:100%;
+				img {
+					width:240px;
+					height:240px;
+					padding: 60px 20px 20px;
+					align-items: center;
+				}
+				h3 {
+					padding: 20px 10px;
+					font-size: 17.5px;
+					text-align: center;
+				}
+				p {
+					padding: 20px 20px 50px 20px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.work-how{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width:100%;
+		height:620px;
+		background-color: #ffffff;
+		&::after {
+			content: " ";
+			display: block;
+			width: 110px;
+			height: 10px;
+			margin-top: 110px;
+			background-color: $generalColor;
+		}
+		h2{
+			font-size: 1.7em;
+			font-weight: 700;
+			padding: 20px 20px;
+		}
+		.how-blocks{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			.how-block{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width:16.5%;
+				height:100%;
+				img{
+					width: 115px;
+					height: 115px;
+					margin: 60px 20px 20px;
+					align-items: center;
+					border: 3px solid $border;
+					border-radius: 100%;
+				}
+				h3 {
+					padding: 20px 10px;
+					font-size: 17.5px;
+					text-align: center;
+				}
+				p {
+					padding: 0px 30px 20px 30px;
+					text-align: center;
+				}
+			}
+			.arrow-svg{
+				width:1.5%;
+				svg{
+					margin-top: 90px;
+					color: $border;
+					width:100%;
+				}
+			}
+		}
+	}
+	.our-pluses{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width:100%;
+		height:760px;
+		background-color: #ffffff;
+		h2{
+			font-size: 1.7em;
+			font-weight: 700;
+			padding: 40px 20px 20px;
+		}
+		.our-pluses-blocks{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			.our-pluses-block{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width:22.5%;
+				height:100%;
+				img {
+					width:200px;
+					height:200px;
+					padding: 30px 30px 30px;
+					align-items: center;
+				}
+				h3 {
+					padding: 0px 10px 20px;
+					font-size: 17.5px;
+					text-align: center;
+				}
+				p {
+					padding: 20px 20px 50px 20px;
+					text-align: center;
+				}
+			}
+		}
+		.mail-us{
+			width: 170px;
+            @extend %yellow-button;
+			margin-top: 60px;
+		}
+	}
+}

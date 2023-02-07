@@ -1,0 +1,22 @@
+$headBg: #1B1E24;
+.container-fluid {
+    .panel-primary {
+        border-color: $headBg;
+        background-color: $headBg;
+        .panel-heading {
+            border-color: $headBg;
+            background-color: $headBg;
+        }
+    }
+    #tree {
+        .folder-item {
+            font-size: 1.6rem;
+            color: black;
+        }
+    }
+    #content {
+        a {
+            color: black;
+        }
+    }
+}

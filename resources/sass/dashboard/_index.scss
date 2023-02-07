@@ -1,0 +1,993 @@
+.v-list__tile__content,
+.v-list__tile {
+    height: 28px !important;
+}
+.csv-table-wrap {
+    display: flex;
+    height: 100%;
+    transition: all .5s ease-out;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .csv-table {
+        position: relative;
+        height: 100%;
+        background-color: $thead;
+        .head {
+            position: absolute;
+            display: flex;
+            left: 0;
+            width: 100%;
+            height: 52px;
+            color: $DashboardBlocksHeadText;
+            background-color: $thead;
+            overflow: hidden;
+            .error {
+                color: white;
+                background-color: rgba(100%, 0%, 0%, .3);
+            }
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: left;
+                width: 200px;
+                height: 42px;
+                color: $DashboardBlocksHeadText;
+                font-size: .9em;
+                margin: 6px 0;
+                &:first-child,
+                &:nth-child(2) {
+                    width: 120px;
+                }
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: 300px;
+                }
+                &:last-child {
+                    flex: 1 1 auto;
+                }
+                input {
+                    cursor: pointer;
+                    padding: 4px 10px;
+                }
+            }
+        }
+        .body {
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+            transition: all .5s ease-out;
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .product {
+                    display: flex;
+                    //color: $DashboardBlocksText;
+                    color: white;
+                    overflow: hidden;
+                    background-color: $tbodyOdd;
+                    .error {
+                        background-color: rgba(100%, 0%, 0%, .3);
+                        border-color: black !important;
+                    }
+                    &:nth-child(even) {
+                        background-color: $tbodyEven;
+                    }
+                    .loading {
+                        color: white;
+                        background-color: rgba(5%, 69%, 92%, .5) !important;
+                    }
+                    .loaded {
+                        color: white;
+                        background-color: rgba(11%, 89%, 28%, .3) !important;
+                    }
+                    .problem {
+                        color: white;
+                        background-color: rgba(100%, 78%, 17%, .6) !important;
+                    }
+                    > div {
+                        display: flex;
+                        justify-content: flex-start;
+                        text-align: left;
+                        line-height: 30px;
+                        font-size: .9em;
+                        width: 200px;
+                        min-height: 30px;
+                        max-height: 30px;
+                        transition: all 1s ease-out;
+                        overflow: hidden;
+                        border: 1px solid black;
+                        padding: 1px;
+                        input {
+                            width: 100%;
+                            padding: 4px 10px;
+                        }
+                        &:first-child,
+                        &:nth-child(2) {
+                            width: 120px;
+                        }
+                        &:nth-child(3), {
+                            //color: white;
+                            //background-color: rgba(34%, 95%, 52%, .3);
+                        }
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            width: 300px;
+                        }
+                        &:last-child {
+                            flex: 1 1 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .csv-table-product {
+        position: relative;
+        height: 100%;
+        background-color: $thead;
+        .head {
+            position: absolute;
+            display: flex;
+            left: 0;
+            width: 100%;
+            height: 52px;
+            color: $DashboardBlocksHeadText;
+            background-color: $thead;
+            overflow: hidden;
+            .error {
+                color: white;
+                background-color: rgba(100%, 0%, 0%, .3);
+            }
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: left;
+                width: 200px;
+                height: 42px;
+                color: $DashboardBlocksHeadText;
+                font-size: .9em;
+                margin: 6px 0;
+                &:first-child,
+                &:nth-child(2) {
+                    width: 350px;
+                }
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: 300px;
+                }
+                &:last-child {
+                    flex: 1 1 auto;
+                }
+                input {
+                    cursor: pointer;
+                    padding: 4px 10px;
+                }
+            }
+        }
+        .body {
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+            transition: all .5s ease-out;
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .product {
+                    display: flex;
+                    //color: $DashboardBlocksText;
+                    color: white;
+                    overflow: hidden;
+                    background-color: $tbodyOdd;
+                    .error {
+                        background-color: rgba(100%, 0%, 0%, .3);
+                        border-color: black !important;
+                    }
+                    &:nth-child(even) {
+                        background-color: $tbodyEven;
+                    }
+                    .loading {
+                        color: white;
+                        background-color: rgba(5%, 69%, 92%, .5) !important;
+                    }
+                    .loaded {
+                        color: white;
+                        background-color: rgba(11%, 89%, 28%, .3) !important;
+                    }
+                    .problem {
+                        color: white;
+                        background-color: rgba(100%, 78%, 17%, .6) !important;
+                    }
+                    > div {
+                        display: flex;
+                        justify-content: flex-start;
+                        text-align: left;
+                        line-height: 30px;
+                        font-size: .9em;
+                        width: 200px;
+                        min-height: 30px;
+                        max-height: 30px;
+                        transition: all 1s ease-out;
+                        overflow: hidden;
+                        border: 1px solid black;
+                        padding: 1px;
+                        > div {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            input {
+                                width: 100%;
+                                height: 100%;
+                                padding: 4px 10px;
+                            }
+                            div {
+                                display: flex;
+                                align-items: center;
+                                white-space: nowrap;
+                                width: 100%;
+                                height: 100%;
+                                padding: 4px 10px;
+                            }
+                            select {
+                                width: 100%;
+                                padding: 4px 10px;
+                                appearance: menulist;
+                                option {
+                                    color: #000;
+                                }
+                            }
+                        }
+                        &:first-child,
+                        &:nth-child(2) {
+                            width: 350px;
+                        }
+                        &:nth-child(3), {
+                            //color: white;
+                            //background-color: rgba(34%, 95%, 52%, .3);
+                        }
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            width: 300px;
+                        }
+                        &:last-child {
+                            flex: 1 1 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.csv-scroll-fix {
+    display: block;
+    background-color: $DashboardBg;
+    width: 100%;
+    height: 30px;
+    margin-top: -27px;
+    z-index: 10;
+}
+.currencies {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $DashboardBlocks;
+    div {
+        color: white;
+        margin: 4px 10px;
+    }
+}
+.dashboard-main {
+    @extend %content-flex-column;
+    .upload-products, .upload-categories {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        overflow-x: hidden;
+        .scroll-fix {
+            display: block;
+            background-color: $DashboardBg;
+            width: 100%;
+            height: 30px;
+            margin-top: -27px;
+            z-index: 10;
+        }
+        .display-errors {
+            font-size: .8em;
+            color: red;
+        }
+        .display-filename {
+            font-size: .8em;
+            color: white;
+        }
+        .select {
+            z-index: 20;
+            form {
+                display: flex;
+                label {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 7px 10px;
+                    border: 1px solid $buttonBorder;
+                    font-size: .85rem;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .5s ease-in-out;
+                    &:hover {
+                        color: #fff;
+                        background: $buttonBgHover;
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+                    svg {
+                        fill: $buttonColor;
+                        width: 26px;
+                        height: 26px;
+                        margin-right: 10px;
+                        transition: all .4s ease-out;
+                    }
+                }
+                .import-field {
+                    display: none;
+                    flex-direction: column;
+                    margin-left: 10px;
+                    font-size: .7em;
+                    color: $buttonColor;
+                    select {
+                        box-sizing: border-box;
+                        width: 100%;
+                        margin-top: 4px;
+                        padding: 4px 10px;
+                        border: 1px solid $selectBorder;
+                        outline: none;
+                        color: $selectText;
+                        background: $selectBg;
+                        transition: all .4s ease-out;
+                        -webkit-appearance: none;
+                        option {
+                            background: $selectBg;
+                            border: 1px solid red;
+                            outline-color: $selectOptionBorder;
+                            color: $selectText;
+                        }
+                    }
+                }
+                button {
+                    display: none;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-left: 10px;
+                    padding: 7px 10px;
+                    border: 1px solid $buttonBorder;
+                    font-size: .85rem;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .4s ease-out;
+                    &.disabled {
+                        cursor: not-allowed;
+                        color: white;
+                        background-color: #71272e;
+                        svg {
+                            fill: white;
+                        }
+                        &:hover {
+                            background-color: #71272e;
+                        }
+                    }
+                    &:hover {
+                        color: white;
+                        background: $buttonBgHover;
+                        svg {
+                            fill: white;
+                        }
+                    }
+                    svg {
+                        fill: $buttonColor;
+                        width: 26px;
+                        height: 26px;
+                        margin-right: 10px;
+                        transition: all .4s ease-out;
+                    }
+                }
+                input[type=file] {
+                    display: none;
+                }
+            }
+        }
+        #prepare-products-wrap, #prepare-categories-wrap {
+            display: flex;
+            width: 100%;
+            height: 0;
+            transition: all .5s ease-out;
+            font-family: monospace;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            #prepare-products, #prepare-categories {
+                position: relative;
+                height: 380px;
+                margin: 10px 0;
+                background-color: $thead;
+                #head-table {
+                    box-sizing: border-box;
+                    position: absolute;
+                    display: flex;
+                    left: 0;
+                    width: calc(100% + 18px);
+                    height: 42px;
+                    color: $DashboardBlocksHeadText;
+                    background-color: $thead;
+                    .error {
+                        color: white;
+                        background-color: rgba(100%, 0%, 0%, .3);
+                    }
+                    div {
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 200px;
+                        height: 42px;
+                        padding: 10px;
+                        &:first-child {
+                            width: 40px;
+                        }
+                        &:nth-child(3), {
+                            justify-content: center;
+                            text-align: center;
+                        }
+                        &:nth-child(3),
+                        &:nth-child(4), {
+                            width: 150px;
+                        }
+                        &:nth-child(5) {
+                            width: 300px;
+                        }
+                        &:nth-child(6),
+                        &:nth-child(7) {
+                            width: 150px;
+                        }
+                    }
+                }
+                #head-table-categories {
+                    box-sizing: border-box;
+                    position: absolute;
+                    display: flex;
+                    left: 0;
+                    width: calc(100% + 18px);
+                    height: 42px;
+                    color: $DashboardBlocksHeadText;
+                    background-color: $thead;
+                    .error {
+                        color: white;
+                        background-color: rgba(100%, 0%, 0%, .3);
+                    }
+                    div {
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 200px;
+                        height: 42px;
+                        padding: 10px;
+                        &:first-child {
+                            width: 40px;
+                        }
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4), {
+                            width: 300px;
+                        }
+                    }
+                }
+                #body-table {
+                    box-sizing: border-box;
+                    width: calc(100% + 18px);
+                    height: 343px;
+                    margin-top: 40px;
+                    margin-right: 18px;
+                    transition: all .5s ease-out;
+                    overflow-y: scroll;
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        a {
+                            text-decoration: none;
+                        }
+                        .product {
+                            box-sizing: border-box;
+                            display: flex;
+                            color: $DashboardBlocksText;
+                            background-color: $tbodyOdd;
+                            overflow: hidden;
+                            &.odd {
+                                background-color: $tbodyEven;
+                            }
+                            .error {
+                                color: white;
+                                background-color: rgba(100%, 0%, 0%, .3);
+                            }
+                            div {
+                                box-sizing: border-box;
+                                display: flex;
+                                justify-content: flex-start;
+                                text-align: left;
+                                line-height: 34px;
+                                width: 200px;
+                                padding: 0 10px;
+                                min-height: 34px;
+                                max-height: 34px;
+                                transition: all 1s ease-out;
+                                overflow: hidden;
+                                &:first-child {
+                                    width: 40px;
+                                }
+                                &:nth-child(3),
+                                &:nth-child(4), {
+                                    width: 150px;
+                                }
+                                &:nth-child(3), {
+                                    justify-content: center;
+                                    text-align: center;
+                                    color: white;
+                                    background-color: rgba(34%, 95%, 52%, .3);
+                                }
+                                &:nth-child(5) {
+                                    width: 300px;
+                                }
+                                &:nth-child(6),
+                                &:nth-child(7) {
+                                    width: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #body-table-categories {
+                    box-sizing: border-box;
+                    width: calc(100% + 18px);
+                    height: 343px;
+                    margin-top: 40px;
+                    margin-right: 18px;
+                    transition: all .5s ease-out;
+                    overflow-y: scroll;
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        .product {
+                            box-sizing: border-box;
+                            display: flex;
+                            color: $DashboardBlocksText;
+                            background-color: $tbodyOdd;
+                            overflow: hidden;
+                            &.odd {
+                                background-color: $tbodyEven;
+                            }
+                            .error {
+                                color: white;
+                                background-color: rgba(100%, 0%, 0%, .3);
+                            }
+                            div {
+                                box-sizing: border-box;
+                                display: flex;
+                                justify-content: flex-start;
+                                text-align: left;
+                                line-height: 34px;
+                                width: 200px;
+                                padding: 0 10px;
+                                min-height: 34px;
+                                max-height: 34px;
+                                transition: all 1s ease-out;
+                                overflow: hidden;
+                                &:first-child {
+                                    width: 40px;
+                                }
+                                &:nth-child(3), {
+                                    color: white;
+                                    background-color: rgba(34%, 95%, 52%, .3);
+                                }
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4), {
+                                    width: 300px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .upload-csv, .upload-csv-calculator {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        .select {
+            form {
+                display: flex;
+                label {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 7px 10px;
+                    border: 1px solid $buttonBorder;
+                    border-radius: 6px;
+                    font-size: .85rem;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .5s ease-in-out;
+                    &:hover {
+                        color: white;
+                        background: $buttonBgHover;
+                        svg {
+                            fill: white;
+                        }
+                    }
+                    svg {
+                        fill: $buttonColor;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                        transition: all .4s ease-out;
+                    }
+                }
+                button {
+                    display: none;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-left: 10px;
+                    padding: 7px 10px;
+                    border: 1px solid $buttonBorder;
+                    border-radius: 6px;
+                    font-size: .85rem;
+                    color: $buttonColor;
+                    background-color: $buttonBg;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all .4s ease-out;
+                    &:hover {
+                        color: white;
+                        background: $buttonBgHover;
+                        svg {
+                            fill: white;
+                        }
+                    }
+                    svg {
+                        fill: $buttonColor;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                        transition: all .4s ease-out;
+                    }
+                }
+                input[type=file] {
+                    display: none;
+                }
+            }
+        }
+    }
+    #uploaded-products, #uploaded-calculator {
+        position: relative;
+        width: 100%;
+        height: 0;
+        margin-top: 10px;
+        transition: all .5s ease-out;
+        border-radius: 6px;
+        background-color: black;
+        overflow: hidden;
+        .close-terminal {
+            position: absolute;
+            display: inline-block;
+            top: 12px;
+            right: 12px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .title {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+        }
+        .content {
+            box-sizing: border-box;
+            width: calc(100% + 18px);
+            height: 300px;
+            margin-top: 30px;
+            margin-right: 18px;
+            padding: 10px;
+            border-radius: 6px;
+            background-color: black;
+            overflow-y: scroll;
+            .uploading {
+                box-sizing: border-box;
+                display: flex;
+                color: white;
+                width: 100%;
+                margin-top: 6px;
+                margin-right: 6px;
+                padding: 2px 10px;
+                font-size: .9em;
+                font-family: monospace;
+            }
+        }
+        .product {
+            display: flex;
+            width: 100%;
+            > div {
+                box-sizing: border-box;
+                display: flex;
+                margin-top: 6px;
+                margin-right: 6px;
+                padding: 2px 10px;
+                border-radius: 6px;
+                color: white;
+                font-size: .9em;
+                font-family: monospace;
+            }
+            &.updated {
+                > div {
+                    color: #25b876;
+                }
+            }
+            .name {
+                width: 40%;
+            }
+            .url {
+                width: 10%;
+            }
+            .sku {
+                width: 10%;
+            }
+            .sku-name {
+                width: 20%;
+            }
+            .sku-price {
+                width: 10%;
+            }
+            .sku-old-price {
+                width: 10%;
+            }
+            .item {
+                width: 30%;
+            }
+            .option {
+                width: 20%;
+            }
+            .value {
+                width: 30%;
+            }
+            .code {
+                width: 10%;
+            }
+            .price {
+                width: 10%;
+            }
+        }
+    }
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        @media(min-width: $tablet) {
+            flex-direction: row;
+        }
+        .git-block {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: monospace;
+            color: white;
+            background-color: black;
+            @media(min-width: $tablet) {
+                width: 50%;
+            }
+            .version {
+                width: 100%;
+                text-align: right;
+                color: #10c787;
+                span {
+
+                }
+            }
+            .last-update {
+                width: 100%;
+                text-align: right;
+                span {
+
+                }
+            }
+            .whats-new {
+                margin-top: 10px;
+                .header {
+
+                }
+                ul {
+                    margin: 10px 0 10px 20px;
+                    li {
+
+                    }
+                }
+            }
+            .feature-update {
+                ul {
+                    margin: 10px 0 10px 20px;
+                    li {
+
+                    }
+                }
+            }
+        }
+        .git-timeline {
+            box-sizing: border-box;
+            width: 100%;
+            @media(min-width: $tablet) {
+                width: calc(50% - 10px);
+                margin-right: 10px;
+            }
+            #more-history {
+                @extend %button;
+                margin-top: 10px;
+            }
+            .timeline {
+                position: relative;
+                border-left: 4px solid $generalColor;
+                color: white;
+                font-family: monospace;
+                padding: 20px 50px;
+                list-style: none;
+                text-align: left;
+                max-width: 100%;
+                background-color: #383D48;
+                h2 {
+                    margin-bottom: 10px;
+                    color: #10c787;
+                    font-size: 1.2em;
+                    font-weight: 400;
+                }
+                .event {
+                    display: none;
+                    border-bottom: 1px dashed rgba(255, 255, 255, .1);
+                    padding-bottom: 25px;
+                    margin-bottom: 50px;
+                    position: relative;
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        display: block;
+                    }
+                    &:nth-child(3) {
+                        margin-bottom: 0;
+                        border: none;
+                    }
+                    .header {
+                        margin: 8px 0;
+                    }
+                    ul {
+                        margin-left: 40px;
+                        list-style-type: square;
+                        li {
+                            line-height: 18px;
+                        }
+                    }
+                    &:last-of-type {
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        border: none;
+                    }
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                    }
+                    &:before {
+                        content: attr(data-date);
+                        left: -217.5px;
+                        color: rgba(255, 255, 255, .4);
+                        text-align: right;
+                        font-size: .9em;
+                        min-width: 120px;
+                    }
+                    &:after {
+                        content: "";
+                        box-shadow: 0 0 0 4px $generalColor;
+                        left: -57.85px;
+                        background: #313534;
+                        border-radius: 50%;
+                        height: 11px;
+                        width: 11px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+        .error-block {
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: $DashboardBlocks;
+            overflow: hidden;
+            @media(min-width: $tablet) {
+                width: calc(50% - 10px);
+                margin-left: 10px;
+                margin-top: 0;
+            }
+            .log-info {
+                display: flex;
+                width: 100%;
+                padding-bottom: 10px;
+                p {
+                    display: flex;
+                    align-items: center;
+                    font-family: monospace;
+                    font-size: 1.4em;
+                    color: $inputColor;
+                }
+                button {
+                    @extend %button;
+                    margin-left: 10px;
+                }
+            }
+            .error-logs-wrap {
+                box-sizing: border-box;
+                width: 100%;
+                height: calc(100% - 24px);
+                overflow: hidden;
+                .error-logs {
+                    position: relative;
+                    width: calc(100% + 27px);
+                    height: calc(100% - 10px);
+                    background: $inputBg;
+                    overflow-y: scroll;
+                    .log-messages {
+                        box-sizing: border-box;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 7px 17px 7px 10px;
+                        font-family: monospace;
+                        font-size: .9em;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                        li {
+                            color: $inputColor;
+                            padding-bottom: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

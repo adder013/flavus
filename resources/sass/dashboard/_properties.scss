@@ -1,0 +1,367 @@
+#app {
+    .properties-wrap {
+        @extend %content-flex-column;
+		.update-message {
+			width: 280px;
+    		color: white;
+    		padding: 20px;
+    		top: 10px;
+    		right: 10px;
+			background: $messageBg;
+		}
+		.success-message {
+			width: 280px;
+    		color: white;
+    		padding: 20px;
+    		top: 10px;
+    		right: 10px;
+			background: $messageBg;
+		}
+        .add-property {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            color: $DashboardBlocksHeadText;
+            background-color: $DashboardBlocks;
+            @media(min-width: $pc) {
+                flex-direction: row;
+            }
+            .input-wrap, .select-wrap {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: calc(100% - 12px);
+                margin: 6px;
+                border-radius: 6px;
+                color: $DashboardBlocksHeadText;
+                background: $DashboardBlocks;
+                @media(min-width: $pc) {
+                    width: 240px;
+                }
+                .name {
+                    width: 100%;
+                }
+                input[type=text], select {
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 7px 10px;
+                    border: 1px solid $inputBorder;
+                    border-radius: 6px;
+                    outline: none;
+                    transition: background-color .4s ease-out;
+                    color: $inputColor;
+                    background-color: $inputBg;
+                    &::placeholder {
+                        color: $inputPlaceholder;
+                    }
+                    &:focus {
+                        padding: 6px 9px;
+                        border: 2px solid $inputBorderFocus;
+                        border-radius: 8px;
+                        background-color: $inputBgFocus;
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                select {
+                    height: 31px;
+                }
+            }
+            .btn-sub-wrap {
+                display: flex;
+                align-items: center;
+                button {
+                    margin-top: 30px;
+                    @extend %button;
+                    @media(min-width: $pc) {
+                        margin-left: 4px;
+                        height: 31px;
+                    }
+                }
+            }
+        }
+        .properies-title {
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            margin-top: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            .name, .url {
+                box-sizing: border-box;
+                display: none;
+                width: calc(40% - 22px);
+                margin-right: 4px;
+                padding: 10px;
+                color: $generalText;
+                background-color: $generalColor;
+                @media(min-width: $tablet) {
+                    display: flex;
+                }
+            }
+            .type {
+                box-sizing: border-box;
+                display: none;
+                width: calc(20% - 4px);
+                margin-right: 4px;
+                padding: 10px;
+                color: $generalText;
+                background-color: $generalColor;
+                @media(min-width: $tablet) {
+                    display: flex;
+                }
+            }
+            .delete {
+                box-sizing: border-box;
+                display: none;
+                width: 36px;
+                padding: 10px;
+                color: $generalText;
+                background-color: $generalColor;
+                @extend %transition;
+                @media(min-width: $tablet) {
+                    display: flex;
+                }
+            }
+        }
+        .property-block {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            margin-top: 6px;
+            border-radius: 6px;
+            overflow: hidden;
+            text-decoration: none;
+            @media(max-width: $tablet-max) {
+                margin-top: 14px;
+            }
+            &:hover {
+                cursor: pointer;
+                .name, .url, .type {
+                    .header, .body {
+                        background-color: #543FA8 !important;
+                    }
+                }
+                .delete {
+                    background-color: #543FA8 !important;
+                }
+            }
+            .name {
+                .header, .body {
+                    margin-top: 0 !important;
+                }
+            }
+            .name, .url {
+                display: flex;
+                width: 100%;
+                .header, .body {
+                    @extend %transition;
+                }
+                @media(max-width: $tablet-max) {
+                    width: 100%;
+                    .header {
+                        box-sizing: border-box;
+                        display: flex;
+                        text-align: right;
+                        width: 100px;
+                        margin-top: 6px;
+                        margin-right: 6px;
+                        padding: 10px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                    }
+                    .body {
+                        box-sizing: border-box;
+                        display: flex;
+                        width: calc(100% - 106px);
+                        margin-top: 6px;
+                        padding: 10px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                    }
+                }
+                @media(min-width: $tablet) {
+                    width: calc(40% - 22px);
+                    margin-right: 4px;
+                    .header {
+                        display: none;
+                    }
+                    .body {
+                        box-sizing: border-box;
+                        display: flex;
+                        width: 100%;
+                        padding: 10px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                    }
+                }
+            }
+            .type {
+                box-sizing: border-box;
+                display: flex;
+                width: 100%;
+                .header, .body {
+                    @extend %transition;
+                }
+                @media(max-width: $tablet-max) {
+                    width: 100%;
+                    .header {
+                        box-sizing: border-box;
+                        display: flex;
+                        text-align: right;
+                        width: 100px;
+                        margin-top: 6px;
+                        margin-right: 6px;
+                        padding: 10px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                    }
+                    .body {
+                        box-sizing: border-box;
+                        display: flex;
+                        width: calc(100% - 106px);
+                        margin-top: 6px;
+                        padding: 10px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                    }
+                }
+                @media(min-width: $tablet) {
+                    width: calc(20% - 4px);
+                    margin-right: 4px;
+                    .header {
+                        display: none;
+                    }
+                    .body {
+                        box-sizing: border-box;
+                        display: flex;
+                        width: 100%;
+                        padding: 10px;
+                        color: $DashboardBlocksHeadText;
+                        background-color: $DashboardBlocks;
+                    }
+                }
+            }
+            .delete {
+                box-sizing: border-box;
+                width: 36px;
+                padding: 10px;
+                color: $DashboardBlocksHeadText;
+                background-color: $DashboardBlocks;
+                @extend %transition;
+                &:hover {
+                    color: #B5A5F4;
+                    background-color: #3A2C75 !important;
+                }
+                @media(max-width: $tablet-max) {
+                    position: absolute;
+                    top: 0;
+                    right: 6px;
+                }
+            }
+        }
+    }
+}
+.property-wrap {
+    @extend %content-flex-column;
+    h1 {
+        @extend %h1;
+    }
+    h2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        margin: 10px 0;
+        font-size: 1.3em;
+    }
+    .property {
+        width: 100%;
+        .edit-property, .add-option-value {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .input-wrap {
+                box-sizing: border-box;
+                @extend %input-wrap;
+                padding: 12px;
+            }
+            .textarea-wrap {
+                box-sizing: border-box;
+                @extend %textarea-wrap;
+            }
+            .select-wrap {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: 6px 0;
+                padding: 12px;
+                border-radius: 6px;
+                color: $DashboardBlocksHeadText;
+                background: $DashboardBlocks;
+                @media(min-width: $tablet) {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .name {
+                    width: 270px;
+                }
+                select{
+                    width: calc(100% - 20px);
+                    margin-top: 10px;
+                    padding: 7px 10px;
+                    border: 1px solid $inputBorder;
+                    border-radius: 6px;
+                    outline: none;
+                    transition: background-color .4s ease-out;
+                    color: $inputColor;
+                    background-color: $inputBg;
+                    @media(min-width: $tablet) {
+                        margin-top: 0;
+                        margin-left: 10px;
+                        width: 100%;
+                    }
+                    &::placeholder {
+                        color: $inputPlaceholder;
+                    }
+                    &:focus {
+                        padding: 6px 9px;
+                        border: 2px solid $inputBorderFocus;
+                        border-radius: 8px;
+                        background-color: $inputBgFocus;
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                select {
+                    height: 31px;
+                }
+            }
+            .btn-sub-wrap {
+                display: flex;
+                width: calc(100% - 20px);
+                margin: 6px 0;
+                button {
+                    @extend %button;
+                }
+            }
+        }
+    }
+    .all-props-table {
+        display: flex;
+        width: 100%;
+    }
+}

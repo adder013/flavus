@@ -1,0 +1,179 @@
+.module-specials-wrap {
+    @extend %content-flex-column;
+    .add-special {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 20px);
+        margin: 10px;
+        padding: 20px 10px;
+        background-color: $DashboardBlocks;
+        border-radius: 6px;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .img-wrap {
+                box-sizing: border-box;
+                padding: 0 12px;
+                margin: 20px 0;
+                img {
+                    width: 100%;
+                }
+            }
+            .file-btn {
+                box-sizing: border-box;
+                display: flex;
+                color: $DashboardBlocksText;
+                background-color: $DashboardBlocks;
+                border-radius: 6px;
+                border: 1px solid $inputBorder;
+                margin: 10px 0;
+                padding: 7px 10px;
+                width: calc(100% - 20px);
+            }
+            .input-wrap {
+                box-sizing: border-box;
+                @extend %input-wrap;
+                padding: 4px 12px;
+            }
+            .textarea-wrap {
+                box-sizing: border-box;
+                @extend %textarea-wrap;
+            }
+            .btn-sub-wrap {
+                display: flex;
+                width: calc(100% - 20px);
+                button {
+                    @extend %button;
+                }
+            }
+        }
+    }
+}
+.specials-edit-wrap {
+    @extend %content-flex-column;
+    .upload-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        width: calc(100% - 40px);
+        margin: 0 10px;
+        padding: 10px;
+        border-radius: 6px;
+        background: $DashboardBlocks;
+        @media (min-width: $tablet) {
+            width: 250px;
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 230px;
+            border-radius: 6px;
+            padding: 10px;
+            background: white;
+            img {
+                width: 220px;
+            }
+        }
+        .file-btn {
+            width: calc(100% - 20px);
+            margin-top: 20px;
+            @extend %button;
+            input[type=file] {
+                display: none;
+            }
+        }
+    }
+    .update-special {
+        display: flex;
+        flex-flow: row wrap;
+        width: calc(100% - 20px);
+        margin: 6px 10px;
+        .input-wrap {
+            @extend %input-wrap;
+        }
+        .textarea-wrap {
+            @extend %textarea-wrap;
+        }
+        .btn-wrap {
+            display: flex;
+            .btn-sub-wrap {
+                margin: 10px 20px 10px 0;
+                button {
+                    @extend %button;
+                }
+            }
+        }
+    }
+    #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        h1 {
+            width: 100%;
+			margin: 10px 0;
+            color: white;
+            text-align: center;
+        }
+        .stickers {
+            select {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 7px 10px;
+                border: 1px solid $selectBorder;
+                border-radius: 6px;
+                outline: none;
+                color: $selectText;
+                background: $selectBg;
+                margin-top: 10px;
+            }
+        }
+        .on-off {
+            position: relative;
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            width: calc(100% - 44px);
+            margin: 10px 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            color: $DashboardBlocksHeadText;
+            background-color: $DashboardBlocks;
+            @media(min-width: $tablet) {
+                width: 248px;
+            }
+            @extend %onoff;
+            .tgl {
+                + .tgl-btn {
+                    width: 60px;
+                    height: 30px;
+                }
+            }
+            .tgl-flat {
+                + .tgl-btn {
+                    top: 8px;
+                    left: 196px;
+                }
+            }
+        }
+        .product-groups-wrap {
+            width: 100%;
+            .specials {
+                width: 100%;
+                h2 {
+                    width: 100%;
+    				margin: 10px 0;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

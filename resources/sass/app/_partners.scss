@@ -1,0 +1,151 @@
+.partners-wrap {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0 20px 10px;
+    @media(max-width: $large-mobile-max) {
+        padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+        padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+    }
+    h1 {
+        width: 100%;
+        @extend %pages-h1;
+    }
+    .partner-block {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid $border;
+        color: black;
+        background-color: white;
+        outline: none;
+        text-decoration: none;
+        margin: 10px 0;
+        @extend %hover-transition;
+        @media(min-width: $tablet) {
+            margin: 10px;
+        }
+        &:hover {
+            box-shadow: 0 5px 15px 5px $shadowColor;
+        }
+        @media(min-width: $large-mobile) and (max-width: $tablet-max) {
+            width: calc(50% - 5px);
+            margin-left: 0;
+            margin-right: 10px;
+            &:nth-child(2n + 1) {
+                margin-right: 0;
+            }
+        }
+        @media(min-width: $tablet) and (max-width: $pc-max) {
+            width: calc(33% - 10px);
+            margin-left: 0;
+            margin-right: 15px;
+            &:nth-child(3n + 1) {
+                margin-right: 0;
+            }
+        }
+        @media(min-width: $pc) {
+            width: calc(25% - 15px);
+            margin-left: 0;
+            margin-right: 20px;
+            &:nth-child(4n + 1) {
+                margin-right: 0;
+            }
+        }
+        .img-wrap {
+            width: 100%;
+            min-width: 80px;
+            max-height: 270px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        h2 {
+            height: 60px;
+            padding: 16px;
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+        .text {
+            padding: 16px;
+            font-size: .9em;
+            color: $notActive;
+        }
+    }
+}
+.be-partner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    @media(min-width: $tablet) {
+        flex-direction: row;
+    }
+    .huge-img {
+        width: 100%;
+        overflow: hidden;
+        @media(min-width: $tablet) {
+            width: 30%;
+        }
+        @media(min-width: $pc) {
+            width: 40%;
+        }
+        img {
+            height: 100%;
+            @media(max-width: $tablet-max) {
+                display: none;
+            }
+        }
+    }
+    .how-to {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        @media(max-width: $large-mobile-max) {
+            padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+            padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+        }
+        @media(min-width: $tablet) {
+            width: 70%;
+        }
+        @media(min-width: $pc) {
+            width: 60%;
+            padding: 30px;
+        }
+        h2 {
+            width: 100%;
+            padding: 7px 16px;
+            font-size: 1.6em;
+            font-weight: 400;
+            border-left: 10px solid $generalColor;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .consult {
+            margin: 30px 0;
+            color: $notActive;
+            font-size: 1.1em;
+        }
+        .call {
+            .phone {
+            }
+            a {
+                text-decoration: none;
+                font-size: 1.5em;
+                color: $asideMenuColor;
+            }
+            span {
+            }
+        }
+        .mail-us {
+            margin-top: 20px;
+            width: 130px;
+            @extend %yellow-button;
+        }
+    }
+}

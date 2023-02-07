@@ -1,0 +1,57 @@
+// Size
+$mobile: 375px;
+$mobile-max: 374px;
+$large-mobile: 450px;
+$large-mobile-max: 449px;
+$productSmall: 790px;
+$tablet: 1024px;
+$tablet-max: 1023px;
+$pc: 1400px;
+$pc-max: 1399px;
+$pc-wide: 1800px;
+$pc-wide-max: 1799px;
+$pc-4k: 2000px;
+$pc-4k-max: 1999px;
+// Color
+$generalColor: rgba(34%, 54%, 95%, 1);
+$generalText: #000;
+$navBg: #1B1E24;
+$navTextColor: #fff;
+$navTextColorHover: #001133;
+$navTextBg: #568AF2;
+$DashboardBg: #282C34;
+$DashboardBlocks: #333842;
+$DashboardBlocksHover: #3C434F;
+$DashboardBlocksHeadText: #D2D5DB;
+$DashboardBlocksText: #9098A7;
+$DashboardBlocksHr: #181A1F;
+$skuBg: rgba(0%, 0%, 0%, .12);
+// Select
+$selectBg: #3A3F4B;
+$selectBorder: #181A1F;
+$selectOptionBorder: #C59E53;
+$selectText: #8D95A4;
+// Input
+$inputBg: #1E2127;
+$inputBgFocus: #202634;
+$inputBorder: #1C1E24;
+$inputBorderFocus: #568AF2;
+$inputPlaceholder: #545962;
+$inputColor: #D7DAE0;
+// Button
+$buttonBg: #383D48;
+$buttonBgHover: #568AF2;
+$buttonBorder: #181A1F;
+$buttonColor: #8D95A4;
+// Hr
+$hr: #181A1F;
+// Global Message
+$messageBg: rgba(34%, 54%, 95%, .7);
+$errorMessageBg: rgba(96%, 52%, 44%, .7);
+// Table
+$thead: #1B1E24;
+$tbodyOdd: #333842;
+$tbodyEven: #393F4A;
+$tSelectBox: #25272E;
+$tSelectBoxActive: #568AF2;
+$tEditRow: #1B1E24;

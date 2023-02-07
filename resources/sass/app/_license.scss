@@ -1,0 +1,44 @@
+.license-wrap {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0 20px 10px;
+    @media(max-width: $large-mobile-max) {
+        padding-left: unquote('max(#{20px}, env(safe-area-inset-left))');
+        padding-right: unquote('max(#{20px}, env(safe-area-inset-right))');
+    }
+    h1 {
+        width: 100%;
+        @extend %pages-h1;
+    }
+    a {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        @media(min-width: $large-mobile) {
+            width: 50%;
+        }
+        @media(min-width: $tablet) {
+            width: 33%;
+        }
+        @media(min-width: $pc) {
+            width: 25%;
+        }
+        &:hover {
+            color: $generalHover;
+        }
+        img {
+            width: 70%;
+            margin-bottom: 20px;
+        }
+    }
+}

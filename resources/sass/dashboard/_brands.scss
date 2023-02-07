@@ -1,0 +1,236 @@
+.brands-wrap {
+    @extend %content-flex-column;
+    .brands {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .data-left {
+            width: 100%;
+            @media(min-width: $tablet) {
+                width: calc(34% - 10px);
+                margin-right: 10px;
+            }
+            @media(min-width: $pc) {
+                width: calc(20% - 10px);
+            }
+            .brands-list {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 8px;
+                background-color: $DashboardBlocks;
+                .block-img {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    background-color: white;
+                    border: 2px dashed black;
+                    img {
+                        width: 280px;
+                        @media(min-width: $pc) {
+                            width: 100%;
+                        }
+                    }
+                }
+                > button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    @extend %button;
+                }
+                .on-off {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 6px;
+                    height: 36px;
+                    margin-bottom: 10px;
+                    font-size: .8em;
+                    color: $DashboardBlocksHeadText;
+                    background-color: rgba(0, 0, 0, .4);
+                    @extend %onoff;
+                    .tgl {
+                        + .tgl-btn {
+                            width: 44px;
+                            height: 24px;
+                        }
+                    }
+                    .tgl-flat {
+                        + .tgl-btn {
+                            top: 6px;
+                            right: 6px;
+                        }
+                    }
+                }
+                @extend %sortable-list;
+            }
+        }
+        .data-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+            @media(min-width: $tablet) {
+                width: 66%;
+                margin-top: 0;
+            }
+            @media(min-width: $pc) {
+                width: 80%;
+            }
+            .add-brand {
+                @extend %add;
+            }
+            .edit-brand {
+                .block-input {
+                    &:first-child {
+                        margin: 0;
+                    }
+                }
+				@extend %edit;
+				.block-tags {
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					.tag {
+						box-sizing: border-box;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						width: calc(50% - 5px);
+						margin-top: 10px;
+						padding: 12px;
+						color: $DashboardBlocksHeadText;
+						background: $DashboardBlocks;
+						.body {
+							width: 100px;
+							margin-bottom: 10px;
+						}
+						.checkbox {							
+                            width: 16px;
+							height: 16px;
+							margin-right: 5px;
+                            cursor: pointer;
+                            &::before {
+                                box-sizing: border-box;
+                                content: " ";
+                                display: block;
+                                width: 18px;
+                                height: 18px;
+                                padding: 2px;
+                                background-color: $tSelectBox;
+                                outline: 0;
+                                transition: all .4s ease-out;
+                            }
+                            &:checked::before {
+                                content: url('/svg/check.svg');
+                                padding: 3px;
+                                background-color: $tSelectBoxActive;
+                            }
+                            &:hover::before {
+                                background-color: $tSelectBoxActive;
+                            }
+						}
+						&:nth-child(1) {
+							margin-right: 10px;
+						}
+					}
+				}
+            }
+            .brands-list {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                .brand-block {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    background-color: $DashboardBlocks;
+                    @media(max-width: 499px) {
+                        width: 100%;
+                        margin: 10px 0 0;
+                    }
+                    @media(min-width: 500px) and (max-width: 799px) {
+                        width: calc(50% - 5px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: 800px) and (max-width: $tablet-max) {
+                        width: calc(33.33% - 6.66px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: $tablet) and (max-width: $pc-max) {
+                        width: calc(50% - 5px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: $pc) and (max-width: $pc-4k-max) {
+                        width: calc(25% - 7.5px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(4n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: $pc-4k) {
+                        width: calc(20% - 8px);
+                        margin: 10px 10px 0 0;
+                        &:nth-child(5n) {
+                            margin-right: 0;
+                        }
+                    }
+                    .img-wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        height: 120px;
+                        background-color: white;
+                        border: 2px dashed black;
+                        img {
+                            height: 80%;
+                        }
+                    }
+                    .name {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        width: 100%;
+                        margin-top: 10px;
+                        font-size: 1.1em;
+                        font-weight: 700;
+                        color: $DashboardBlocksHeadText;
+                    }
+                    .btn-wrap {
+                        display: flex;
+                        flex-flow: row wrap;
+                        width: 100%;
+                        margin-top: 10px;
+                        button {
+                            width: 100%;
+                            @extend %button;
+                        }
+                        a {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            @extend %a-button;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

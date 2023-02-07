@@ -1,0 +1,100 @@
+#wysiwyg-wrap {
+	width: 100%;
+	padding: 2rem 2rem 12rem 2rem;
+	.url {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 10px;
+		span {
+			margin-right: 2px;
+			color: #fff;
+		}
+		input {
+			display: flex;
+			flex-grow: 1;
+			padding: 5px;
+			background-color: #fff;
+		}
+		form {
+			button {
+				margin-left: 10px;
+				padding: 4px 10px;
+				background-color: #fff;
+			}
+		}
+	}
+	> h2 {
+		margin: 1rem 0;
+		color: white;
+	}
+	.ck-editor__editable {
+		min-height: 500px;
+		h2 {
+			margin-bottom: 20px;
+		}
+		h3 {
+			margin: 10px 0;
+			font-size: 1.25em;
+			font-weight: 700;
+		}
+		p {
+			margin: 10px 0;
+		}
+		ul {
+			margin-left: 40px;
+			list-style-position: outside;
+		}
+		table {
+			width: 50%;
+			margin: 6px 0;
+			border: 1px solid #d9d9d9;
+			table-layout: unset;
+			thead {
+				tr {
+					background-color: #dedede;
+					th {
+						// width: 50%;
+						padding: 10px;
+						font-weight: 700;
+						text-align: center;
+						background-color: inherit;
+					}
+				}
+			}
+			tbody {
+				vertical-align: middle;
+				tr {
+					vertical-align: inherit;
+					&:nth-child(even) {
+						background-color: white;
+					}
+					&:nth-child(odd) {
+						background-color: rgba(95%, 95%, 95%, 1);
+					}
+					td[colspan] {
+						font-weight: 700;
+						text-align: center;
+					}
+					td {
+						vertical-align: inherit;
+						padding: 10px;
+						a {
+							cursor: pointer;
+							color: black;
+							text-decoration: underline;
+							&:hover {
+								color: #1c87ed;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	textarea {
+		width: 100%;
+		background-color: #fff;
+	}
+}

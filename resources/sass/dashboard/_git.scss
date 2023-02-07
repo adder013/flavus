@@ -1,0 +1,125 @@
+.git-control {
+    @extend %content-flex-column;
+    .all-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        @media(min-width: $tablet) {
+            flex-direction: row;
+        }
+        .status {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 20px;
+            font-family: monospace;
+            color: white;
+            background-color: black;
+            @media(min-width: $tablet) {
+                width: calc(50% - 10px);
+                margin-right: 20px;
+            }
+            .version {
+                width: 100%;
+                color: #10c787;
+                margin-bottom: 10px;
+            }
+        }
+        .messages {
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 10px;
+            padding: 20px;
+            font-family: monospace;
+            color: white;
+            background-color: black;
+            @media(min-width: $tablet) {
+                width: calc(50% - 10px);
+                margin-top: 0;
+            }
+            .whats-new {
+                margin-top: 10px;
+                .header {
+
+                }
+                ul {
+                    margin: 10px 0 10px 20px;
+                    li {
+
+                    }
+                }
+            }
+        }
+    }
+    .control {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        button {
+            box-sizing: border-box;
+            @extend %button;
+            height: 30px;
+            padding: 0 10px;
+            margin: 10px 10px 10px 0;
+        }
+    }
+    .git-log {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        .block {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 10px 0;
+            padding: 20px;
+            color: $DashboardBlocksHeadText;
+            background: $DashboardBlocks;
+            list-style: none;
+            font-family: monospace;
+            @media(min-width: $large-mobile) {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+            @media(min-width: $tablet) {
+                width: calc(33% - 20px);
+            }
+            @media(min-width: $pc) {
+                width: calc(25% - 20px);
+            }
+            @media(min-width: $pc-wide) {
+                width: calc(20% - 20px);
+            }
+            .version {
+                color: #d6c720;
+                span {
+
+                }
+            }
+            .date {
+                margin-top: 6px;
+                font-size: .8em;
+                span {
+
+                }
+            }
+            .author {
+                margin-top: 6px;
+                font-size: .8em;
+                span {
+
+                }
+            }
+            .revert-this {
+                box-sizing: border-box;
+                font-family: OpenSans;
+                @extend %button;
+                font-size: .8em;
+                padding: 0 10px;
+                height: 30px;
+                margin: 10px 0;
+            }
+        }
+    }
+}

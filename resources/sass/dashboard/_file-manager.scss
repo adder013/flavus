@@ -1,0 +1,12 @@
+.file-manager {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    iframe {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        border: 0;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,69 @@
+version: '3.7'
+services:
+  nginx:
+    container_name: uralenergotel_nginx
+    image: nginx:1.23-alpine
+    volumes:
+      - ./docker/nginx:/etc/nginx/conf.d:ro
+      - ./:/var/www:ro
+      - ./docker/logs:/var/log/nginx
+    networks:
+      - default-network
+  workspace:
+    container_name: uralenergotel_workspace
+    build: ./docker/images/workspace
+    image: uralenergotel/workspace
+    tty: true
+    hostname: uralenergotel_workspace
+    volumes:
+      - ./:/var/www:consistent
+    networks:
+      - default-network
+  php-fpm:
+    container_name: uralenergotel_php-fpm
+    build: ./docker/images/php-fpm
+    image: uralenergotel/php-fpm
+    hostname: uralenergotel_php-fpm
+    volumes:
+      - ./:/var/www:consistent
+    networks:
+      - default-network
+  cron:
+    container_name: uralenergotel_cron
+    build: ./docker/images/cron
+    image: uralenergotel/cron
+    volumes:
+      - ./:/var/www:consistent
+    networks:
+      - default-network
+  node:
+    container_name: uralenergotel_node
+    image: node:16.6
+    tty: true
+    hostname: uralenergotel_node
+    volumes:
+      - ./:/var/www:consistent
+    working_dir: /var/www
+    networks:
+      - default-network
+  mysql:
+    container_name: uralenergotel_mysql
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: uralenergotel_ru
+      MYSQL_USER: web
+      MYSQL_PASSWORD: localpassword
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICENAME: mysql
+    volumes:
+      - mysqldb:/var/lib/mysql
+    networks:
+      - default-network
+networks:
+  default-network:
+    name: uralenergotel_network
+    driver: bridge
+volumes:
+  mysqldb:

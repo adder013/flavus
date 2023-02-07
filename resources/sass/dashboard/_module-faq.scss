@@ -1,0 +1,142 @@
+.module-faq-wrap {
+	@extend %content-flex-column;
+	color: white;
+	> form {
+		@extend %add-form;
+		width: 100%;
+	}
+	.drag-area {
+		box-sizing: border-box;
+		width: 100%;
+		.category-block {
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			margin: 6px 0;
+			width: 100%;
+			border-radius: 6px;
+			background-color: $DashboardBlocks;
+			.preview {
+				box-sizing: border-box;
+				display: flex;
+				width: 100%;
+				padding: 10px;
+				color: $DashboardBlocksHeadText;
+				cursor: pointer;
+				border-radius: 6px;
+				&:hover {
+					background-color: $DashboardBlocksHover;
+				}
+				.category-name {
+					display: flex;
+					button {
+						display: flex;
+						align-items: center;
+						background-color: transparent;
+						border: 0;
+						outline: none;
+						svg {
+							width: 20px;
+							height: 20px;
+							&:hover {
+								cursor: pointer;
+								fill: white;
+							}
+						}
+					}
+				}
+			}
+			.wrap {
+				box-sizing: border-box;
+				display: none;
+				width: 100%;
+				> form {
+					box-sizing: border-box;
+					display: block;
+					margin: 10px;
+					padding: 12px 0;
+					background-color: $DashboardBg;
+					border-radius: 6px;
+					p {
+						margin-left: 12px;
+					}
+					.new-question-wrap {
+						display: flex;
+						width: 100%;
+					}
+					button {
+						margin-left: 12px;
+						@extend %button;
+					}
+				}
+				.questions-block {
+					box-sizing: border-box;
+					.question {
+						box-sizing: border-box;
+						background-color: $DashboardBg;
+						margin: 10px;
+						margin-bottom: 15px;
+						border-radius: 6px;
+					}
+				}
+			}
+		}
+		form {
+			display: none;
+			.input-wrap {
+				box-sizing: border-box;
+				@extend %input-wrap;
+				padding: 4px 12px;
+			}
+			.textarea-wrap {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				margin: 6px 0;
+				padding: 12px;
+				border-radius: 6px;
+				color: $DashboardBlocksHeadText;
+				.name {
+					box-sizing: border-box;
+					width: 270px;
+				}
+				textarea {
+					box-sizing: border-box;
+					width: calc(100% - 20px);
+					height: 100px;
+					margin-top: 10px;
+					padding: 7px 10px;
+					border: 1px solid $inputBorder;
+					border-radius: 6px;
+					outline: none;
+					resize: vertical;
+					transition: background-color 0.4s ease-out;
+					color: $inputColor;
+					background: $DashboardBlocks;
+					&::placeholder {
+						color: $inputPlaceholder;
+					}
+					&:focus {
+						padding: 6px 9px;
+						border: 2px solid $inputBorderFocus;
+						border-radius: 8px;
+						background: $inputBgFocus;
+						&::placeholder {
+							color: transparent;
+						}
+					}
+				}
+			}
+			.btn-wrap {
+				display: flex;
+				.btn-sub-wrap {
+					margin: 10px;
+					button {
+						@extend %button;
+					}
+				}
+			}
+		}
+	}
+}

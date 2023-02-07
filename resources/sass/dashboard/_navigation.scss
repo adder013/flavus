@@ -1,0 +1,58 @@
+header {
+    width: 100%;
+    font-size: 1.2em;
+    nav {
+        height: 100%;
+        width: 100%;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            list-style: none;
+            li {
+                height: 100%;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    padding: 0 10px;
+                    text-decoration: none;
+                    color: $navTextColor;
+                    transition: all .4s ease-out;
+                    span {
+                        @media(max-width: $pc-max) {
+                            display: none;
+                        }
+                    }
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 8px;
+                        transition: all .4s ease-out;
+                        @media(max-width: 360px) {
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 0;
+                        }
+                        @media(min-width: 361px) and (max-width: 520px) {
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+                a:hover, .active {
+                    text-decoration: none;
+                    color: $navTextColorHover;
+                    background: $navTextBg;
+                    svg {
+                        fill: $navTextColorHover;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.free-delivery-wrap {
+	* {
+		box-sizing: border-box;
+	}
+	padding: 0 30px 35px 20px;
+	h1 {
+		margin: 0;
+		text-transform: uppercase;
+        @extend %pages-h1;
+		@media (min-width: $pc) {
+			max-width: 75%;
+		}
+	}
+	.text {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+		img {
+			width: 110px;
+			@media (max-width: $mobile-max) {
+				display: none;
+			}
+		}
+		p {
+			font-size: 1.2em;
+			@media (min-width: $mobile) {
+				margin-left: 60px;
+			}
+			@media (min-width: $large-mobile) {
+				font-size: 1.4em;
+			}
+		}
+	}
+	.delivery-area {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 60px;
+		background-color: white;
+		border: 1px solid #d9d9d9;
+		@media (min-width: $pc) {
+			flex-direction: row;
+		}
+		.list {
+			display: flex;
+			flex-direction: column;
+			min-width: 270px;
+			padding: 30px;
+			h2 {
+				margin-bottom: 25px;
+				font-size: 1.2em;
+			}
+			ul {
+				list-style: none;
+				@media (max-width: $mobile-max) {
+					columns: 1;
+				}
+				@media (min-width: $mobile) and (max-width: 600px) {
+					columns: 2;
+				}
+				@media (min-width: 600px) and (max-width: $pc-max) {
+					columns: 3;
+				}
+				li {
+					margin-bottom: 10px;
+					font-size: 1.1em;
+				}
+			}
+		}
+		.map {
+			@media (max-width: $pc-max) {
+				width: 100%;
+				border-top: 1px solid #d9d9d9;
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
+			@media (min-width: $pc) {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				border-left: 1px solid #d9d9d9;
+				img {
+					height: 100%;
+				}				
+			}
+		}
+	}
+	.pickup {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		margin-top: 35px;
+		padding: 20px 10px 15px 10px;
+		background-color: #fff;
+		border: 1px solid #d9d9d9;
+		text-decoration: none;
+		@extend %hover-transition;
+		&:hover {
+            box-shadow: 0 5px 15px 5px $shadowColor;
+		}
+		@media (min-width: $tablet) {
+			padding: 40px 25px 30px 25px;
+		}
+		.img-wrap {
+			height: 100px;
+			img {
+				height: 100%;
+			}
+		}
+		.text {
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 0;
+			@media (min-width: 600px) {
+				margin-left: 30px;
+			}
+			h2 {
+				color: $generalHover;
+				font-weight: 400;
+				margin-bottom: 30px;
+			}
+			p {
+				margin: 0;
+				font-size: 1em;
+				color: black;
+			}
+		}
+	}
+}

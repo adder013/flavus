@@ -1,0 +1,46 @@
+// Import Variables
+@import "app/variables";
+@import "app/general";
+@import "app/common";
+
+// Import Fonts
+@import "fonts";
+
+// Plugins Edited styles
+@import "app/flickity";
+@import "app/pagination";
+@import "app/jquery-slider";
+
+// Import SCSS
+@import "app/components/track-timeline";
+@import "app/navigation";
+@import "app/errors";
+@import "app/aside-menu";
+@import "app/top-info";
+@import "app/login";
+@import "app/index";
+@import "app/footer";
+@import "app/catalog";
+@import "app/category";
+@import "app/about";
+@import "app/brands";
+@import "app/license";
+@import "app/partners";
+@import "app/contacts";
+@import "app/customers";
+@import "app/products";
+@import "app/cart";
+@import "app/compare";
+@import "app/specials";
+@import "app/delivery";
+@import "app/free-delivery";
+@import "app/individual-lockers";
+@import "app/news";
+@import "app/faq";
+@import "app/tracks";
+@import "app/supply";
+@import "app/containers";
+@import "app/search";
+@import "app/tdLanding";
+@import "app/vacancies";
+@import "app/individualBusiness";

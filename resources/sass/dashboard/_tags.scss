@@ -1,0 +1,14 @@
+.tags-wrap {
+    @extend %content-flex-column;
+    .add-tag {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @media(min-width: $tablet) {
+            width: 500px;
+        }
+        form {
+            @extend %add-form;
+        }
+    }
+}

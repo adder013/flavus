@@ -1,0 +1,120 @@
+footer {
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @media(min-width: $pc) {
+            width: 50%;
+        }
+        > a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            img {
+                width: 70px;
+                margin-right: 20px;
+                @media(min-width: $tablet) {
+                    width: 100px;
+                }
+            }
+            span {
+                font-size: 1.3em;
+                @media(min-width: $tablet) {
+                    font-size: 2em;;
+                }
+            }
+        }
+        .contact {
+            h3 {
+                margin-top: 20px;
+            }
+            span {
+                display: flex;
+                margin: 10px 0;
+            }
+            .phone,
+            .email {
+                margin: 10px 0;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+		}
+    }
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        @media(min-width: $pc) {
+            width: 50%;
+        }
+        nav {
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                list-style: none;
+                li {
+                    display: flex;
+                    width: 100%;
+                    margin: 6px 0;
+                    @media(min-width: $large-mobile) {
+                        width: calc(50% - 12px);
+                        margin: 6px;
+                    }
+                    @media(min-width: $tablet) {
+                        width: calc(33% - 12px);
+                    }
+                    a {
+                        font-size: .9em;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: black;
+                        @extend %hover-transition;
+                        &:hover {
+                            color: $generalHover;
+                        }
+                    }
+                }
+            }
+        }
+        .socials {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+			flex: 1 1 auto;		
+			width: 100%;	
+			.policy {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				a {
+					color: black;
+				}
+			}
+            .links {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-flow: row wrap;
+                flex: 1;
+                a {
+                    color: $notActive;
+                    &:hover {
+                        color: $generalHover;
+                    }
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 8px;
+                    }
+                    img {
+                        height: 70px;
+                    }
+                }
+            }
+        }
+    }
+}

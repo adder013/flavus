@@ -1,0 +1,70 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1350px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1300px
+);
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Import Variables
+@import "dashboard/variables";
+@import "dashboard/common";
+@import "dashboard/general";
+
+// Import Fonts
+@import "fonts";
+
+// Import SCSS
+@import "dashboard/components/git";
+@import "dashboard/navigation";
+@import "dashboard/footer";
+@import "dashboard/index";
+@import "dashboard/git";
+@import "dashboard/users";
+@import "dashboard/system";
+@import "dashboard/database";
+@import "dashboard/properties";
+@import "dashboard/edit-product";
+@import "dashboard/products-table";
+@import "dashboard/products";
+@import "dashboard/brands";
+@import "dashboard/groups";
+@import "dashboard/tags";
+@import "dashboard/modules";
+@import "dashboard/module-partners";
+@import "dashboard/module-home-brands";
+@import "dashboard/module-menu";
+@import "dashboard/module-slider";
+@import "dashboard/module-contacts";
+@import "dashboard/module-lockers";
+@import "dashboard/module-stickers";
+@import "dashboard/module-specials";
+@import "dashboard/module-delivery";
+@import "dashboard/module-news";
+@import "dashboard/module-seo";
+@import "dashboard/module-redirect";
+@import "dashboard/module-robots";
+@import "dashboard/module-brandsTags";
+@import "dashboard/module-faq";
+@import "dashboard/module-wysiwyg";
+@import "dashboard/module-supply";
+@import "dashboard/file-manager";
+@import "dashboard/kibana";
+@import "dashboard/vue-good-table";
+@import "dashboard/vue2Dropzone";
+
+// Material Design Icons
+$material-design-icons-font-path: '~material-design-icons-iconfont/dist/fonts/';
+@import '~material-design-icons-iconfont/src/material-design-icons';
+@import '~vuetify/dist/vuetify.min.css';

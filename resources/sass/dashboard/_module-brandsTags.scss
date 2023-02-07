@@ -1,0 +1,110 @@
+.module-brandsTags-wrap {
+	@extend %content-flex-column;
+	.module-brands-tags {
+		width: 100%;
+		div {
+			.add-brands-tag {
+				@extend %add-form;
+				width: calc(100% - 20px);
+			}
+			.dragArea {
+				width: 100%;
+				li {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin: 10px;
+					padding: 10px;
+					border-radius: 6px;
+					background-color: $navBg;
+					color: $DashboardBlocksHeadText;
+					.head {
+						display: flex;
+						align-items: center;
+						width: calc(100% - 20px);
+						button {
+							display: flex;
+							align-items: center;
+							background-color: transparent;
+							border: 0;
+							outline: none;
+							svg {
+								width: 20px;
+								height: 20px;
+								&:hover {
+									cursor: pointer;
+									fill: white;
+								}
+							}
+						}
+					}
+					.wrap {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						width: 100%;
+						margin: 6px 0;
+						padding: 12px;
+						border-radius: 6px;
+						color: $DashboardBlocksHeadText;
+						background: $DashboardBlocks;
+						textarea {
+							box-sizing: border-box;
+							width: 100%;
+							height: 100px;
+							padding: 7px 10px;
+							border: 1px solid $inputBorder;
+							border-radius: 6px;
+							outline: none;
+							resize: vertical;
+							transition: background-color 0.4s ease-out;
+							color: $inputColor;
+							background: $inputBg;
+							&::placeholder {
+								color: $inputPlaceholder;
+							}
+							&:focus {
+								padding: 6px 9px;
+								border: 2px solid $inputBorderFocus;
+								border-radius: 8px;
+								background: $inputBgFocus;
+								&::placeholder {
+									color: transparent;
+								}
+							}
+						}
+						input[type="text"],
+						input[type="email"],
+						input[type="password"] {
+							width: 100%;
+							margin-top: 10px;
+							padding: 7px 10px;
+							border: 1px solid $inputBorder;
+							border-radius: 6px;
+							outline: none;
+							transition: background-color 0.4s ease-out;
+							color: $inputColor;
+							background-color: $inputBg;
+							&::placeholder {
+								color: $inputPlaceholder;
+							}
+							&:focus {
+								padding: 6px 9px;
+								border: 2px solid $inputBorderFocus;
+								border-radius: 8px;
+								background-color: $inputBgFocus;
+								&::placeholder {
+									color: transparent;
+								}
+							}
+						}
+					}
+					button {
+						@extend %button;
+						align-self: flex-start;
+					}
+				}
+			}
+		}
+	}
+}

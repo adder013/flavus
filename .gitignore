@@ -1,0 +1,15 @@
+/node_modules
+/public/hot
+/public/storage
+/public/sitemap.xml
+/public/robots.txt
+public/*.html
+/storage/*.key
+/vendor
+.env
+/.idea
+/.vscode
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+.DS_Store

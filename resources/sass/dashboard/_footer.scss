@@ -1,0 +1,223 @@
+body > footer {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+	flex: 0 0 auto;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 20;
+	background-color: $navBg;
+    @media(max-width: $tablet-max) {
+        position: relative;
+    }
+    .laravel {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 130px;
+        color: #fb503b;
+        font-size: 1rem;
+        img {
+            width: 30px;
+            margin-right: 10px;
+        }
+    }
+    .console-terminal {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% + 36px);
+        padding: 0 10px;
+        height: 0;
+        background-color: #000;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: all .5s ease-in-out;
+        .close-terminal {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 20px;
+            .close {
+                position: relative;
+                width: 100%;
+                background-color: #000;
+                @media(min-width: $tablet) {
+                    width: 70%;
+                }
+                .button {
+                    position: absolute;
+                    display: inline-block;
+                    top: 20px;
+                    right: 10px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+        .content {
+            width: 100%;
+            padding-top: 20px;
+            font-family: monospace;
+            @media(min-width: $tablet) {
+                width: 70%;
+            }
+            .row {
+                color: $DashboardBlocksText;
+            }
+        }
+        #terminal {
+            display: flex;
+            width: 100%;
+            height: 20px;
+            padding-bottom: 20px;
+            font-family: monospace;
+            color: lime;
+            @media(min-width: $tablet) {
+                width: 70%;
+            }
+            span {
+                margin-right: 6px;
+                height: 16px;
+            }
+            input[type=text] {
+                box-sizing: border-box;
+                border: 0;
+                width: 100%;
+                height: 16px;
+                color: white;
+                font-family: monospace;
+                outline: none;
+                background-color: #000;
+            }
+        }
+    }
+    .manager {
+        display: flex;
+        width: 100%;
+        @media(max-width: 800px) {
+            flex-direction: column;
+        }
+        @media(min-width: $tablet) {
+            width: 70%;
+        }
+        .manager-info {
+            box-sizing: border-box;
+            display: flex;
+            width: 40%;
+            padding: 20px;
+            @media(max-width: 800px) {
+                width: 100%;
+            }
+            @media(min-width: $pc) {
+                width: 30%;
+            }
+            .user {
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    color: $DashboardBlocksHeadText;
+                    font-size: 1em;
+                    .wrapped {
+                        display: flex;
+                        align-items: center;
+                        a {
+                            color: $DashboardBlocksHeadText;
+                            text-decoration: none;
+                            margin-left: 10px;
+                        }
+                    }
+                    span {
+                        font-size: .7em;
+                        color: $DashboardBlocksText;
+                    }
+                }
+                .email {
+                    display: flex;
+                    flex-direction: column;
+                    color: $DashboardBlocksHeadText;
+                    margin-top: 6px;
+                    font-size: 1rem;
+                    span {
+                        font-size: .7em;
+                        color: $DashboardBlocksText;
+                    }
+                }
+                .role {
+                    display: flex;
+                    flex-direction: column;
+                    color: $DashboardBlocksHeadText;
+                    margin-top: 6px;
+                    font-size: 1rem;
+                    span {
+                        font-size: .7em;
+                        color: $DashboardBlocksText;
+                    }
+                }
+            }
+            .preview {
+                display: flex;
+                flex-direction: column;
+                .user-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    height: 80px;
+                    margin-right: 20px;
+                    border: 1px solid $DashboardBlocksText;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 80px;
+                    }
+                }
+                a {
+                    font-size: .85rem;
+                    margin-top: 8px;
+                    text-decoration: none;
+                    color: $generalColor;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .actions {
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            width: 60%;
+            padding: 20px 0 50px;
+            @media(max-width: 800px) {
+                width: 100%;
+            }
+            @media(min-width: $pc) {
+                width: 70%;
+            }
+            button {
+                box-sizing: border-box;
+                @extend %button;
+                padding: 0 10px;
+                height: 30px;
+                margin: 0 5px 10px;
+            }
+            a {
+                @extend %a-button;
+                margin: 0 5px 10px;
+                svg {
+                    height: 16px;
+                }
+            }
+        }
+    }
+}

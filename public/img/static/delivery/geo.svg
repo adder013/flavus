@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Слой_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 110 110"
+	 style="enable-background:new 0 0 110 110;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F5EB05;}
+</style>
+<switch>
+	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
+		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
+		</i:pgfRef>
+	</foreignObject>
+	<g i:extraneous="self">
+		<g>
+			<path class="st0" d="M55,24.3c-12.3,0-22.3,10-22.3,22.3c0,4.2,1.2,8.2,3.2,11.5L55,84.6l19.1-26.5c2-3.4,3.2-7.3,3.2-11.5
+				C77.3,34.3,67.3,24.3,55,24.3z M55,57c-6.2,0-11.1-5-11.1-11.1c0-6.2,5-11.1,11.1-11.1s11.1,5,11.1,11.1C66.1,52.1,61.2,57,55,57
+				z"/>
+			<path d="M55,87.2L34.7,58.9c-2.3-3.7-3.5-8-3.5-12.3c0-13.1,10.7-23.8,23.8-23.8c13.1,0,23.8,10.7,23.8,23.8
+				c0,4.3-1.2,8.6-3.5,12.3L75.3,59L55,87.2z M37.2,57.3L55,82.1l17.8-24.8c2-3.3,3-7,3-10.7c0-11.5-9.3-20.8-20.8-20.8
+				c-11.5,0-20.8,9.3-20.8,20.8C34.2,50.4,35.2,54.1,37.2,57.3z M55,58.5c-7,0-12.6-5.7-12.6-12.6c0-7,5.7-12.6,12.6-12.6
+				c7,0,12.6,5.7,12.6,12.6C67.6,52.9,62,58.5,55,58.5z M55,36.3c-5.3,0-9.6,4.3-9.6,9.6c0,5.3,4.3,9.6,9.6,9.6
+				c5.3,0,9.6-4.3,9.6-9.6C64.6,40.6,60.3,36.3,55,36.3z"/>
+		</g>
+	</g>
+</switch>
+<i:pgf  id="adobe_illustrator_pgf">
+</i:pgf>
+</svg>

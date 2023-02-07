@@ -125,36 +125,36 @@
     <a href="{{ URL::to('/td_uet') }}" class="block">
         <div class="img-wrap"><img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}" data-src="{{ url('/img/static/profitable.svg') }}" alt="Доставка"></div>
         <div class="text">
-            <div class="title">Выгоднее, чем на заводе</div>
-            <span>Все товары по цене производителя или ниже</span>
+            <div class="title">Оптовые цены</div>
+            <span>Оптовые цены даже для самых небольших покупателей</span>
         </div>
     </a>
     <a href="{{ URL::to('/delivery') }}" class="block">
         <div class="img-wrap"><img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}" data-src="{{ url('/img/static/delivery.svg') }}" alt="Доставка"></div>
         <div class="text">
-            <div class="title">Быстрая доставка</div>
-            <span>По России и странам Таможенного Союза</span>
+            <div class="title">Доставка по всей России</div>
+            <span>Быстрая доставка в отдаленные регионы доставка СДЭК</span>
         </div>
     </a>
     <a href="{{ URL::to('/about/brands') }}" class="block">
         <div class="img-wrap"><img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}" data-src="{{ url('/img/static/provider.svg') }}" alt="Доставка"></div>
         <div class="text">
-            <div class="title">Единый поставщик</div>
-            <span>Всё оборудование, что вам требуется, в одном сервисе поставок </span>
+            <div class="title">ТД УЭТ & OZON</div>
+            <span>Получите рядом - в любом пункте выдачи OZON</span>
         </div>
     </a>
     <a href="{{ URL::to('/customers') }}" class="block">
         <div class="img-wrap"><img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}" data-src="{{ url('/img/static/manager.svg') }}" alt="Доставка"></div>
         <div class="text">
-            <div class="title">Помощь менеджера</div>
-            <span>Всегда в курсе статуса заказа</span>
+            <div class="title">Личный менеджер</div>
+            <span>На связи 24/7, оснащение вышего бизнеса легко и доступно</span>
         </div>
     </a>
     <a href="{{ URL::to('mailto:'.$contacts->email) }}" class="block">
-        <div class="img-wrap"><img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}" data-src="{{ url('/img/static/credit-card-svgrepo-com.svg') }}" alt="Доставка"></div>
+        <div class="img-wrap"><img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}" data-src="{{ url('/img/static/credit-card-front-svgrepo-com.svg') }}" alt="Доставка"></div>
         <div class="text">
-            <div class="title">Техническая помощь при выборе</div>
-            <span>Подбор замен, подбор с учётом характеристик</span>
+            <div class="title">Оплата картой на сайте</div>
+            <span></span>
         </div>
     </a>
 </div>

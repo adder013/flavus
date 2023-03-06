@@ -66,7 +66,7 @@
                 </div>
             </div> --}}
         </div>
-        <!-- <section class="supplying">
+        <section class="supplying">
             <h2>Направления поставки</h2>
             <div class="supplying-cards">
                 @foreach ($navCategories->take(4) as $subCategory)
@@ -112,7 +112,7 @@
             <div class="supplying__more">
                 <a href="/catalog">Все направления</a>
             </div>
-        </section> -->
+        </section>
         <section class="regions">
             <h2>Регионы поставки</h2>
             <ul class="countries">

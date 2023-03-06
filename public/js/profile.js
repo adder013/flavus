@@ -4004,7 +4004,7 @@ var render = function render() {
     }
   }, [_c("v-icon", {
     staticClass: "pr-2"
-  }, [_vm._v("add_box")]), _vm._v("Обновить\n            ")], 1), _vm._v(" "), _c("v-btn", {
+  }, [_vm._v("add_box")]), _vm._v("Обновить\r\n            ")], 1), _vm._v(" "), _c("v-btn", {
     staticClass: "mt-3",
     attrs: {
       dark: "",
@@ -4018,7 +4018,7 @@ var render = function render() {
     }
   }, [_c("v-icon", {
     staticClass: "pr-2"
-  }, [_vm._v("delete")]), _vm._v("Удалить\n            ")], 1), _vm._v(" "), _c("v-dialog", {
+  }, [_vm._v("delete")]), _vm._v("Удалить\r\n            ")], 1), _vm._v(" "), _c("v-dialog", {
     attrs: {
       persistent: "",
       "max-width": "290"

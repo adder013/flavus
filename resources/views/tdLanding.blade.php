@@ -7,8 +7,8 @@
                 <div class="dots"></div>
             </div>
             <h1 class="hero__title">
-                <div class="hero__title-highlight">В&nbsp;Торговом доме УЭТ выгоднее,</div>
-                чем на&nbsp;заводе, потому что
+                <div class="hero__title-highlight">FLAVUS</div>
+                Оптовые цены всегда рядом
             </h1>
             <div class="dots-container">
                 <div class="dots"></div>
@@ -19,24 +19,24 @@
         <ul class="features">
             <li>
                 <img src="/img/static/tdLanding/icon-1.svg" alt="Поставка">
-                <div class="features__title">Оптовые цены на&nbsp;закупки</div>
-                Цены ниже заводских даже при разовых покупках
+                <div class="features__title">Оптовые цены на закупки</div>
+                Во всех районах даже отдаленных
             </li>
             <li>
                 <img src="/img/static/tdLanding/icon-2.svg" alt="Перевозка">
-                <div class="features__title">Выгодная&nbsp;доставка</div>
-                Доставка любого груза по&nbsp;всей России по&nbsp;ценам Торгового дома
+                <div class="features__title">Быстрая доставка</div>
+                Получить на ближайшем пункте OZON или СДЭК, или заказать бесплатную доставку до адреса
             </li>
             <li>
                 <img src="/img/static/tdLanding/icon-3.svg" alt="Документы">
-                <div class="features__title">Работа по&nbsp;договору</div>
-                Индивидуальные условия для закупки вашего оборудования при заключении договора
+                <div class="features__title">Работа по договору с гарантией</div>
+                Можем оформить договор на любую поставку
             </li>
         </ul>
         <section class="about">
             <div class="about__title">
-                Торговый дом УЭТ&nbsp;&mdash; федеральный дистрибьютор инженерного оборудования.<br />
-                Оборудование автоматизации, электродвигатели, счетчики электроэнергии, насосное оборудование.
+                FLAVUS — федеральный дистрибьютор товаров для HORECA.<br />
+                Оборудование для кафе по оптовым ценам везде рядом с вами.
             </div>
             <a href="/about" class="about__button">Подробнее о нас</a>
         </section>
@@ -66,7 +66,7 @@
                 </div>
             </div> --}}
         </div>
-        <section class="supplying">
+        <!-- <section class="supplying">
             <h2>Направления поставки</h2>
             <div class="supplying-cards">
                 @foreach ($navCategories->take(4) as $subCategory)
@@ -112,7 +112,7 @@
             <div class="supplying__more">
                 <a href="/catalog">Все направления</a>
             </div>
-        </section>
+        </section> -->
         <section class="regions">
             <h2>Регионы поставки</h2>
             <ul class="countries">

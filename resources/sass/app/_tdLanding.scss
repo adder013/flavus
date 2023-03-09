@@ -338,11 +338,12 @@
 		}
 		.countries {
 			display: flex;
-			flex-wrap: wrap;
+			flex-flow:row wrap;
 			gap: 30px;
 			justify-content: space-evenly;
 			list-style: none;
 			li {
+				width: 20%;
 				.country__name {
 					font-weight: bold;
 					font-size: 16px;
@@ -350,6 +351,7 @@
 					margin-bottom: 5px;
 				}
 				img {
+					margin-top: 25px;
 					margin-bottom: 25px;
 					border-radius: 50%;
 				}

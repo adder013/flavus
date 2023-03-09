@@ -1,7 +1,7 @@
 <div class="top-info">
     <div class="logo">
         <a href="{{ URL::to('/') }}">
-            <img src="{{ url('/img/flavus_logo_yellow.png') }}" alt="Торговый дом УЭТ">
+            <img src="{{ url('/img/flavus_logo_gradient.png') }}" alt="Торговый дом УЭТ">
         </a>
     </div>
     <div class="contacts-mobile">

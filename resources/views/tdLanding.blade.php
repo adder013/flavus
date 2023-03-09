@@ -20,12 +20,12 @@
             <li>
                 <img src="/img/static/tdLanding/icon-1.svg" alt="Поставка">
                 <div class="features__title">Оптовые цены на закупки</div>
-                Во всех районах даже отдаленных
+                Во всех районах России даже отдаленных
             </li>
             <li>
                 <img src="/img/static/tdLanding/icon-2.svg" alt="Перевозка">
                 <div class="features__title">Быстрая доставка</div>
-                Получить на ближайшем пункте OZON или СДЭК, или заказать бесплатную доставку до адреса
+                Можно получить на ближайшем пункте OZON или СДЭК, или заказать бесплатную доставку до адреса
             </li>
             <li>
                 <img src="/img/static/tdLanding/icon-3.svg" alt="Документы">
@@ -117,29 +117,44 @@
             <h2>Регионы поставки</h2>
             <ul class="countries">
                 <li>
-                    <img src="/img/static/tdLanding/russia.png" alt="Флаг России">
-                    <div class="country__name">Россия</div>
-                    <div>1099 городов</div>
+                    <img src="/img/static/tdLanding/central.png" alt="Флаг Москвы">
+                    <div class="country__name">Центральный</div>
+                    <div>18 областей</div>
                 </li>
                 <li>
-                    <img src="/img/static/tdLanding/kazakhstan.png" alt="Флаг Казахстана">
-                    <div class="country__name">Казахстан</div>
-                    <div>45 городов</div>
+                    <img src="/img/static/tdLanding/northwestern.png" alt="Флаг Санкт-Петербурга">
+                    <div class="country__name">Северо-Западный</div>
+                    <div>11 областей</div>
                 </li>
                 <li>
-                    <img src="/img/static/tdLanding/belarus.png" alt="Флаг Беларуси">
-                    <div class="country__name">Беларусь</div>
-                    <div>115 городов</div>
+                    <img src="/img/static/tdLanding/south.png" alt="Флаг Ростов-на-Дону">
+                    <div class="country__name">Южный</div>
+                    <div>8 областей</div>
                 </li>
                 <li>
-                    <img src="/img/static/tdLanding/kyrgyzstan.png" alt="Флаг Киргизии">
-                    <div class="country__name">Киргизия</div>
-                    <div>31 город</div>
+                    <img src="/img/static/tdLanding/north-caucasian.png" alt="Флаг Пятигорск">
+                    <div class="country__name">Северо-Кавказский</div>
+                    <div>7 областей</div>
                 </li>
                 <li>
-                    <img src="/img/static/tdLanding/armenia.png" alt="Флаг Армении">
-                    <div class="country__name">Армения</div>
+                    <img src="/img/static/tdLanding/volga.png" alt="Флаг Нижний Новгород">
+                    <div class="country__name">Приволжский</div>
                     <div>14 областей</div>
+                </li>
+                <li>
+                    <img src="/img/static/tdLanding/ural.png" alt="Флаг Екатеринбург">
+                    <div class="country__name">Уральский</div>
+                    <div>6 областей</div>
+                </li>
+                <li>
+                    <img src="/img/static/tdLanding/siberian.png" alt="Флаг Новосибирск">
+                    <div class="country__name">Сибирский</div>
+                    <div>10 областей</div>
+                </li>
+                <li>
+                    <img src="/img/static/tdLanding/far-eastern.png" alt="Флаг Владивосток">
+                    <div class="country__name">Дальневосточный</div>
+                    <div>11 областей</div>
                 </li>
             </ul>
         </section>

@@ -1,15 +1,1 @@
-.container-fluid .panel-primary {
-  border-color: #1B1E24;
-  background-color: #1B1E24;
-}
-.container-fluid .panel-primary .panel-heading {
-  border-color: #1B1E24;
-  background-color: #1B1E24;
-}
-.container-fluid #tree .folder-item {
-  font-size: 1.6rem;
-  color: black;
-}
-.container-fluid #content a {
-  color: black;
-}
+.container-fluid .panel-primary,.container-fluid .panel-primary .panel-heading{border-color:#1b1e24;background-color:#1b1e24}.container-fluid #tree .folder-item{font-size:1.6rem;color:#000}.container-fluid #content a{color:#000}

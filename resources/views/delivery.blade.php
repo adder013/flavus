@@ -34,7 +34,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="delivery-block">
+            <!-- <div class="delivery-block">
                 <div class="img-wrap">
                     <img src="{{ url('/img/static/delivery/payment.svg') }}" alt="Оплата">
                 </div>
@@ -67,7 +67,7 @@
                 <div class="map-wrap">
                     <img src="{{ url('/img/static/delivery/map.png') }}" alt="Регионы доставки">
                 </div>
-            </div>
+            </div> -->
             <div class="delivery-block">
                 <div class="img-wrap">
                     <img src="{{ url('/img/static/delivery/warranty.svg') }}" alt="Гарантия">
@@ -88,19 +88,16 @@
                 <div class="text-wrap">
                     <div class="text">
                         <p>
-                            Мы сотрудничаем с ТК Деловые линии, ПЭК, СДЭК и DPD. В удалённые регионы возможна доставка
+                            Мы сотрудничаем с ТК Деловые линии, OZON, СДЭК. В удалённые регионы возможна доставка
                             специализированными ТК.
                         </p>
-                        <p>Доставка в страны Таможенного союза — ТК DPD.</p>
+                        <!-- <p>Доставка в страны Таможенного союза — ТК DPD.</p> -->
                         <div class="delivery-logos-wrap">
-                            <div class="img-wrap">
-                                <img src="{{ url('/img\static\delivery\dpd_logo.png') }}" alt="DPD">
-                            </div>
                             <div class="img-wrap">
                                 <img src="{{ url('/img/static/delivery/businesslineslogo.png') }}" alt="Деловые Линии">
                             </div>
                             <div class="img-wrap">
-                                <img src="{{ url('/img/static/delivery/peclogo.png') }}" alt="ПЭК">
+                                <img src="{{ url('/img/static/delivery/ozon.png') }}" alt="OZON">
                             </div>
                             <div class="img-wrap">
                                 <img src="{{ url('/img\static\delivery\cdek_logo.png') }}" alt="СДЭК">
@@ -115,6 +112,26 @@
                     </div> -->
                 </div>
             </div>
+            <!-- <div class="delivery-block">
+                <div id="2giswidget"></div>
+                <script src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script>
+                    new DGWidgetLoader({
+                        "container": "2giswidget",
+                        "height": 740,
+                        "borderColor": "#d9d9d9",
+                        "opt": {
+                            "city": "ekaterinburg"
+                        },
+                        "org": [{
+                            "id": "1267174266615808"
+                        }]
+                    });
+                </script>
+            </div>
+            <div class="delivery-block">
+                <h2>123</h2>
+            </div> -->
             <div class="delivery-block">
                 <div class="img-wrap"><img src="{{ url('/img/static/delivery/shipping.svg') }}" alt="Доставка"></div>
                 <div class="text">

@@ -112,7 +112,7 @@
                     </div> -->
                 </div>
             </div>
-            <div class="delivery-block">
+            <!-- <div class="delivery-block">
                 <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
                 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=744b109e-0f8c-45d3-a218-3f13125a0105"></script>
                 <script>
@@ -146,7 +146,7 @@
             </div>
             <div class="delivery-block">
                 <h2>123</h2>
-            </div>
+            </div> -->
             <div class="delivery-block">
                 <div class="img-wrap"><img src="{{ url('/img/static/delivery/shipping.svg') }}" alt="Доставка"></div>
                 <div class="text">

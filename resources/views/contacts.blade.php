@@ -14,7 +14,7 @@
     </div>
 </div>
 <div class="contacts-wrap">
-    <h1>Контакты ТД УЭТ. Сервис поставок</h1>
+    <h1>Контакты FLAVUS Сервис поставок HoReCa</h1>
     <div class="address">
         <div class="info">
             <ul>
@@ -26,10 +26,10 @@
                     <div class="name">Телефон в Екатеринбурге:</div>
                     <div class="body"><a href="tel:+{{ preg_replace('/[^0-9]/', '', $contacts->phone) }}"><strong>{{ $contacts->phone }}</strong></a></div>
                 </li>
-                <li>
+                <!-- <li>
                     <div class="name">Телефон в Москве:</div>
                     <div class="body"><a href="tel:+{{ preg_replace('/[^0-9]/', '', $contacts->phone_msk) }}"><strong>{{ $contacts->phone_msk }}</strong></a></div>
-                </li>
+                </li> -->
                 <li>
                     <div class="name">Время работы:</div>
                     <div class="body">{!! $contacts->work_hours !!}</div>

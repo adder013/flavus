@@ -113,38 +113,36 @@
                 </div>
             </div>
             <div class="delivery-block">
-                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<744b109e-0f8c-45d3-a218-3f13125a0105>" type="text/javascript"></script>
+                <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=744b109e-0f8c-45d3-a218-3f13125a0105"></script>
                 <script>
-                    function init() {
-                        var myMap = new ymaps.Map('map', {
-                            center: [55.74, 37.58],
-                            zoom: 13,
-                            controls: []
-                        });
-                        
-                        // Создадим экземпляр элемента управления «поиск по карте»
-                        // с установленной опцией провайдера данных для поиска по организациям.
-                        var searchControl = new ymaps.control.SearchControl({
-                            options: {
-                                provider: 'yandex#search'
-                            }
-                        });
-                        
-                        myMap.controls.add(searchControl);
-                        
-                        // Программно выполним поиск определённых кафе в текущей
-                        // прямоугольной области карты.
-                        searchControl.search('Ozon');
-                    }
+                    ymaps.ready()
+                        .done(function (ym) {
+                            var myMap = new ym.Map('YMapsID', {
+                                center: [55.751574, 37.573856],
+                                zoom: 10
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            });
 
-                    ymaps.ready(init);
+                            jQuery.getJSON('https://search-maps.yandex.ru/v1/?text=Ozon, пункты выдачи&type=biz&lang=ru_RU&results=500&bbox=36.83,55.67~38.24,55.91&apikey=a2f751ca-9295-4a27-9e5b-f7ff3b314f12', function (json) {
+                                var geoObjects = ym.geoQuery(json)
+                                        .addToMap(myMap)
+                                        .applyBoundsToMap(myMap, {
+                                            checkZoomRange: true
+                                        });
+                            });
+                        });
                 </script>
-                <style>
-                    #map {
-                        width: 600px; height: 600px; padding: 0; margin: 0;
+                <div id="YMapsID"></div>
+                <style type="text/css">
+                    #YMapsID {
+                        width: 600px;
+                        height: 600px;
+                        padding: 0;
+                        margin: 0;
                     }
                 </style>
-                <div id="map"></div>
             </div>
             <div class="delivery-block">
                 <h2>123</h2>

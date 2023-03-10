@@ -47,7 +47,7 @@
             <div class="how-block">
                 <img src="{{ url('/img/static/individualB/B1.png') }}" alt="Заказ">
                 <h3>Заказ</h3>
-                <p>Вы оставляете заказ через корзину интернет-магазина</p>
+                <p>Вы оставляете заказ на почту</p>
             </div>
             <div class="arrow-svg">
                 <svg width="33" height="60" viewBox="0 0 33 60" fill="none" xmlns="http://www.w3.org/2000/svg">

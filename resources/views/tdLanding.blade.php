@@ -183,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="social-buttons">
+                <!-- <div class="social-buttons">
                     <a href="https://www.facebook.com/uralenergotel" title="Facebook">
                         <img src="/img/static/tdLanding/fb.svg" alt="Facebook">
                     </a>
@@ -193,7 +193,7 @@
                     <a href="https://www.youtube.com/channel/UCAEO89tnU7Fi9lzkZec_aqA" title="YouTube">
                         <img src="/img/static/tdLanding/yt.svg" alt="YouTube">
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="column">
                 <img src="/img/static/tdLanding/footer.jpg">

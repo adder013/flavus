@@ -97,6 +97,7 @@
                 <div id="total-price" data-total="{{ $total }}">{{ number_format($total , 2, ',', ' ') }} ₽</div>
                 <div class="send-all-wrap">
                     <button class="send-all" type="submit" @if ($total < 10000 && $showButton == 0) @endif>Получить счет</button>
+                    <button class="send-payment" type="submit" @if ($total < 10000 && $showButton == 0) @endif>Оплатить картой</button>
                     <div class="min-sum @if ($total >= 10000 || $showButton == 1) hidden @endif">Минимальная сумма заказа <span class="cart-price">10000</span></div>
                 </div>
             </div>
@@ -219,5 +220,11 @@
 	function showFileName(file) {
 		document.querySelector(".file_name").innerHTML = file.name;
 	}
+
+    // function getPaymentLink()
+    // {
+    //     let name = document.getElementsByName("name").value;
+
+    // }
 </script>
 @endsection

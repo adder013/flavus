@@ -79,7 +79,7 @@
 						.delivery-logos-wrap {
 							display: flex;
 							flex-direction: row;
-							margin-top: 25px;
+							margin-top: 40px;
 							align-items: center;
 							justify-content: center;
 							.img-wrap {
@@ -88,6 +88,7 @@
 								margin-right: 20px;
 								img {
 									width: 100%;
+									margin:0 20px;
 								}
 							}
 						}

@@ -112,26 +112,43 @@
                     </div> -->
                 </div>
             </div>
-            <!-- <div class="delivery-block">
-                <div id="2giswidget"></div>
-                <script src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+            <div class="delivery-block">
+                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<744b109e-0f8c-45d3-a218-3f13125a0105>" type="text/javascript"></script>
                 <script>
-                    new DGWidgetLoader({
-                        "container": "2giswidget",
-                        "height": 740,
-                        "borderColor": "#d9d9d9",
-                        "opt": {
-                            "city": "ekaterinburg"
-                        },
-                        "org": [{
-                            "id": "1267174266615808"
-                        }]
-                    });
+                    function init() {
+                        var myMap = new ymaps.Map('map', {
+                            center: [55.74, 37.58],
+                            zoom: 13,
+                            controls: []
+                        });
+                        
+                        // Создадим экземпляр элемента управления «поиск по карте»
+                        // с установленной опцией провайдера данных для поиска по организациям.
+                        var searchControl = new ymaps.control.SearchControl({
+                            options: {
+                                provider: 'yandex#search'
+                            }
+                        });
+                        
+                        myMap.controls.add(searchControl);
+                        
+                        // Программно выполним поиск определённых кафе в текущей
+                        // прямоугольной области карты.
+                        searchControl.search('Ozon');
+                    }
+
+                    ymaps.ready(init);
                 </script>
+                <style>
+                    #map {
+                        width: 600px; height: 600px; padding: 0; margin: 0;
+                    }
+                </style>
+                <div id="map"></div>
             </div>
             <div class="delivery-block">
                 <h2>123</h2>
-            </div> -->
+            </div>
             <div class="delivery-block">
                 <div class="img-wrap"><img src="{{ url('/img/static/delivery/shipping.svg') }}" alt="Доставка"></div>
                 <div class="text">

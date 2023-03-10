@@ -1,14 +1,11 @@
 {
-    "/js/app.js": "/js/app.js?id=c576cb47ff5d13f88e08",
-    "/js/app.js.map": "/js/app.js.map?id=8dd071d5f0708ab990d8",
-    "/js/dashboard.js": "/js/dashboard.js?id=b81f189234a100cf804d",
-    "/css/dashboard.css": "/css/dashboard.css?id=faa402301f1b68a9c39e",
-    "/css/app.css": "/css/app.css?id=e465e99139c2c1315bb4",
-    "/css/file-manager.css": "/css/file-manager.css?id=e43e5e566a8637ee2ddb",
-    "/css/profile.css": "/css/profile.css?id=56d5a241c04a8780c0ed",
-    "/js/dashboard.js.map": "/js/dashboard.js.map?id=ffcb53b066ae972e3018",
-    "/js/profile.js": "/js/profile.js?id=bc4a4c1f09a0dbe6c0e1",
-    "/js/profile.js.map": "/js/profile.js.map?id=23057d348cbcb19ce1fa",
-    "/css/styles.css": "/css/styles.css?id=123957a7d1a34650d2a6",
-    "/js/scripts.js": "/js/scripts.js?id=fe6d349bb0661117b52e"
+    "/js/app.js": "/js/app.js",
+    "/js/dashboard.js": "/js/dashboard.js",
+    "/css/dashboard.css": "/css/dashboard.css",
+    "/css/app.css": "/css/app.css",
+    "/css/file-manager.css": "/css/file-manager.css",
+    "/css/profile.css": "/css/profile.css",
+    "/js/profile.js": "/js/profile.js",
+    "/css/styles.css": "/css/styles.css",
+    "/js/scripts.js": "/js/scripts.js"
 }

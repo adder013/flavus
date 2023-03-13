@@ -100,6 +100,7 @@ class AppController extends Controller
 		// 	$email = $contacts->email;
 		// }
 		Cookie::queue('uralenergotel_email', $email, 120);
+		$email = $contacts->email;
 		$contacts->email = $email;
 		return $contacts;
 	}

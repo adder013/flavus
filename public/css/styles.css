@@ -6908,7 +6908,7 @@ footer .right-side .socials .links a img {
   flex-grow: 2;
   order: 2;
   padding-bottom: 120px;
-  background-image: url("/img/static/about/banner-2.png");
+  background-image: url("/img/static/about/banner-4.png");
   background-size: auto;
   background-position: center;
 }
@@ -11089,6 +11089,26 @@ h1 {
   height: 50px;
   width: 210px;
   margin-top: 25px;
+}
+.delivery-wrap .delivery-blocks-wrap .delivery-block:nth-child(4) {
+  width: 100%;
+  height: 600px;
+}
+.delivery-wrap .delivery-blocks-wrap .delivery-block:nth-child(4) #map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.delivery-wrap .delivery-blocks-wrap .delivery-block:nth-child(5) {
+  width: 100%;
+  height: 600px;
+}
+.delivery-wrap .delivery-blocks-wrap .delivery-block:nth-child(5) #map-cdek {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 .delivery-wrap .delivery-blocks-wrap .delivery-block .img-wrap {
   width: 100px;

@@ -55,11 +55,10 @@
 		</div>
 		<div>
 			<h2>Организация доставки по России и в страны Таможенного Союза</h2>
-			<p>Мы доставляем товары по всей России транспортными компаниями Деловые Линии и DPD, по Казахстану, Беларуси, Армении и Киргизии – DPD. Также мы готовы сотрудничать с клиентами из других стран ближнего зарубежья.</p>
+			<p>Мы доставляем товары по всей России транспортными компаниями Деловые Линии, OZON и CDEK. Также мы готовы сотрудничать с клиентами из других стран ближнего зарубежья.</p>
 			<div class="devlivery-brands">
-				<img src="{{ url('/img/static/about/dpd.png') }}" alt="DPD">
 				<img src="{{ url('/img/static/about/dellin.png') }}" alt="Деловые Линии">
-				<img src="{{ url('/img/static/about/peclogo.png') }}" alt="ПЭК">
+				<img src="{{ url('/img/static/about/ozon.png') }}" alt="OZON">
 				<img src="{{ url('/img/static/about/cdek_logo.png') }}" alt="СДЭК">
 			</div>
 			<a class="details" href="{{ URL::to('delivery') }}">Подробнее</a>

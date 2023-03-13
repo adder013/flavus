@@ -13341,6 +13341,7 @@ h1 {
   border: 1px solid rgb(217, 217, 217);
   border-left: none;
   border-bottom: none;
+  background-color: #fff;
 }
 .supply-page .tiles .tile .img-wrap {
   width: 130px;
@@ -13352,40 +13353,6 @@ h1 {
 .supply-page .tiles .tile span.sub {
   font-size: 1em;
   opacity: 0.7;
-}
-.supply-page .tiles .tile:not(:first-child) {
-  background-color: #fff;
-}
-.supply-page .tiles .tile:first-child {
-  width: 50%;
-  background-color: rgb(102, 105, 110);
-  justify-content: center;
-}
-@media (max-width: 1399px) {
-  .supply-page .tiles .tile:first-child {
-    width: 100%;
-    border-top: none;
-  }
-}
-@media (max-width: 449px) {
-  .supply-page .tiles .tile:first-child {
-    height: 180px;
-  }
-}
-.supply-page .tiles .tile:first-child p {
-  display: block;
-  max-width: 60%;
-  padding-left: 25px;
-  color: rgb(245, 235, 5);
-  text-transform: uppercase;
-  font-size: 1.5em;
-  font-weight: 700;
-}
-@media (max-width: 1023px) {
-  .supply-page .tiles .tile:first-child p {
-    padding-left: 0;
-    font-size: 1.3em;
-  }
 }
 @media (max-width: 1399px) {
   .supply-page .tiles .tile {

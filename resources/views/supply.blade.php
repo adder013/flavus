@@ -27,9 +27,9 @@
         </div>
     </div>
     <div class="tiles">
-        <div class="tile">
+        <!-- <div class="tile">
             <p>Преимущества закупки по договору в ТД УЭТ</p>
-        </div>
+        </div> -->
         <div class="tile">
             <div class="img-wrap">
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
@@ -69,6 +69,22 @@
             </div>
             <span>Более 30 заводов партнеров</span>
             <span class="sub">Широкий выбор продукции</span>
+        </div>
+        <div class="tile">
+            <div class="img-wrap">
+                <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
+                    data-src="{{ url('/img/static/supply/icon6.svg') }}" alt="icon">
+            </div>
+            <span>Выделенный менеджер</span>
+            <span class="sub">Удобная покупка</span>
+        </div>
+        <div class="tile">
+            <div class="img-wrap">
+                <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
+                    data-src="{{ url('/img/static/supply/icon6.svg') }}" alt="icon">
+            </div>
+            <span>Выделенный менеджер</span>
+            <span class="sub">Удобная покупка</span>
         </div>
         <div class="tile">
             <div class="img-wrap">

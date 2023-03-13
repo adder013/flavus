@@ -28,7 +28,7 @@
     </a>
     <a href="{{ URL::route('show.dashboardSpecials') }}" class="menu-module">
         <div class="img-wrap"><img src="{{ url('/svg/modules/specials_module.svg') }}" alt="Новости производителей"></div>
-        <div class="name">Новости производителей</div>
+        <div class="name">Новости HoReCa</div>
     </a>
     <a href="{{ URL::route('show.dashboard.delivery') }}" class="menu-module">
         <div class="img-wrap"><img src="{{ url('/svg/modules/delivery_module.svg') }}" alt="Доставка"></div>
@@ -36,7 +36,7 @@
     </a>
     <a href="{{ URL::route('show.dashboard.news') }}" class="menu-module">
         <div class="img-wrap"><img src="{{ url('/svg/modules/news_module.svg') }}" alt="Новости ТД УЭТ"></div>
-        <div class="name">Новости ТД УЭТ</div>
+        <div class="name">Новости Flavus</div>
     </a>
     <a href="{{ URL::route('show.dashboard.homeBrands') }}" class="menu-module">
         <div class="img-wrap"><img src="{{ url('/svg/modules/home_brands_module.svg') }}" alt="Бренды на главной странице"></div>

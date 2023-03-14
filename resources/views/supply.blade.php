@@ -22,8 +22,7 @@
         </div>
         <h1>Стать партнером</h1>
         <div class="text">
-            <p>Торговый дом УЭТ приглашает к заключению договора на поставку оборудования системных интеграторов,
-                торговые организации, а также конечных покупателей</p>
+            <p>FLAVUS приглашает к партнерству кафе, рестораны, пекарни и другие организации общественного питания для работы по партнерскому договору</p>
         </div>
     </div>
     <div class="tiles">
@@ -35,64 +34,64 @@
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
                     data-src="{{ url('/img/static/supply/icon1.svg') }}" alt="icon">
             </div>
-            <span>Оборудование по ценам заводов или ниже</span>
+            <span>Оборудование по оптовым ценам и расходники</span>
             <span class="sub">Выгодная покупка</span>
+        </div>
+        <div class="tile">
+            <div class="img-wrap">
+                <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
+                    data-src="{{ url('/img/static/supply/icon6.svg') }}" alt="icon">
+            </div>
+            <span>Личный менеджер</span>
+            <span class="sub">Подбор оборудования для ваших целей</span>
         </div>
         <div class="tile">
             <div class="img-wrap">
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
                     data-src="{{ url('/img/static/supply/icon2.svg') }}" alt="icon">
             </div>
-            <span>Отгрузка напрямую со складов заводов</span>
-            <span class="sub">Быстрая доставка</span>
+            <span>Быстрая доставка прямо к вам</span>
+            <span class="sub">В отдаленные регионы России</span>
         </div>
         <div class="tile">
             <div class="img-wrap">
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
-                    data-src="{{ url('/img/static/supply/icon3.svg') }}" alt="icon">
+                    data-src="{{ url('/img/static/supply/icon9.svg') }}" alt="icon">
             </div>
-            <span>Отслеживание грузов в любое время на сайте</span>
-            <span class="sub">Полный контроль закупки</span>
+            <span>Работа по договору</span>
+            <span class="sub">Работаем по договору</span>
         </div>
         <div class="tile">
             <div class="img-wrap">
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
-                    data-src="{{ url('/img/static/supply/icon4.svg') }}" alt="icon">
+                    data-src="{{ url('/img/static/supply/icon8.svg') }}" alt="icon">
             </div>
-            <span>Официальный партенер заводов</span>
-            <span class="sub">Гарантия и сервисное обслуживание заводов</span>
+            <span>FLAVUS & OZON</span>
+            <span class="sub">Получить товары рядом в OZON</span>
+        </div>
+        <div class="tile">
+            <div class="img-wrap">
+                <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
+                    data-src="{{ url('/img/static/supply/icon7.svg') }}" alt="icon">
+            </div>
+            <span>Отгрузка с региональных складов</span>
+            <span class="sub">Отгрузка со склада</span>
         </div>
         <div class="tile">
             <div class="img-wrap">
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
                     data-src="{{ url('/img/static/supply/icon5.svg') }}" alt="icon">
             </div>
-            <span>Более 30 заводов партнеров</span>
-            <span class="sub">Широкий выбор продукции</span>
+            <span>Широкий ассортимент</span>
+            <span class="sub">Более 30 заводов партнеров</span>
         </div>
         <div class="tile">
             <div class="img-wrap">
                 <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
-                    data-src="{{ url('/img/static/supply/icon6.svg') }}" alt="icon">
+                    data-src="{{ url('/img/static/supply/icon4.svg') }}" alt="icon">
             </div>
-            <span>Выделенный менеджер</span>
-            <span class="sub">Удобная покупка</span>
-        </div>
-        <div class="tile">
-            <div class="img-wrap">
-                <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
-                    data-src="{{ url('/img/static/supply/icon6.svg') }}" alt="icon">
-            </div>
-            <span>Выделенный менеджер</span>
-            <span class="sub">Удобная покупка</span>
-        </div>
-        <div class="tile">
-            <div class="img-wrap">
-                <img class="b-lazy" src="{{ url('/svg/placeholder.svg') }}"
-                    data-src="{{ url('/img/static/supply/icon6.svg') }}" alt="icon">
-            </div>
-            <span>Выделенный менеджер</span>
-            <span class="sub">Удобная покупка</span>
+            <span>Официальный поставщик</span>
+            <span class="sub">Гарантия и сервисное обслуживание</span>
         </div>
     </div>
     <div class="supplies">
